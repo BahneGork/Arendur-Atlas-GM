@@ -229,6 +229,17 @@ def prop_targets(value):
     return out
 
 
+def prop(props, *keys):
+    """A property under any of these names, ignoring case and _ / - / space (Friend_or_Foe = friend-or-foe)."""
+    norm = lambda k: re.sub(r"[\s_-]+", "", str(k).lower())
+    by = {norm(k): v for k, v in props.items()}
+    for k in keys:
+        v = by.get(norm(k))
+        if v not in (None, "", []):
+            return v
+    return None
+
+
 # Disposition / friend-or-foe values -> ally | neutral | enemy | unknown
 STANCE = {"ally": "ally", "friend": "ally", "deceased-ally": "ally", "neutral": "neutral",
           "conditional": "neutral", "enemy": "enemy", "foe": "enemy", "hostile": "enemy"}
@@ -267,8 +278,8 @@ def build_people(notes, note_id, session_of):
     where_lc.update({p["name"].lower(): pid for pid, p in PLACES.items() if p.get("name")})
 
     def place_of(props):
-        for key in ("location_primary", "Location", "location"):
-            for t in prop_targets(props.get(key)):
+        for key in ("currentlocation", "location_primary", "location"):  # where they are now comes first
+            for t in prop_targets(prop(props, key)):
                 for part in [t] + t.split(","):  # "blackwood, feywild": the first part that is a place
                     if part.strip().lower() in where_lc:
                         return where_lc[part.strip().lower()]
@@ -393,8 +404,8 @@ def build_people(notes, note_id, session_of):
         factions[note_id[title]] = {
             "name": title, **{k.replace("place", "seat").replace("Place", "Seat"): v
                               for k, v in where_is(title, pr, n["body"]).items()},
-            "stance": STANCE.get(str(pr.get("friend-or-foe", "")).lower(), "unknown"),
-            "type": text_prop(pr.get("faction_type")), "status": text_prop(pr.get("status")),
+            "stance": STANCE.get(str(prop(pr, "friend-or-foe", "disposition") or "").lower(), "unknown"),
+            "type": text_prop(prop(pr, "faction_type", "type")), "status": text_prop(pr.get("status")),
             "leader": [note_id[t] for t in prop_targets(pr.get("leader")) if t in note_id],
             "sessions": sessions_of(title, pr), "members": [],
         }
@@ -406,7 +417,7 @@ def build_people(notes, note_id, session_of):
                 or re.search(r"\.(png|jpe?g|webp)$", title, re.I):  # image notes are not people
             continue
         pr = n["props"]
-        disp = str(pr.get("disposition", "")).lower()
+        disp = str(prop(pr, "disposition", "friend-or-foe") or "").lower()
         status, status_note = PARTY_STATUS.get(title, (str(pr.get("status", "")).lower(), ""))
         fids = []
         for key in ("affiliation", "Faction", "faction"):
