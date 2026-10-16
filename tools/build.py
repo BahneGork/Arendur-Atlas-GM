@@ -56,7 +56,7 @@ def load_notes():
     for dirpath, dirs, files in os.walk(NOTES_ROOT):
         dirs[:] = sorted(d for d in dirs if not d.startswith("."))
         for f in sorted(files):
-            if not f.endswith(".md") or f == ".md":  # ".md" is an untitled note
+            if not f.endswith(".md") or f == ".md" or f[:-3] in SKIP_NOTES:  # ".md" is an untitled note
                 continue
             path = os.path.join(dirpath, f)
             text = open(path, encoding="utf-8").read()

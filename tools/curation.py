@@ -46,7 +46,20 @@ CAMPAIGN = {
     "home_note": "1.This is the player vault for the Arendur Rising campaign",
     "hubs": ["1.This is the player vault for the Arendur Rising campaign", "2.Campaign Journal",
              "4.Locations heard of or visited", "5.People", "+Mission Board", "_Cutscenes Index"],
-    "skip_notes": ["README"],
+    # Notes left out of the atlas altogether: indexes, databases, MOCs, Dataview listings, to-do lists.
+    "skip_notes": [
+        "README", "03 People", "14 Locations", "1.NPC database", "1. Faction database", "People Origins", "People",
+        "Notes", "+Name Generator", "Arendur MOC", "Arendur Rising Campaign MOC", "Delios MOC",
+        "Duchies n Baronies of Ursia MOC", "Faction Dashboard", "Faction Map dynamic properties",
+        "Factions MOC - Arendur", "Kingdoms and Empires MOC", "Locatins MOC", "People - locations", "Sessions MOC",
+        "The Heroes MOC", "The Shadow Company MOC", "people MOC", "Plots MOC", "Exp rewards MOC", "Dangers MOC",
+        "Delios annual founders celebration MOC", "The Bedegaarn Barony MOC", "_Cutscenes Index",
+        "Random Bible Note", "Timeline", "PC's compilation", "Active Party Summary", "1.Loot found",
+        "2.Lootfound - notion import", "01.Items identified database folder", "+Mission Board",
+        "INDEX-Starsong-Hill-Package", "+Develop list", "Tjek list", "Party Planning List of contents",
+        "Misty falls Nodes", "Mistyfalls subregion lists", "Rirroneth Hazards", "Rirroneth POIs - Landmarks",
+        "+Party DO list", "+Everyone else DO list", "Red Hand of Doom relationship map",
+    ],
     "gm": "",
     # Rejsen follows the chronicle in stages, because which session did what isn't recorded (owner).
     "unit": "Etape",

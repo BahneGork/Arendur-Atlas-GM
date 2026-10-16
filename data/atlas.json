@@ -2302,7 +2302,7 @@
    "aliases": [],
    "travel": "",
    "travelLost": false,
-   "summary": "The southern part of [Bedegaarn Barony](#note/the-bedegaarn-barony-moc) is known as [Misty Falls](#note/misty-falls). Delios - Teslions - [Taernu](#note/taernu)",
+   "summary": "The southern part of Bedegaarn Barony is known as [Misty Falls](#note/misty-falls). Delios - Teslions - [Taernu](#note/taernu)",
    "url": "",
    "sessions": [],
    "people": [
@@ -5886,10 +5886,8 @@
    "name": "Arendur Cityguard",
    "seat": null,
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
