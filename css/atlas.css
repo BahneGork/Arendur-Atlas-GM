@@ -123,6 +123,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .signpost small { font-family: var(--font-body); font-style: italic; font-size: 12px; opacity: 0.8; }
 .signpost:hover span, .signpost:focus span { background: var(--wax-dark); }
 
+/* GM edition */
+.gm-badge {
+  display: inline-block; margin-left: 8px; padding: 0 6px; vertical-align: middle; border-radius: 3px;
+  background: var(--wax); color: var(--parchment); font-size: 13px; letter-spacing: 0.08em;
+}
+.gm-note {
+  margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--wax);
+  background: rgba(158, 43, 37, 0.07);
+}
+.gm-note strong { display: block; font-family: var(--font-title); font-weight: normal; color: var(--wax-dark); }
+.gm-note .summary { margin: 2px 0 0; }
+
 /* A place that is its own map: a small parchment scroll with rolled ends. */
 .map-scroll { background: none; border: none; }
 .map-scroll span {

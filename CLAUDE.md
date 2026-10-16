@@ -3,16 +3,18 @@
 This document extends the general Claude instructions with project-specific requirements.
 
 ## Project Context
-An interactive **player atlas** for the owner's Arendur Rising campaign (the group: the Shadow Company). The owner is the **GM**. It's a static Leaflet site on GitHub Pages, seeded from the Erukana atlas (`../Atlassian`). Curated by Claude from the notes; see the `campaign-atlas` skill and `docs/assessment.md`.
+The **GM atlas** for the owner's Arendur Rising campaign (the owner is the GM; the group is the Shadow Company), in a **private** repo (BahneGork/Arendur-Atlas-GM). The same build also writes the **players' edition** into the public repo `../Arendur-Atlas` (GitHub Pages: bahnegork.github.io/Arendur-Atlas). Seeded from the Erukana atlas (`../Atlassian`); see the `campaign-atlas` skill and `docs/assessment.md`.
 
 ## Additional Requirements
-- **Spoiler safety (most important)**: the site and repo are public and the players read them. Atlas text may only state what the players know: the Player Vault (chronicle, locations list, missions, handouts), the player map `EastBlackwood-PC.png`, and maps/handouts the players have seen. Claude may read all GM notes (owner's permission) to understand the campaign, but never copies GM-only facts into the atlas. When unsure whether players know something, ask.
-- **No owner attribution on the site**: facts the owner (the GM) tells Claude go into the atlas as plain facts. Never write "ifølge Bahne" or similar in panel text; record the source in a code comment in `curation.py` instead.
-- The build only reads the folders in `CAMPAIGN["notes_dirs"]` (`tools/curation.py`). Never add a GM folder there.
-- Every placement and panel statement must trace to a source; chronicle points are cited as (K12).
-- Read notes only; never modify the vault or the GMnostes repo from this project.
-- **Keep GitHub up to date**: repo `BahneGork/Arendur-Atlas`. After every change, commit and push to `main`. Run `git pull --rebase` first (Actions and the site's "Gem for alle" also push).
-- A GM layer may come later; it must never be built into or deployed from this public repo.
+- **Hidden by default**: everything in `tools/curation.py` is GM-only unless it has `players=True` (places, maps, party members). GM-only text on a player-visible place goes in `gm="..."`; `secret_at=True` hides a known place's position.
+- **Players' text is player knowledge only**: for `players=True` entries, name/summary/where/aliases may only state what the players know. Claude may read all GM notes (owner's permission), but GM facts go in `gm=` or on GM-only entries.
+- **Publishing**: `python3 tools/build.py --players ../Arendur-Atlas`, then commit and push the public repo. The build refuses to write the players' edition if any GM-only name or text would appear in it (`tools/players.py`). Never copy files to the public repo any other way.
+- **No owner attribution on the site**: facts the owner (the GM) tells Claude are canon; never write "ifølge Bahne" in site text. Record the source in a code comment.
+- Every placement and statement must trace to a source; chronicle points are cited as (K12).
+- Notes are read only (published notes from GMnostes, only the folders in `CAMPAIGN["notes_dirs"]`); never modify the vault or GMnostes.
+- Geography: the Worldographer map `../GM-vault/Hexmaps/Main diamor hex1.wxx` is the source of truth for where things are relative to each other (see GM-vault's CLAUDE.md, "Geographic Toolset Protocol"). The Misty Falls hex map (`MistyFallsRegion-Ursia.png`) lines up with it; the Ursia barony map and the players' East Blackwood map do not.
+- **Keep GitHub up to date**: after every change, commit and push this repo (`git pull --rebase` first; the site's "Gem for alle" commits here).
+- View the GM atlas locally: `python3 -m http.server 8000` here, then http://localhost:8000.
 
 ## Overrides
 None yet.

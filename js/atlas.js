@@ -496,6 +496,7 @@
         !p.at && !anchor(id) ? el("span", { class: "badge approx" }, "Ikke på kortet") : null),
       p.summary ? summary(p.summary) : null,
       p.where ? el("p", { class: "where" }, p.where) : null,
+      p.gm ? el("div", { class: "gm-note" }, el("strong", {}, "Kun GM"), summary(p.gm)) : null,
       p.travel ? el("p", { class: "travel-note" }, p.travel) : null,
       Object.entries(maps).filter(([, m]) => m.place === id).map(([mid, m]) =>
         el("p", {}, el("button", { type: "button", class: "session-chip", onclick: () => go(`kort/${mid}`) }, `Åbn kortet over ${m.name} →`))),
@@ -1127,6 +1128,12 @@
   });
 
   if (!sessions.length) journey.style.display = "none";
+  // The GM's edition shows everything; mark it so it is never mistaken for the players' site.
+  if (campaign.audience === "gm") {
+    document.body.classList.add("gm-view");
+    $(".cartouche h1").append(el("span", { class: "gm-badge" }, "GM"));
+    document.title += " – GM";
+  }
   showMap(campaign.start);
   route_(location.hash.slice(1));
 })();

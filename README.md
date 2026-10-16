@@ -1,34 +1,33 @@
-# Arendur Atlas
+# Arendur Atlas – GM
 
-An interactive atlas of the **Arendur Rising** campaign, as the Shadow Company knows it: Ursia, East Blackwood and the town of Delios. Pins open panels about each place, written from the players' own chronicle.
+The private GM edition of the Arendur Rising atlas, and the source of the players' edition.
 
-Built from the same code as the Erukana atlas ([Atlassian](https://github.com/BahneGork/Atlassian)); the experience behind it is in the Claude skill `campaign-atlas`.
+- **GM atlas**: everything, including GM-only places, maps and notes. View it locally:
+  `python3 -m http.server 8000`, then http://localhost:8000
+- **Players' edition**: only what is marked `players=True`, published to the public repo
+  [Arendur-Atlas](https://github.com/BahneGork/Arendur-Atlas) → https://bahnegork.github.io/Arendur-Atlas/
 
-## Run locally
+## Build
 ```bash
-python3 -m http.server 8000   # open http://localhost:8000
+python3 tools/build.py                              # GM atlas into data/
+python3 tools/build.py --players ../Arendur-Atlas   # + the players' edition into the public repo
 ```
+Then commit and push the public repo. The players' build stops if any GM-only name or text would reach it.
 
-## Update the atlas
-- `tools/curation.py`: campaign settings (`CAMPAIGN`), maps, places, sessions. Player knowledge only – the site is public.
-- `tools/build.py`: fetches the published player notes from GitHub (`BahneGork/GMnostes`, only the folders in `CAMPAIGN["notes_dirs"]`) and writes `data/atlas.json` and `data/notes.json`.
+## Showing something to the players
+In `tools/curation.py`, set `players=True` on the place (or map, or party member). Keep GM-only facts in `gm="..."`; use `secret_at=True` if the players know the place but not where it is.
 
-```bash
-python3 tools/build.py
-```
-
-### Adding a map
+## Adding a map
 1. Save the image as WebP in `maps/` (max ~4096 px wide; keep positions in the original image's pixels).
-2. Add it to `MAPS` with its original `size`, and `place` = the place whose panel should open it.
+2. Add it to `MAPS` with its original `size`, `place` = the place whose panel opens it, and `players: True` if the players have seen it.
 3. Add a signpost back in `PORTALS`, at an empty map edge.
-4. Place pins on it (`map=`, `at=`), or drag them there in the site's edit mode.
 
-### Moving and placing pins
-On the site: **Signaturer → Redigér placeringer**, drag pins, then **Gem for alle** (commits a file to `moves/`; the "Rebuild atlas" workflow applies it).
+## Moving and placing pins
+On either site: **Signaturer → Redigér placeringer**, drag pins, then **Gem for alle** (commits a file to `moves/` in this repo; the "Rebuild atlas" workflow applies it to the GM atlas). Publish the players' edition afterwards.
 
 ## Layout
-- `index.html`, `css/`, `js/`: the site (no build step)
-- `data/`: generated
-- `maps/`: map images (WebP)
-- `vendor/`: Leaflet 1.9.4 (BSD-2-Clause), marked 12.0.2 (MIT)
+- `tools/curation.py`: all atlas data (GM + players). `tools/build.py`, `tools/players.py`: the build and the players' filter.
+- `index.html`, `css/`, `js/`: the site, shared by both editions
+- `data/`: the GM atlas (generated)
+- `maps/`: all map images (only the players' maps are copied to the public repo)
 - `docs/assessment.md`: what the notes support, and open questions

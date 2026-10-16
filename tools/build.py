@@ -1,10 +1,13 @@
 """Build data/atlas.json from the curated places and the published notes.
 
-Usage: python3 tools/build.py [path-to-notes-root]
+Usage: python3 tools/build.py [--notes <path-to-notes-root>] [--players <public-repo-dir>]
+Always builds the GM atlas into data/ (this private repo). With --players, also writes the players'
+edition (only what is marked players=True) into the public repo's checkout; see tools/players.py.
 By default the notes are fetched from GitHub (CAMPAIGN["notes_repo"] in curation.py, where the
 Obsidian Digital Garden plugin publishes them) into .cache/. Only the folders in
 CAMPAIGN["notes_dirs"] are read. Notes are only read, never modified.
 """
+import argparse
 import json
 import os
 import re
@@ -19,6 +22,7 @@ from curation import (CAMPAIGN, GARDEN_URL, LOCATION_ALIASES, MAPS, NOT_PEOPLE, 
                       OFFMAP, PARTY, PARTY_CLASS, PARTY_EXTRA, PARTY_NAMES, PARTY_ORIGIN, PARTY_PERIODS, PARTY_RACE,
                       PARTY_STATUS, PLACES, PORTALS, SOLO_SESSIONS,
                       REGIONS, SESSIONS)
+import players as pl  # noqa: E402
 import threads as thr  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,7 +49,11 @@ def fetch_notes():
     return CACHE
 
 
-ROOT_DIR = sys.argv[1] if len(sys.argv) > 1 else fetch_notes()
+ARGS = argparse.ArgumentParser()
+ARGS.add_argument("--notes", help="notes root instead of fetching them from GitHub")
+ARGS.add_argument("--players", metavar="DIR", help="also write the players' edition into DIR (the public repo)")
+ARGS = ARGS.parse_args()
+ROOT_DIR = ARGS.notes or fetch_notes()
 NOTE_DIRS = [os.path.join(ROOT_DIR, d) for d in NOTES_DIRS]
 
 WIKILINK = re.compile(r"\[\[(?:[^\]|]*/)?([^\]|/#]+?)(?:#[^\]|]*)?(?:\\?\|([^\]]+))?\]\]")
@@ -394,7 +402,7 @@ def main():
             "name": p.get("name", p["note"]), "kind": p["kind"],
             "map": p.get("map"), "at": p.get("at"), "approx": p.get("approx", False),
             "also": [{"map": m, "at": at, "approx": approx} for m, at, approx in p.get("also", [])],
-            "scroll": p.get("scroll", False),
+            "scroll": p.get("scroll", False), "gm": p.get("gm", ""),
             "parent": p.get("parent"), "region": p.get("region"), "offmap": p.get("offmap"),
             "where": p.get("where", ""), "aliases": p.get("aliases", []), "travel": p.get("travel", ""), "travelLost": p.get("travel_lost", False),
             "summary": p.get("summary") or (summarize(n["body"], note_id) if n else ""),
@@ -529,7 +537,8 @@ def main():
     for s in sessions:
         s["noteId"] = note_id.get(entry_note_of.get(s["num"]) or session_notes.get(s["num"]))
 
-    out = {"campaign": {k: CAMPAIGN[k] for k in ("title", "start", "repo", "unit", "readLabel") if k in CAMPAIGN}, "maps": MAPS, "portals": PORTALS, "offmap": OFFMAP, "places": places,
+    out = {"campaign": {**{k: CAMPAIGN[k] for k in ("title", "start", "repo", "unit", "readLabel") if k in CAMPAIGN},
+                        "audience": "gm"}, "maps": MAPS, "portals": PORTALS, "offmap": OFFMAP, "places": places,
            "people": people, "factions": factions, "threads": threads, "tools": tools,
            "regions": regions, "sessions": sessions, "unplaced": unplaced}
     with open(os.path.join(ROOT, "data", "atlas.json"), "w", encoding="utf-8") as f:
@@ -552,6 +561,18 @@ def main():
     print("new location notes, not yet in the atlas:", ", ".join(uncurated) or "none")
     for old, new in sorted(renamed.items()):
         print(f"followed rename: {old} -> {new} (update tools/curation.py when convenient)")
+    if ARGS.players:
+        if problems:
+            print("players' edition NOT written: fix the problems first")
+        else:
+            data, leaks = pl.filter_atlas(out)
+            notes_json = open(notes_path, encoding="utf-8").read()
+            leaks += pl.leak_check([json.dumps(data, ensure_ascii=False), notes_json])
+            if leaks:
+                problems += leaks
+                print("players' edition NOT written")
+            else:
+                pl.write(ARGS.players, ROOT, data, notes_json, version)
     for p in problems:
         print("PROBLEM", p)
     return 1 if problems else 0
