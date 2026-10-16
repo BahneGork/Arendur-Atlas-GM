@@ -658,6 +658,20 @@ def main():
         if nid in notes_out:
             notes_out[nid]["together"] = pairs
     json.dump(notes_out, open(notes_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # A place lists the people and factions whose notes link to it only when they have no known place of
+    # their own: Nails' note links to Arendur ("not a member of the tower in Arendur"), but he is elsewhere.
+    def inside_place(ref, pid):
+        while ref:
+            if ref == pid:
+                return True
+            ref = places.get(ref, {}).get("parent")
+        return False
+    known_at = {note_id[p["name"]]: p["place"] for p in people.values() if p["name"] in note_id}
+    known_at.update({fid: f["seat"] for fid, f in factions.items()})
+    for pid, item in places.items():
+        for key in ("people", "factions"):
+            item[key] = [t for t in item[key]
+                         if not known_at.get(note_id.get(t)) or inside_place(known_at[note_id.get(t)], pid)]
     for item in list(places.values()) + list(regions.values()):
         for key in ("people", "factions"):
             item[key] = [[t, note_id.get(t)] for t in item[key]]

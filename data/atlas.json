@@ -103,10 +103,6 @@
    "sessions": [],
    "people": [
     [
-     "Angel the executioner",
-     "angel-the-executioner"
-    ],
-    [
      "Bayard - spy of  'the eyes'",
      "bayard-spy-of-the-eyes"
     ],
@@ -119,28 +115,12 @@
      "harl-lasalle"
     ],
     [
-     "Josie Harrt",
-     "josie-harrt"
-    ],
-    [
      "Kalarel the vile",
      "kalarel-the-vile"
     ],
     [
-     "Lord Davide Castilla",
-     "lord-davide-castilla"
-    ],
-    [
      "Lord Jarret Castilla",
      "lord-jarret-castilla"
-    ],
-    [
-     "Nails",
-     "nails"
-    ],
-    [
-     "Regent Hexton",
-     "regent-hexton"
     ],
     [
      "Selina Rosenknop",
@@ -148,10 +128,6 @@
     ]
    ],
    "factions": [
-    [
-     "Abbesses",
-     "abbesses"
-    ],
     [
      "Blue Guardians",
      "blue-guardians"
@@ -498,12 +474,7 @@
    "sessions": [
     6
    ],
-   "people": [
-    [
-     "Duerif Redblade",
-     "duerif-redblade"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "vault-of-shadows"
@@ -1033,10 +1004,6 @@
      "ivana-schatz"
     ],
     [
-     "Lord Vermil",
-     "lord-vermil"
-    ],
-    [
      "THE necromancer",
      "the-necromancer"
     ]
@@ -1366,16 +1333,7 @@
    "summary": "Nogle af gruppen har været på besøg i kroen.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Milton Fischer",
-     "milton-fischer"
-    ],
-    [
-     "Minka Fischer",
-     "minka-fischer"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "anden-tavern"
@@ -1542,16 +1500,7 @@
    "summary": "Kroen, hvor gruppen har boet i Delios.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Agapito Alamilla",
-     "agapito-alamilla"
-    ],
-    [
-     "Ashely Vieth",
-     "ashely-vieth"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "black-portrait-inn"
@@ -1686,16 +1635,7 @@
    "summary": "Gruppen har været i The Milly Bell.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Bell",
-     "bell"
-    ],
-    [
-     "Millicent",
-     "millicent"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "the-milly-bell"
@@ -1837,16 +1777,7 @@
    "summary": "",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Jayce Fireheart - ranger hut",
-     "jayce-fireheart-ranger-hut"
-    ],
-    [
-     "Ranger hut - Jayce Fireheart",
-     "ranger-hut-jayce-fireheart"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": false,
    "noteId": null
@@ -2305,34 +2236,8 @@
    "summary": "The southern part of Bedegaarn Barony is known as [Misty Falls](#note/misty-falls). Delios - Teslions - [Taernu](#note/taernu)",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Family Martelli",
-     "family-martelli"
-    ],
-    [
-     "Jayce Fireheart - ranger hut",
-     "jayce-fireheart-ranger-hut"
-    ],
-    [
-     "Ranger hut - Jayce Fireheart",
-     "ranger-hut-jayce-fireheart"
-    ]
-   ],
-   "factions": [
-    [
-     "Family Eberhardt",
-     "family-eberhardt"
-    ],
-    [
-     "Family Martelli 1",
-     "family-martelli-1"
-    ],
-    [
-     "House Arpad",
-     "house-arpad"
-    ]
-   ],
+   "people": [],
+   "factions": [],
    "visited": false,
    "noteId": "misty-falls"
   },
@@ -2358,26 +2263,8 @@
    "summary": "The Moors are rocky, hilly and slightly watery. The road snakes and bends sharply to avoid the difficult terrains. Along the well travelled road lies the [Click Claw Watch](#note/click-claw-watch) fort.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Bartolo the guide",
-     "bartolo-the-guide"
-    ],
-    [
-     "Family Paget",
-     "family-paget"
-    ],
-    [
-     "Willard",
-     "willard"
-    ]
-   ],
-   "factions": [
-    [
-     "Family Paget 1",
-     "family-paget-1"
-    ]
-   ],
+   "people": [],
+   "factions": [],
    "visited": false,
    "noteId": "click-claw-moors"
   },
@@ -2639,30 +2526,8 @@
    "summary": "",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Family Martelli",
-     "family-martelli"
-    ],
-    [
-     "mace Martelli",
-     "mace-martelli"
-    ],
-    [
-     "Ramon Chartrand - Alkymist",
-     "ramon-chartrand-alkymist"
-    ],
-    [
-     "The Vampire Spawn",
-     "the-vampire-spawn"
-    ]
-   ],
-   "factions": [
-    [
-     "Family Martelli 1",
-     "family-martelli-1"
-    ]
-   ],
+   "people": [],
+   "factions": [],
    "visited": false,
    "noteId": "ranch-1-falca"
   },
@@ -2733,12 +2598,7 @@
    "summary": "The Beltath ranch is owned and run by the",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "Ashely Vieth",
-     "ashely-vieth"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": false,
    "noteId": "ranch-4-beltath"
@@ -2917,10 +2777,6 @@
     16
    ],
    "people": [
-    [
-     "Copper",
-     "copper"
-    ],
     [
      "THE necromancer",
      "the-necromancer"
