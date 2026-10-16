@@ -262,12 +262,34 @@ def build_people(notes, note_id, session_of):
     where.update({a: f"region:{rid}" for rid, r in REGIONS.items() for a in r.get("aliases", [])})
     where.update(LOCATION_ALIASES)
 
+    # Any spelling of a place: its note, name or alias, in any case.
+    where_lc = {k.lower(): v for k, v in where.items() if k}
+    where_lc.update({p["name"].lower(): pid for pid, p in PLACES.items() if p.get("name")})
+
     def place_of(props):
         for key in ("location_primary", "Location", "location"):
             for t in prop_targets(props.get(key)):
-                if t in where:
-                    return where[t]
+                for part in [t] + t.split(","):  # "blackwood, feywild": the first part that is a place
+                    if part.strip().lower() in where_lc:
+                        return where_lc[part.strip().lower()]
         return None
+
+    def depth(pid):
+        d = 0
+        while PLACES[pid].get("parent"):
+            pid, d = PLACES[pid]["parent"], d + 1
+        return d
+
+    # Tags that name a place (#delios), the most specific first. The campaign's own tag (#Arendur) is
+    # on nearly every note, so it says nothing about where someone is.
+    campaign_tags = {x.lower() for x in CAMPAIGN.get("campaign_tags", [])}
+
+    def tag_place(props, body):
+        tags = props.get("tags") or []
+        tags = [tags] if isinstance(tags, str) else [x for x in tags if isinstance(x, str)]
+        tags += re.findall(r"(?<![\w&])#([\wæøåÆØÅ/-]+)", body)
+        hits = {where_lc[x.lower()] for x in tags if x.lower() not in campaign_tags and x.lower() in where_lc}
+        return max(hits, key=depth) if hits else None
 
     # Without a location property: the place the note's text points to most, by name. A link counts
     # double; on a tie the more specific place (deeper inside other places) wins.
@@ -278,12 +300,6 @@ def build_people(notes, note_id, session_of):
                 names[s.lower()] = pid
     name_re = re.compile(r"(?<![\wæøå])(" + "|".join(re.escape(s) for s in sorted(names, key=len, reverse=True))
                          + r")(?![\wæøå])")
-
-    def depth(pid):
-        d = 0
-        while PLACES[pid].get("parent"):
-            pid, d = PLACES[pid]["parent"], d + 1
-        return d
 
     def guess_place(body):
         counts = defaultdict(int)
@@ -306,8 +322,8 @@ def build_people(notes, note_id, session_of):
             continue
         pr = n["props"]
         factions[note_id[title]] = {
-            "name": title, "seat": place_of(pr) or guess_place(n["body"]),
-            "seatGuess": not place_of(pr),
+            "name": title, "seat": place_of(pr) or tag_place(pr, n["body"]) or guess_place(n["body"]),
+            "seatGuess": not (place_of(pr) or tag_place(pr, n["body"])),
             "stance": STANCE.get(str(pr.get("friend-or-foe", "")).lower(), "unknown"),
             "type": text_prop(pr.get("faction_type")), "status": text_prop(pr.get("status")),
             "leader": [note_id[t] for t in prop_targets(pr.get("leader")) if t in note_id],
@@ -330,8 +346,9 @@ def build_people(notes, note_id, session_of):
                     fids.append(note_id[t])
         pid = note_id[title]
         people[pid] = {
-            "name": title, "place": place_of(pr) or (None if in_party else guess_place(n["body"])),
-            "placeGuess": not place_of(pr),
+            "name": title,
+            "place": place_of(pr) or (None if in_party else tag_place(pr, n["body"]) or guess_place(n["body"])),
+            "placeGuess": not (place_of(pr) or tag_place(pr, n["body"])),
             "stance": STANCE.get(disp, "ally" if in_party else "unknown"),  # party members are allies unless noted
             "dead": status == "dead" or disp.startswith("deceased"),
             "status": status if status not in ("", "alive", "unknown") else "",

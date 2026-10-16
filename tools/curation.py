@@ -41,6 +41,8 @@ CAMPAIGN = {
         ("/Loot/", "Loot"), ("The Shadow Company/", "Company"), ("01 Running the game", "Prep"),
         ("00 Arendur Seedbox", "Seeds"), ("15 lists", "Lists"),
     ],
+    # Tags on (nearly) every note of the campaign; they never place anyone (#Arendur is the campaign, not the city).
+    "campaign_tags": ["Arendur"],
     "home_note": "1.This is the player vault for the Arendur Rising campaign",
     "hubs": ["1.This is the player vault for the Arendur Rising campaign", "2.Campaign Journal",
              "4.Locations heard of or visited", "5.People", "+Mission Board", "_Cutscenes Index"],
@@ -316,7 +318,12 @@ SESSIONS = [
      "På vej mod Castle Blackspear: udøde ved Dødebjerget. Brumor dør og bringes tilbage – for en pris (K106–K110)."),
 ]
 
-LOCATION_ALIASES = {}
+# location: values in the GM notes that name a place differently (PLACES ids). Used only to place people.
+LOCATION_ALIASES = {
+    "Blackwood": "east-blackwood", "Blackspear swamp": "blackspear-swamp", "Bedeagaarn": "bedegaarn",
+    "Bedegaarn Barony": "bedegaarn", "raven kings tomb": "raven-tomb", "Rirroneth": "rirroneth",
+    "far realm": "rirroneth", "labyrinth of the festering spire": "festering-spire", "shadow company HQ": "fallen-star",
+}
 NOT_PLACES = {  # location notes that are maps, lists, rules, rumours, people or items, not places
     "14 Locations", "Alternate vampire plot", "Arendur Organisations", "Arendur Rising Fronts",
     "Bedegaarn Barony Region Sheet", "Belle", "Delios (known)", "Delios known poi", "Delios possible trainers",
