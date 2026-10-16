@@ -404,12 +404,13 @@ PLACED = {
     "Oxbar": "camp-oxbar", "Lady Dazran": "rirroneth",
     # Further away
     "Pinna": "arendur",  # now Assumi's retainer; went home to Arendur with her (K35)
+    "Mellik": "arendur",  # per the owner (2026-10-16)
     "Selina Rosenknop": "arendur", "Lord Jarret Castilla": "arendur", "Faustus Antili": "azuremarket",
     "Regent Hexton": "bedegaarn", "Sir Claudio": "bedegaarn", "Sir Claudio 1": "bedegaarn",
     "Lady Floret": "bedegaarn",  # "remaining in Bedegaarn"
     "Sunkiller": "bedegaarn",  # sent to Bedegaarn Keep (Secret transport report)
     # Unknown: the vault mentions no place they are at
-    "THE necromancer": None, "Throg'was": None, "Sharwyn": None, "Mellik": None,
+    "THE necromancer": None, "Throg'was": None, "Sharwyn": None,
     "Latona 'Pippa' the halfling": None, "Duke Armatage Volantis": None, "The Star-Violet Lady": None,
     "jawbreaker": None, "Kryx Bloodgnash": None,
     # Factions
