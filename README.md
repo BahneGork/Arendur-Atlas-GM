@@ -1,9 +1,9 @@
 # Arendur Atlas – GM
 
-The private GM edition of the Arendur Rising atlas, and the source of the players' edition.
+The GM edition of the Arendur Rising atlas, and the source of the players' edition. Public, but not linked from anywhere the players see.
 
-- **GM atlas**: everything, including GM-only places, maps and notes. View it locally:
-  `python3 -m http.server 8000`, then http://localhost:8000
+- **GM atlas**: everything, including GM-only places, maps and notes: https://bahnegork.github.io/Arendur-Atlas-GM/
+  (or locally: `python3 -m http.server 8000`, then http://localhost:8000)
 - **Players' edition**: only what is marked `players=True`, published to the public repo
   [Arendur-Atlas](https://github.com/BahneGork/Arendur-Atlas) → https://bahnegork.github.io/Arendur-Atlas/
 
@@ -12,7 +12,7 @@ The private GM edition of the Arendur Rising atlas, and the source of the player
 python3 tools/build.py                              # GM atlas into data/
 python3 tools/build.py --players ../Arendur-Atlas   # + the players' edition into the public repo
 ```
-Then commit and push the public repo. The players' build stops if any GM-only name or text would reach it.
+The public repo also does this by itself every hour (workflow "Publish players' edition"). The players' build stops if any GM-only name or text would reach it.
 
 ## Showing something to the players
 In `tools/curation.py`, set `players=True` on the place (or map, or party member). Keep GM-only facts in `gm="..."`; use `secret_at=True` if the players know the place but not where it is.

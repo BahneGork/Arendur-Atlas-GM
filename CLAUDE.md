@@ -3,18 +3,18 @@
 This document extends the general Claude instructions with project-specific requirements.
 
 ## Project Context
-The **GM atlas** for the owner's Arendur Rising campaign (the owner is the GM; the group is the Shadow Company), in a **private** repo (BahneGork/Arendur-Atlas-GM). The same build also writes the **players' edition** into the public repo `../Arendur-Atlas` (GitHub Pages: bahnegork.github.io/Arendur-Atlas). Seeded from the Erukana atlas (`../Atlassian`); see the `campaign-atlas` skill and `docs/assessment.md`.
+The **GM atlas** for the owner's Arendur Rising campaign (the owner is the GM; the group is the Shadow Company), in the repo BahneGork/Arendur-Atlas-GM. The repo and its GitHub Pages site (bahnegork.github.io/Arendur-Atlas-GM, noindex) are **public by the owner's choice**: players simply don't get the link. Never link to it from the players' site. The same build also writes the **players' edition** into the public repo `../Arendur-Atlas` (GitHub Pages: bahnegork.github.io/Arendur-Atlas). Seeded from the Erukana atlas (`../Atlassian`); see the `campaign-atlas` skill and `docs/assessment.md`.
 
 ## Additional Requirements
 - **Hidden by default**: everything in `tools/curation.py` is GM-only unless it has `players=True` (places, maps, party members). GM-only text on a player-visible place goes in `gm="..."`; `secret_at=True` hides a known place's position.
 - **Players' text is player knowledge only**: for `players=True` entries, name/summary/where/aliases may only state what the players know. Claude may read all GM notes (owner's permission), but GM facts go in `gm=` or on GM-only entries.
-- **Publishing**: `python3 tools/build.py --players ../Arendur-Atlas`, then commit and push the public repo. The build refuses to write the players' edition if any GM-only name or text would appear in it (`tools/players.py`). Never copy files to the public repo any other way.
+- **Publishing**: the public repo's workflow "Publish players' edition" builds the players' edition from this repo every hour (or run it from its Actions tab). Locally: `python3 tools/build.py --players ../Arendur-Atlas`, then commit and push that repo. The build refuses to write the players' edition if any GM-only name or text would appear in it (`tools/players.py`). Never copy files to the public repo any other way.
 - **No owner attribution on the site**: facts the owner (the GM) tells Claude are canon; never write "ifølge Bahne" in site text. Record the source in a code comment.
 - Every placement and statement must trace to a source; chronicle points are cited as (K12).
 - Notes are read only (published notes from GMnostes, only the folders in `CAMPAIGN["notes_dirs"]`); never modify the vault or GMnostes.
 - Geography: the Worldographer map `../GM-vault/Hexmaps/Main diamor hex1.wxx` is the source of truth for where things are relative to each other (see GM-vault's CLAUDE.md, "Geographic Toolset Protocol"). The Misty Falls hex map (`MistyFallsRegion-Ursia.png`) lines up with it; the Ursia barony map and the players' East Blackwood map do not.
 - **Keep GitHub up to date**: after every change, commit and push this repo (`git pull --rebase` first; the site's "Gem for alle" commits here).
-- View the GM atlas locally: `python3 -m http.server 8000` here, then http://localhost:8000.
+- View the GM atlas at https://bahnegork.github.io/Arendur-Atlas-GM/ or locally: `python3 -m http.server 8000` here, then http://localhost:8000.
 
 ## Overrides
 None yet.
