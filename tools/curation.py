@@ -46,6 +46,9 @@ MAPS = {
     "blackwood": {"players": True, "name": "East Blackwood", "image": "maps/blackwood.webp", "size": [1131, 1080],
                   "place": "east-blackwood"},
     # "Delios no pins.png", the base of the players' Delios handout.
+    # GM only. MistyFallsRegion-Ursia.png, exported from the Worldographer map; positions below are computed from
+    # the wxx Kingdom coordinates (fit to the owner's Leaflet pins, max error 19 px).
+    "misty": {"name": "Misty Falls (GM)", "image": "maps/misty.webp", "size": [1822, 1121]},
     "delios": {"players": True, "name": "Delios", "image": "maps/delios.webp", "size": [7680, 4320], "place": "delios"},
 }
 
@@ -82,12 +85,12 @@ PLACES = {
     # also=[(map, at, approx)]: the same place on further maps. The Ursia positions are estimates around the
     # owner's pin "Bedegaarn barony – Duke Alvares" (4752, 4066), in the open land north of the forest.
     "delios": dict(note="", players=True, name="Delios", map="blackwood", at=[707, 465], kind="by", visited=True,
-                   also=[("ursia", [4895, 4157], True)],
+                   also=[("misty", [1032, 338], False), ("ursia", [4895, 4157], True)],
                    summary="By med tømmer-ranches i Blackwood. Gruppen kom til festival her (K62–K64), "
                            "og borgmester Osric hyrede kompagniet (K66). Gruppens base mellem ekspeditionerne (K90, K110). "
                            "Brumor har sat et gadekøkken op for byens hjemløse."),
     "teslions": dict(note="", players=True, name="Teslions", map="blackwood", at=[858, 768], kind="by", visited=True,
-                     also=[("ursia", [5261, 4115], True)],
+                     also=[("misty", [1436, 255], False), ("ursia", [5261, 4115], True)],
                      summary="Den sidste by før grænsen. Fik tid til at evakuere, fordi gruppen ødelagde "
                              "Skullgorge-broen (K24), men blev senere overrendt af horden (K38)."),
     "logen": dict(note="", players=True, parent="teslions", kind="sted", name="Logen i Teslions"),
@@ -100,38 +103,38 @@ PLACES = {
     "skygge-vaulten": dict(note="", players=True, parent="lady-dagger-caves", kind="hule", name="Skygge-vaulten", visited=True,
                            summary="En forseglet vault i en sprække under hulerne: \"Ved Kiri-Joliths kraft og "
                                    "Helgen Worlocks autoritet skal denne boks/vault forblive låst\" (K31–K33)."),
-    "maakengorge": dict(note="", players=True, map="blackwood", at=[893, 868], kind="vildmark", name="Maakengorge"),
-    "sunken-citadel": dict(note="", players=True, map="blackwood", at=[522, 745], kind="hule", visited=True,
+    "maakengorge": dict(note="", players=True, also=[("misty", [1710, 91], False)], map="blackwood", at=[893, 868], kind="vildmark", name="Maakengorge"),
+    "sunken-citadel": dict(note="", players=True, also=[("misty", [1412, 905], False)], map="blackwood", at=[522, 745], kind="hule", visited=True,
                            name="Det sunkne citadel",
                            summary="Røde hånd-gobliner under Warchief Ratbag. I bunden stod et dødt træ, hvor "
                                    "goblin-warlocks var ved at åbne en portal til Feydark (K14–K20)."),
-    "camp-oxbar": dict(note="", players=True, map="blackwood", at=[535, 800], approx=True, kind="hule", name="Camp Oxbar",
+    "camp-oxbar": dict(note="", players=True, also=[("misty", [1679, 903], False)], map="blackwood", at=[535, 800], approx=True, kind="hule", name="Camp Oxbar",
                        visited=True, where="I Underdark; kortet viser Oxbar ved det sunkne citadel.",
                        summary="Dværgen Oxbars underjordiske ekspedition, som gruppen reddede (K13)."),
     "skullgorge": dict(note="", players=True, map="blackwood", at=[328, 630], kind="vildmark", name="Skullgorge-broen",
                        visited=True, aliases=["Skull Gorge", "Skullgorge"],
                        summary="Gruppen ødelagde broen i kampen mod gobliner og en grøn drage og "
                                "forsinkede den røde hånds horde i flere dage (K21–K22)."),
-    "blackspear": dict(note="", players=True, map="blackwood", at=[615, 140], kind="borg", name="Castle Blackspear",
+    "blackspear": dict(note="", players=True, also=[("misty", [490, 504], False)], map="blackwood", at=[615, 140], kind="borg", name="Castle Blackspear",
                        summary="Ruiner, hvor den sorte drage Regilarix holder dværgehelten Grozon fanget (K94). "
                                "Det hemmelige våben kom herfra (K40–K41). Kompagniet er på vej herhen (K106)."),
     "blackspear-swamp": dict(note="", players=True, map="blackwood", at=[651, 161], approx=True, kind="vildmark",
                              name="Blackspear-sumpen", where="Omkring Castle Blackspear."),
-    "ranger-hut": dict(note="", players=True, map="blackwood", at=[726, 333], approx=True, kind="sted", name="Rangerhytten",
+    "ranger-hut": dict(note="", players=True, also=[("misty", [748, 164], False)], map="blackwood", at=[726, 333], approx=True, kind="sted", name="Rangerhytten",
                        where="Nordvest for Delios (de spilledes stedliste).",
                        summary="En ranger, der har overlevet en kamp med den sorte drage (K106)."),
     "bedegaarn": dict(note="", players=True, map="blackwood", at=[978, 305], kind="borg", name="Bedegaarn",
                       also=[("ursia", [4757, 3953], True)],
                       summary="Baroniets 'hovedstad' og sæde."),
-    "click-claw": dict(note="", players=True, map="blackwood", at=[740, 525], approx=True, kind="borg", name="Click Claw Watch",
+    "click-claw": dict(note="", players=True, also=[("misty", [1097, 378], False)], map="blackwood", at=[740, 525], approx=True, kind="borg", name="Click Claw Watch",
                        visited=True, where="Ved vejen gennem bakkelandet op mod Delios.",
                        summary="Et fort fra Ork-krigen, der beskytter vejen gennem bakkelandet op mod Delios (K61)."),
-    "raven-tomb": dict(note="", players=True, map="blackwood", at=[780, 495], approx=True, kind="hule",
+    "raven-tomb": dict(note="", players=True, also=[("misty", [1098, 351], False)], map="blackwood", at=[780, 495], approx=True, kind="hule",
                        name="Ravnekongens grav", visited=True, where="Ude i Click Claw-bakkelandet (K68–K69).",
                        aliases=["Tomb of the Raven king", "Ravne Kongens grav"],
                        summary="Her mødte gruppen Ravnekongen, som belønnede dem med et banner (K85–K88)."),
     "rirroneth-wheel": dict(note="", players=True, parent="raven-tomb", kind="sted", name="Rirroneths hjul", visited=True),
-    "fallen-star": dict(note="", players=True, map="blackwood", at=[770, 575], approx=True, kind="sted", name="Fallen Star",
+    "fallen-star": dict(note="", players=True, also=[("misty", [1119, 392], False)], map="blackwood", at=[770, 575], approx=True, kind="sted", name="Fallen Star",
                         visited=True, where="En landevejskro på vejen mod Delios (K57).",
                         summary="Landevejskro, hvor Anton og Frekka sluttede sig til gruppen (K57–K58). "
                                 "Skyggekompagniets hovedkvarter (Summary Session 47)."),
@@ -139,7 +142,7 @@ PLACES = {
                       visited=True, where="Ikke langt fra Fallen Star (K54–K57).",
                       summary="Gammelt gravsted med et elverbroderet vægtæppe. Tidsmagi sendte gruppen tilbage "
                               "til et overfald på hertugen 'den sorte ørn' (K54–K56)."),
-    "blackbriar": dict(note="", players=True, map="blackwood", at=[800, 660], approx=True, kind="helligt",
+    "blackbriar": dict(note="", players=True, also=[("misty", [1232, 351], False)], map="blackwood", at=[800, 660], approx=True, kind="helligt",
                        name="Blackbriar kloster", visited=True,
                        where="På vejen mellem Teslions og Delios (K46).",
                        summary="Munkene blev dræbt af ghouls fra en skjult krypt fra imperiet Azerumme; "
@@ -189,6 +192,31 @@ PLACES = {
                             summary="St. Gaed-kirken. Brumor har været i kirken."),
     "jagos-jewel": dict(note="", players=True, map="delios", at=[3414, 1674], parent="delios", kind="sted", name="Jago's Jewel",
                         visited=True, summary="Gruppen har været i Jago's Jewel."),
+
+    # --- GM only: Worldographer places on the Misty Falls map (not shown to the players) ---
+    "caves-of-shadows": dict(note="", name="Caves of Shadows", map="misty", at=[1011, 298], kind="hule"),
+    "crocodile-lair": dict(note="", name="Crocodile Lair", map="misty", at=[541, 341], kind="hule",
+                           aliases=["Giant Crocodile of the blackspear swamp"]),
+    "fort-demass": dict(note="", name="Fort De'mass", map="misty", at=[996, 95], kind="borg"),
+    "gazebo": dict(note="", name="Gazebo", map="misty", at=[992, 203], kind="sted"),
+    # The owner's Leaflet pin "Daughters of Meg" (Lair) sits on this spot. The players know the name (3.Secrets
+    # Revealed), not that it is this lair, so it is GM text, not an alias.
+    "hag-coven": dict(note="", name="Hag Coven Lair", map="misty", at=[584, 395], kind="hule",
+                      gm="Daughters of Meg holder til her."),
+    "infernal-grotto": dict(note="", name="Infernal Grotto", map="misty", at=[1014, 216], kind="hule"),
+    "lumber-ranch-1": dict(note="", name="Lumber Ranch 1", map="misty", at=[964, 361], kind="sted"),
+    "lumber-ranch-2": dict(note="", name="Lumber Ranch 2", map="misty", at=[985, 397], kind="sted"),
+    "lumber-ranch-3": dict(note="", name="Lumber Ranch 3", map="misty", at=[1022, 401], kind="sted"),
+    "lumber-ranch-4": dict(note="", name="Lumber Ranch 4", map="misty", at=[1069, 417], kind="sted"),
+    "lumber-ranch-5": dict(note="", name="Lumber Ranch 5", map="misty", at=[1091, 444], kind="sted"),
+    "manticore-lair": dict(note="", name="Manticore Lair", map="misty", at=[1151, 717], kind="hule"),
+    "mossy-delve": dict(note="", name="Mossy Delve", map="misty", at=[1082, 175], kind="hule"),
+    "solambre": dict(note="", name="Solambre", map="misty", at=[886, 54], kind="by"),
+    "star-song-hill": dict(note="", name="Star Song Hill", map="misty", at=[751, 692], kind="sted",
+                           aliases=["Starsong Hill", "Orchid Court"]),
+    "tower-of-lightning": dict(note="", name="Tower of Lightning", map="misty", at=[759, 475], kind="taarn"),
+    "ambush-farm": dict(note="", name="Ambush farm", map="misty", at=[1163, 392], kind="sted"),
+    "hamlet": dict(note="", name="Hamlet ved Click Claw Watch", map="misty", at=[1142, 378], kind="by"),
 
     # --- Off the maps ---
     "rirroneth": dict(note="", players=True, offmap="other", kind="vildmark", name="Rirroneths domæne", visited=True,

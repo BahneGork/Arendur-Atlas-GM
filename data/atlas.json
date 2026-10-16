@@ -27,6 +27,14 @@
    ],
    "place": "east-blackwood"
   },
+  "misty": {
+   "name": "Misty Falls (GM)",
+   "image": "maps/misty.webp",
+   "size": [
+    1822,
+    1121
+   ]
+  },
   "delios": {
    "players": true,
    "name": "Delios",
@@ -216,6 +224,14 @@
    "approx": false,
    "also": [
     {
+     "map": "misty",
+     "at": [
+      1032,
+      338
+     ],
+     "approx": false
+    },
+    {
      "map": "ursia",
      "at": [
       4895,
@@ -255,6 +271,14 @@
    ],
    "approx": false,
    "also": [
+    {
+     "map": "misty",
+     "at": [
+      1436,
+      255
+     ],
+     "approx": false
+    },
     {
      "map": "ursia",
      "at": [
@@ -396,7 +420,16 @@
     868
    ],
    "approx": false,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1710,
+      91
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -423,7 +456,16 @@
     745
    ],
    "approx": false,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1412,
+      905
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -452,7 +494,16 @@
     800
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1679,
+      903
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -513,7 +564,16 @@
     140
    ],
    "approx": false,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      490,
+      504
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -567,7 +627,16 @@
     333
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      748,
+      164
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -630,7 +699,16 @@
     525
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1097,
+      378
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -659,7 +737,16 @@
     495
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1098,
+      351
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -718,7 +805,16 @@
     575
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1119,
+      392
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -776,7 +872,16 @@
     660
    ],
    "approx": true,
-   "also": [],
+   "also": [
+    {
+     "map": "misty",
+     "at": [
+      1232,
+      351
+     ],
+     "approx": false
+    }
+   ],
    "scroll": false,
    "gm": "",
    "parent": null,
@@ -1503,6 +1608,497 @@
    "people": [],
    "factions": [],
    "visited": true,
+   "noteId": null
+  },
+  "caves-of-shadows": {
+   "name": "Caves of Shadows",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    1011,
+    298
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "crocodile-lair": {
+   "name": "Crocodile Lair",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    541,
+    341
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [
+    "Giant Crocodile of the blackspear swamp"
+   ],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "fort-demass": {
+   "name": "Fort De'mass",
+   "kind": "borg",
+   "map": "misty",
+   "at": [
+    996,
+    95
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "gazebo": {
+   "name": "Gazebo",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    992,
+    203
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "hag-coven": {
+   "name": "Hag Coven Lair",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    584,
+    395
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "Daughters of Meg holder til her.",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "infernal-grotto": {
+   "name": "Infernal Grotto",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    1014,
+    216
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "lumber-ranch-1": {
+   "name": "Lumber Ranch 1",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    964,
+    361
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "lumber-ranch-2": {
+   "name": "Lumber Ranch 2",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    985,
+    397
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "lumber-ranch-3": {
+   "name": "Lumber Ranch 3",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    1022,
+    401
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "lumber-ranch-4": {
+   "name": "Lumber Ranch 4",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    1069,
+    417
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "lumber-ranch-5": {
+   "name": "Lumber Ranch 5",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    1091,
+    444
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "manticore-lair": {
+   "name": "Manticore Lair",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    1151,
+    717
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "mossy-delve": {
+   "name": "Mossy Delve",
+   "kind": "hule",
+   "map": "misty",
+   "at": [
+    1082,
+    175
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "solambre": {
+   "name": "Solambre",
+   "kind": "by",
+   "map": "misty",
+   "at": [
+    886,
+    54
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "star-song-hill": {
+   "name": "Star Song Hill",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    751,
+    692
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [
+    "Starsong Hill",
+    "Orchid Court"
+   ],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "tower-of-lightning": {
+   "name": "Tower of Lightning",
+   "kind": "taarn",
+   "map": "misty",
+   "at": [
+    759,
+    475
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "ambush-farm": {
+   "name": "Ambush farm",
+   "kind": "sted",
+   "map": "misty",
+   "at": [
+    1163,
+    392
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": null
+  },
+  "hamlet": {
+   "name": "Hamlet ved Click Claw Watch",
+   "kind": "by",
+   "map": "misty",
+   "at": [
+    1142,
+    378
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
    "noteId": null
   },
   "rirroneth": {
