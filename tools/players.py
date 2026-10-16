@@ -82,6 +82,11 @@ def write(out_dir, root, data, notes_json, version):
             shutil.copytree(src, dst)
         else:
             shutil.copy2(src, dst)
+    # The players' site may be found by search engines; the GM site may not.
+    index = os.path.join(out_dir, "index.html")
+    html = open(index, encoding="utf-8").read()
+    html = re.sub(r'\n  <meta name="robots"[^\n]*', "", html)
+    open(index, "w", encoding="utf-8").write(html)
     os.makedirs(os.path.join(out_dir, "data"), exist_ok=True)
     with open(os.path.join(out_dir, "data", "atlas.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)

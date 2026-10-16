@@ -2,8 +2,8 @@
 # - when placements saved from the site's edit mode ("Gem for alle") arrive as moves/*.json
 # - every night, to pick up newly published notes
 # - on demand (Actions tab -> Rebuild atlas -> Run workflow)
-# It does not publish the players' edition: run `python3 tools/build.py --players ../Arendur-Atlas`
-# locally and push the public repo. If the build reports a problem, the run fails.
+# The players' edition is published by the public repo's own workflow, which builds it from this
+# repo every hour. If the build reports a problem, the run fails.
 name: Rebuild atlas
 
 on:
@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency: rebuild-atlas
 
@@ -51,3 +52,9 @@ jobs:
           git push
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
+      # Pushes made with the workflow token may not start a Pages build on their own.
+      - name: Request Pages build
+        if: steps.commit.outputs.pushed == 'true'
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
