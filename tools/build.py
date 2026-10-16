@@ -56,7 +56,7 @@ def load_notes():
     for dirpath, dirs, files in os.walk(NOTES_ROOT):
         dirs[:] = sorted(d for d in dirs if not d.startswith("."))
         for f in sorted(files):
-            if not f.endswith(".md"):
+            if not f.endswith(".md") or f == ".md":  # ".md" is an untitled note
                 continue
             path = os.path.join(dirpath, f)
             text = open(path, encoding="utf-8").read()
@@ -109,7 +109,15 @@ def summarize(body, ids=None):
             text = plain(m.group(1), ids)
             break
     else:
-        return ""
+        # No description section: the first paragraph that reads as text (not tags, links, images or "Main:").
+        for para in re.split(r"\n\s*\n", body):
+            lines = [ln for ln in para.split("\n") if ln.strip() and not re.match(
+                r"^\s*(#|-?\s*!\[|>|\||Main:|Related:|https?://|```|-\s*$)", ln.strip())]
+            text = plain(" ".join(lines), ids)
+            if len(text) >= 40 and re.search(r"[a-zæøå]{3,} [a-zæøå]{2,} [a-zæøå]{2,}", text):
+                break
+        else:
+            return ""
     sentences = re.split(r"(?<=[.!?])\s+", text)
     out = ""
     for s in sentences:
@@ -261,6 +269,32 @@ def build_people(notes, note_id, session_of):
                     return where[t]
         return None
 
+    # Without a location property: the place the note's text points to most, by name. A link counts
+    # double; on a tie the more specific place (deeper inside other places) wins.
+    names = {}
+    for pid, p in PLACES.items():
+        for s in [p.get("name", ""), p["note"]] + p.get("aliases", []):
+            if len(s) >= 4:
+                names[s.lower()] = pid
+    name_re = re.compile(r"(?<![\wæøå])(" + "|".join(re.escape(s) for s in sorted(names, key=len, reverse=True))
+                         + r")(?![\wæøå])")
+
+    def depth(pid):
+        d = 0
+        while PLACES[pid].get("parent"):
+            pid, d = PLACES[pid]["parent"], d + 1
+        return d
+
+    def guess_place(body):
+        counts = defaultdict(int)
+        for m in WIKILINK.finditer(body):
+            if m.group(1).strip().lower() in names:
+                counts[names[m.group(1).strip().lower()]] += 1
+        text = re.sub(r"(?<![\w&])#[\wæøåÆØÅ/-]+", " ", plain(body))  # tags such as #Arendur are not mentions
+        for m in name_re.finditer(text.lower()):
+            counts[names[m.group(1)]] += 1
+        return max(counts, key=lambda k: (counts[k], depth(k))) if counts else None
+
     def sessions_of(title, props):
         nums = {session_of[t] for t in prop_targets(props.get("sessions")) if t in session_of}
         nums |= {num for t, num in session_of.items() if title in links_in(notes[t]["body"])}
@@ -272,7 +306,8 @@ def build_people(notes, note_id, session_of):
             continue
         pr = n["props"]
         factions[note_id[title]] = {
-            "name": title, "seat": place_of(pr),
+            "name": title, "seat": place_of(pr) or guess_place(n["body"]),
+            "seatGuess": not place_of(pr),
             "stance": STANCE.get(str(pr.get("friend-or-foe", "")).lower(), "unknown"),
             "type": text_prop(pr.get("faction_type")), "status": text_prop(pr.get("status")),
             "leader": [note_id[t] for t in prop_targets(pr.get("leader")) if t in note_id],
@@ -295,7 +330,8 @@ def build_people(notes, note_id, session_of):
                     fids.append(note_id[t])
         pid = note_id[title]
         people[pid] = {
-            "name": title, "place": place_of(pr),
+            "name": title, "place": place_of(pr) or (None if in_party else guess_place(n["body"])),
+            "placeGuess": not place_of(pr),
             "stance": STANCE.get(disp, "ally" if in_party else "unknown"),  # party members are allies unless noted
             "dead": status == "dead" or disp.startswith("deceased"),
             "status": status if status not in ("", "alive", "unknown") else "",
@@ -427,7 +463,7 @@ def main():
         if not p["name"]:
             problems.append(f"{pid}: no name (a place without a note needs name=)")
         if not p["summary"] and PLACES[pid]["note"]:
-            problems.append(f"{pid}: no summary")
+            print(f"note: {pid} has no summary (its note has no description)")
 
     regions = {}
     for rid, r in REGIONS.items():

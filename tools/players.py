@@ -108,14 +108,15 @@ def gm_note_titles(gm_titles):
 def leak_check(atlas_json, notes_json, gm_titles=(), player_titles=()):
     """GM-only names and texts must be absent from the players' files.
 
-    Curated GM-only places, maps and gm= texts may appear nowhere. A GM note's title is a leak only in
-    the generated atlas data, and only when the players' own notes don't contain it: a name the players
-    have written down themselves is known to them (the note's content never reaches them)."""
+    gm= texts may appear nowhere. Names of GM-only places, maps and notes are leaks in the generated atlas
+    data, unless the players' own notes contain them: a name the players have written down themselves is
+    known to them (what the GM knows about it never reaches them)."""
     atlas, own = atlas_json.lower(), notes_json.lower()
     known = {t.lower() for t in player_titles}
     has = lambda blob, s: re.search(r"(?<![\wæøå])" + re.escape(s.lower()) + r"(?![\wæøå])", blob)
+    gm_text = {p["gm"] for p in PLACES.values() if p.get("gm")}
     leaks = [f"LEAK: '{s}' ({where}) is in the players' edition" for where, s in gm_only_strings()
-             if len(s) >= 4 and (has(atlas, s) or has(own, s))]
+             if len(s) >= 4 and (has(atlas, s) or has(own, s)) and (s in gm_text or not has(own, s))]
     leaks += [f"LEAK: GM note '{s}' is named in the players' atlas data"
               for s in gm_note_titles([t for t in gm_titles if t.lower() not in known])
               if len(s) >= 4 and has(atlas, s) and not has(own, s)]

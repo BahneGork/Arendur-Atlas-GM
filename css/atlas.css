@@ -123,6 +123,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .signpost small { font-family: var(--font-body); font-style: italic; font-size: 12px; opacity: 0.8; }
 .signpost:hover span, .signpost:focus span { background: var(--wax-dark); }
 
+.guess { color: var(--ink-soft); font-style: italic; }
+
 /* GM edition */
 .gm-badge {
   display: inline-block; margin-left: 8px; padding: 0 6px; vertical-align: middle; border-radius: 3px;

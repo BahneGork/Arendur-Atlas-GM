@@ -60,7 +60,7 @@ MAPS = {
     # "Delios no pins.png", the base of the players' Delios handout.
     # GM only. MistyFallsRegion-Ursia.png, exported from the Worldographer map; positions below are computed from
     # the wxx Kingdom coordinates (fit to the owner's Leaflet pins, max error 19 px).
-    "misty": {"name": "Misty Falls (GM)", "image": "maps/misty.webp", "size": [1822, 1121]},
+    "misty": {"name": "Misty Falls (GM)", "image": "maps/misty.webp", "size": [1822, 1121], "place": "misty-falls"},
     "delios": {"players": True, "name": "Delios", "image": "maps/delios.webp", "size": [7680, 4320], "place": "delios"},
 }
 
@@ -74,7 +74,7 @@ PORTALS = [
 # kind: by | borg | taarn | hule | helligt | havn | vildmark | sted
 PLACES = {
     # --- Ursia ---
-    "arendur": dict(note="", players=True, name="Arendur", map="ursia", at=[4433, 3040], kind="by", visited=True,
+    "arendur": dict(note="Arendur", players=True, name="Arendur", map="ursia", at=[4433, 3040], kind="by", visited=True,
                     summary="Hovedstaden, omgivet af den store mur som dværgene byggede (K95). "
                             "Her begyndte kompagniets historie med goblinhulerne tæt ved byen (K1)."),
     # Gutbust caves = the goblin caves, and the farm was visited: per the owner (2026-10-16).
@@ -96,7 +96,7 @@ PLACES = {
     # --- East Blackwood (labels on the players' map) ---
     # also=[(map, at, approx)]: the same place on further maps. The Ursia positions are estimates around the
     # owner's pin "Bedegaarn barony – Duke Alvares" (4752, 4066), in the open land north of the forest.
-    "delios": dict(note="", players=True, name="Delios", map="blackwood", at=[707, 465], kind="by", visited=True,
+    "delios": dict(note="Town Delios", players=True, name="Delios", map="blackwood", at=[707, 465], kind="by", visited=True,
                    also=[("misty", [1032, 338], False), ("ursia", [4895, 4157], True)],
                    summary="By med tømmer-ranches i Blackwood. Gruppen kom til festival her (K62–K64), "
                            "og borgmester Osric hyrede kompagniet (K66). Gruppens base mellem ekspeditionerne (K90, K110). "
@@ -112,7 +112,7 @@ PLACES = {
                               name="Lady Daggers huler",
                               summary="Lady Dagger kidnappede Pinna og Siertianna for at lokke gruppen til "
                                       "sit ritual (K28). I hulerne lå også købmandskaravanernes loot (K30)."),
-    "skygge-vaulten": dict(note="", players=True, parent="lady-dagger-caves", kind="hule", name="Skygge-vaulten", visited=True,
+    "skygge-vaulten": dict(note="Vault of Shadows", players=True, parent="lady-dagger-caves", kind="hule", name="Skygge-vaulten", visited=True,
                            summary="En forseglet vault i en sprække under hulerne: \"Ved Kiri-Joliths kraft og "
                                    "Helgen Worlocks autoritet skal denne boks/vault forblive låst\" (K31–K33)."),
     "maakengorge": dict(note="", players=True, also=[("misty", [1710, 91], False)], map="blackwood", at=[893, 868], kind="vildmark", name="Maakengorge"),
@@ -138,7 +138,7 @@ PLACES = {
     "bedegaarn": dict(note="", players=True, map="blackwood", at=[978, 305], kind="borg", name="Bedegaarn",
                       also=[("ursia", [4757, 3953], True)],
                       summary="Baroniets 'hovedstad' og sæde."),
-    "click-claw": dict(note="", players=True, also=[("misty", [1097, 378], False)], map="blackwood", at=[740, 525], approx=True, kind="borg", name="Click Claw Watch",
+    "click-claw": dict(note="Click Claw Watch", players=True, also=[("misty", [1097, 378], False)], map="blackwood", at=[740, 525], approx=True, kind="borg", name="Click Claw Watch",
                        visited=True, where="Ved vejen gennem bakkelandet op mod Delios.",
                        summary="Et fort fra Ork-krigen, der beskytter vejen gennem bakkelandet op mod Delios (K61)."),
     "raven-tomb": dict(note="", players=True, also=[("misty", [1098, 351], False)], map="blackwood", at=[780, 495], approx=True, kind="hule",
@@ -146,7 +146,7 @@ PLACES = {
                        aliases=["Tomb of the Raven king", "Ravne Kongens grav"],
                        summary="Her mødte gruppen Ravnekongen, som belønnede dem med et banner (K85–K88)."),
     "rirroneth-wheel": dict(note="", players=True, parent="raven-tomb", kind="sted", name="Rirroneths hjul", visited=True),
-    "fallen-star": dict(note="", players=True, also=[("misty", [1119, 392], False)], map="blackwood", at=[770, 575], approx=True, kind="sted", name="Fallen Star",
+    "fallen-star": dict(note="Fallen star inn", players=True, also=[("misty", [1119, 392], False)], map="blackwood", at=[770, 575], approx=True, kind="sted", name="Fallen Star",
                         visited=True, where="En landevejskro på vejen mod Delios (K57).",
                         summary="Landevejskro, hvor Anton og Frekka sluttede sig til gruppen (K57–K58). "
                                 "Skyggekompagniets hovedkvarter."),  # HQ: the owner's Summary Session 47
@@ -154,7 +154,7 @@ PLACES = {
                       visited=True, where="Ikke langt fra Fallen Star (K54–K57).",
                       summary="Gammelt gravsted med et elverbroderet vægtæppe. Tidsmagi sendte gruppen tilbage "
                               "til et overfald på hertugen 'den sorte ørn' (K54–K56)."),
-    "blackbriar": dict(note="", players=True, also=[("misty", [1232, 351], False)], map="blackwood", at=[800, 660], approx=True, kind="helligt",
+    "blackbriar": dict(note="blackbriar monastery", players=True, also=[("misty", [1232, 351], False)], map="blackwood", at=[800, 660], approx=True, kind="helligt",
                        name="Blackbriar kloster", visited=True,
                        where="På vejen mellem Teslions og Delios (K46).",
                        summary="Munkene blev dræbt af ghouls fra en skjult krypt fra imperiet Azerumme; "
@@ -169,7 +169,7 @@ PLACES = {
     # --- Delios (the owner's pins) ---
     # Delios visits below (inn, tavern, bookshop, professor, stables, Milly Bell, Jago's Jewel, Operation Mongoose,
     # church ruins (Anton), St. Gaed and the Oathstone (Brumor), herbalist and Gold Loaf ("vist"), Brumor's soup kitchen): per the owner (2026-10-16).
-    "dusty-tome": dict(note="", players=True, map="delios", at=[4654, 2016], parent="delios", kind="sted", name="Dusty Tome – boghandel",
+    "dusty-tome": dict(note="Dusty tome - bookshop", players=True, map="delios", at=[4654, 2016], parent="delios", kind="sted", name="Dusty Tome – boghandel",
                        visited=True, summary="Anton har besøgt boghandleren."),
     "tower-ruins": dict(note="", players=True, map="delios", at=[4716, 939], parent="delios", kind="taarn", name="Tårnruinen"),
     "old-church": dict(note="", players=True, map="delios", at=[5047, 1008], parent="delios", kind="helligt", name="Den gamle kirkeruin",
@@ -177,17 +177,17 @@ PLACES = {
     "ravenscrest": dict(note="", players=True, map="delios", at=[4707, 2693], parent="delios", kind="sted", name="Ravenscrest Emporium"),
     "egas-mannon": dict(note="", players=True, map="delios", at=[4873, 3024], parent="delios", kind="sted", name="Professor Egas Mannon",
                         visited=True, summary="Anton lærte af Egas Mannon og fik Book of the Raven (K99–K100)."),
-    "anden": dict(note="", players=True, map="delios", at=[4839, 2554], parent="delios", kind="sted", name="Anden tavern",
+    "anden": dict(note="Anden tavern", players=True, map="delios", at=[4839, 2554], parent="delios", kind="sted", name="Anden tavern",
                   visited=True, summary="Nogle af gruppen har været på besøg i kroen."),
-    "stormpine": dict(note="", players=True, map="delios", at=[4458, 2879], parent="delios", kind="sted", name="Stormpine Hall – gentlemen club"),
-    "osric-stables": dict(note="", players=True, map="delios", at=[4364, 2746], parent="delios", kind="sted", name="Osric's Gilded Stables",
+    "stormpine": dict(note="Stormpine Hall - gentlemen club", players=True, map="delios", at=[4458, 2879], parent="delios", kind="sted", name="Stormpine Hall – gentlemen club"),
+    "osric-stables": dict(note="Osric's Gilded Stables", players=True, map="delios", at=[4364, 2746], parent="delios", kind="sted", name="Osric's Gilded Stables",
                        visited=True, summary="Gruppen har været i staldene."),
     "operation-mongoose": dict(note="", players=True, map="delios", at=[4096, 3268], parent="delios", kind="sted", name="Operation Mongoose",
                             visited=True, summary="Gruppen var til stede ved Operation Mongoose."),
     "black-eagle": dict(note="", players=True, map="delios", at=[4016, 3106], parent="delios", kind="sted", name="Black Eagle square"),
-    "osric-loaf": dict(note="", players=True, map="delios", at=[4008, 2811], parent="delios", kind="sted", name="Osric's Gold Loaf",
+    "osric-loaf": dict(note="Osric's Gold Loaf", players=True, map="delios", at=[4008, 2811], parent="delios", kind="sted", name="Osric's Gold Loaf",
                       visited=True, summary="Gruppen har været i Osric's Gold Loaf."),
-    "black-portrait": dict(note="", players=True, map="delios", at=[3660, 3151], parent="delios", kind="sted", name="Black Portrait Inn",
+    "black-portrait": dict(note="Black portrait Inn", players=True, map="delios", at=[3660, 3151], parent="delios", kind="sted", name="Black Portrait Inn",
                            visited=True, summary="Kroen, hvor gruppen har boet i Delios."),
     "herbalist": dict(note="", players=True, map="delios", at=[3586, 3628], parent="delios", kind="sted", name="Herbalist",
                      visited=True, summary="Gruppen har været hos herbalisten."),
@@ -195,14 +195,14 @@ PLACES = {
                      visited=True, summary="Brumor har besøgt Oathstone."),
     "harrt-house": dict(note="", players=True, map="delios", at=[1996, 2673], parent="delios", kind="sted", name="The Harrt House"),
     "town-square": dict(note="", players=True, map="delios", at=[3796, 2486], parent="delios", kind="sted", name="Town Square"),
-    "milly-bell": dict(note="", players=True, map="delios", at=[3811, 2224], parent="delios", kind="sted", name="The Milly Bell",
+    "milly-bell": dict(note="The Milly Bell", players=True, map="delios", at=[3811, 2224], parent="delios", kind="sted", name="The Milly Bell",
                        visited=True, summary="Gruppen har været i The Milly Bell."),
     "town-hall": dict(note="", players=True, map="delios", at=[4099, 2311], parent="delios", kind="borg", name="Town Hall",
                       summary="Cedric var blandt VIP-gæsterne i borgmesterboligen under festivalen (K64)."),
-    "gaeds-sanctuary": dict(note="", players=True, map="delios", at=[3982, 1830], parent="delios", kind="helligt", name="Gaed's sanctuary",
+    "gaeds-sanctuary": dict(note="Gaed's sanctuary", players=True, map="delios", at=[3982, 1830], parent="delios", kind="helligt", name="Gaed's sanctuary",
                             aliases=["St. Gaed kirken", "St. Gaed"], visited=True,
                             summary="St. Gaed-kirken. Brumor har været i kirken."),
-    "jagos-jewel": dict(note="", players=True, map="delios", at=[3414, 1674], parent="delios", kind="sted", name="Jago's Jewel",
+    "jagos-jewel": dict(note="Jago's Jewel", players=True, map="delios", at=[3414, 1674], parent="delios", kind="sted", name="Jago's Jewel",
                         visited=True, summary="Gruppen har været i Jago's Jewel."),
 
     # --- GM only: Worldographer places on the Misty Falls map (not shown to the players) ---
@@ -230,6 +230,26 @@ PLACES = {
     "ambush-farm": dict(note="", name="Ambush farm", map="misty", at=[1163, 392], kind="sted"),
     "hamlet": dict(note="", name="Hamlet ved Click Claw Watch", map="misty", at=[1142, 378], kind="by"),
 
+    # --- GM only: places from the location notes (Bible/04 Fact sheets/14 Locations), parent by folder ---
+    "misty-falls": dict(note="Misty Falls", parent="east-blackwood", kind="vildmark"),
+    "click-claw-moors": dict(note="Click claw moors", map="misty", at=[1071, 380], kind="vildmark",
+                             name="Click Claw Moors"),  # position: the wxx label "Click Claw Moors"
+    "ashmar-downs": dict(note="Ashmar Downs", parent="misty-falls", kind="sted"),
+    "haudh-ninlaith": dict(note="Haudh Ninlaith", parent="misty-falls", kind="helligt"),
+    "azuremarket": dict(note="Azuremarket", parent="arendur", kind="sted"),
+    "everending-staircase": dict(note="Everending Staircase - monument", offmap="other", kind="sted",
+                                 name="Everending Staircase"),
+    "rustne-baeger": dict(note="Det Rustne bæger", parent="delios", kind="sted", name="Det Rustne Bæger"),
+    "black-hammer": dict(note="Black Hammer", parent="delios", kind="sted"),
+    "beltath": dict(note="Beltath", parent="delios", kind="sted"),
+    "osric-gold-button": dict(note="Osric's Gold button", parent="delios", kind="sted", name="Osric's Gold Button"),
+    "lumber-ranches": dict(note="lumber ranches", parent="delios", kind="sted", name="Lumber ranches"),
+    "ranch-falca": dict(note="Ranch 1 Falca", parent="lumber-ranches", kind="sted"),
+    "ranch-rutus": dict(note="Ranch 2 Rutus", parent="lumber-ranches", kind="sted"),
+    "ranch-mulcere": dict(note="Ranch 3 Mulcere", parent="lumber-ranches", kind="sted"),
+    "ranch-beltath": dict(note="Ranch 4 Beltath", parent="lumber-ranches", kind="sted"),
+    "ranch-tenere": dict(note="Ranch 5 Tenere", parent="lumber-ranches", kind="sted"),
+
     # --- Off the maps ---
     "rirroneth": dict(note="", players=True, offmap="other", kind="vildmark", name="Rirroneths domæne", visited=True,
                       where="Et domæne i Far Realm.",
@@ -246,7 +266,7 @@ PLACES = {
     "akalane": dict(note="", players=True, offmap="other", kind="by", name="Akalane",
                     where="På den anden side af Blackwood-skoven.",
                     summary="By som Delios handler med."),
-    "dead-mountain": dict(note="", players=True, offmap="other", kind="vildmark", name="Dødebjerget", visited=True,
+    "dead-mountain": dict(note="Dead Mountain", players=True, offmap="other", kind="vildmark", name="Dødebjerget", visited=True,
                           summary="Gruppen udryddede udøde her; et mægtigt monster vågnede, og Brumor døde (K107–K109)."),
 }
 
@@ -297,7 +317,20 @@ SESSIONS = [
 ]
 
 LOCATION_ALIASES = {}
-NOT_PLACES = set()
+NOT_PLACES = {  # location notes that are maps, lists, rules, rumours, people or items, not places
+    "14 Locations", "Alternate vampire plot", "Arendur Organisations", "Arendur Rising Fronts",
+    "Bedegaarn Barony Region Sheet", "Belle", "Delios (known)", "Delios known poi", "Delios possible trainers",
+    "Despotic realm of Regent Hexton of Bedegaarn", "Domains in the barony",
+    "Dragonfly creek - following river by land - encounters", "Fallen star inn - first visit",
+    "Franz Griffins medallion", "Hexton regent of Bedegaarn", "Map - Misty falls region", "Misty falls Nodes",
+    "Misty falls region map", "Mistyfalls subregion lists", "NPCs in Delios town", "Rinaken Stormbane",
+    "Rumours - Delios", "Secrets in Delios town", "Selling loot in Delios", "Sir Claudio Patrol",
+    "Standard Spell services costs", "THE death knight", "Teleportation Circles", "The Bedegaarn Barony MOC",
+    "The Stormpine halls library inventory", "The southern Baronies", "Training possibilities in Delios",
+    "Ursia Region Map", "Ursia hex map", "ambush wagon loot", "clickclawmoors hazards", "council of three",
+    "framed black canvas", "misty falls region npc domains", "stone crabs", "tax_enforcement_guide",
+    "taxation_system_ursia", "worker elixirs",
+}
 
 PARTY = []  # party members with a published note (none yet)
 PARTY_STATUS = {}

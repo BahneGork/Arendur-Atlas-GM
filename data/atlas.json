@@ -33,7 +33,8 @@
    "size": [
     1822,
     1121
-   ]
+   ],
+   "place": "misty-falls"
   },
   "delios": {
    "players": true,
@@ -100,10 +101,88 @@
    "summary": "Hovedstaden, omgivet af den store mur som dværgene byggede (K95). Her begyndte kompagniets historie med goblinhulerne tæt ved byen (K1).",
    "url": "",
    "sessions": [],
-   "people": [],
-   "factions": [],
+   "people": [
+    [
+     "Angel the executioner",
+     "angel-the-executioner"
+    ],
+    [
+     "Bayard - spy of  'the eyes'",
+     "bayard-spy-of-the-eyes"
+    ],
+    [
+     "Faustus Antili",
+     "faustus-antili"
+    ],
+    [
+     "Harl Lasalle",
+     "harl-lasalle"
+    ],
+    [
+     "Josie Harrt",
+     "josie-harrt"
+    ],
+    [
+     "Kalarel the vile",
+     "kalarel-the-vile"
+    ],
+    [
+     "Lord Davide Castilla",
+     "lord-davide-castilla"
+    ],
+    [
+     "Lord Jarret Castilla",
+     "lord-jarret-castilla"
+    ],
+    [
+     "Nails",
+     "nails"
+    ],
+    [
+     "People",
+     "people"
+    ],
+    [
+     "People Origins",
+     "people-origins"
+    ],
+    [
+     "Regent Hexton",
+     "regent-hexton"
+    ],
+    [
+     "Selina Rosenknop",
+     "selina-rosenknop"
+    ]
+   ],
+   "factions": [
+    [
+     "Abbesses",
+     "abbesses"
+    ],
+    [
+     "Blue Guardians",
+     "blue-guardians"
+    ],
+    [
+     "Cult of Oztt",
+     "cult-of-oztt"
+    ],
+    [
+     "Eyes of the many headed snake",
+     "eyes-of-the-many-headed-snake"
+    ],
+    [
+     "The Ruby Throne",
+     "the-ruby-throne"
+    ],
+    [
+     "The Tower",
+     "the-tower"
+    ]
+   ],
    "visited": true,
-   "noteId": ""
+   "noteId": "arendur"
   },
   "goblin-caves": {
    "name": "Gutbust-hulerne",
@@ -133,7 +212,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "farmer-john": {
    "name": "Farmer Johns gård",
@@ -157,7 +236,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "kvalec": {
    "name": "Kvalec",
@@ -184,7 +263,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "east-blackwood": {
    "name": "East Blackwood",
@@ -211,7 +290,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "delios": {
    "name": "Delios",
@@ -256,10 +335,36 @@
     15,
     16
    ],
-   "people": [],
-   "factions": [],
+   "people": [
+    [
+     "Irina Delaque",
+     "irina-delaque"
+    ],
+    [
+     "keyleigh dufaigh",
+     "keyleigh-dufaigh"
+    ],
+    [
+     "Minka Fischer",
+     "minka-fischer"
+    ],
+    [
+     "Ostler Hamm",
+     "ostler-hamm"
+    ],
+    [
+     "The Vampire Spawn",
+     "the-vampire-spawn"
+    ]
+   ],
+   "factions": [
+    [
+     "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
+     "shadow-company-mcdm-organization-sheet-2025-01-13"
+    ]
+   ],
    "visited": true,
-   "noteId": ""
+   "noteId": "town-delios"
   },
   "teslions": {
    "name": "Teslions",
@@ -306,7 +411,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "logen": {
    "name": "Logen i Teslions",
@@ -330,7 +435,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lady-dagger-shop": {
    "name": "Lady Daggers butik",
@@ -354,7 +459,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lady-dagger-caves": {
    "name": "Lady Daggers huler",
@@ -383,7 +488,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "skygge-vaulten": {
    "name": "Skygge-vaulten",
@@ -406,10 +511,15 @@
    "sessions": [
     6
    ],
-   "people": [],
+   "people": [
+    [
+     "Duerif Redblade",
+     "duerif-redblade"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "vault-of-shadows"
   },
   "maakengorge": {
    "name": "Maakengorge",
@@ -445,7 +555,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "sunken-citadel": {
    "name": "Det sunkne citadel",
@@ -483,7 +593,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "camp-oxbar": {
    "name": "Camp Oxbar",
@@ -521,7 +631,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "skullgorge": {
    "name": "Skullgorge-broen",
@@ -553,7 +663,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "blackspear": {
    "name": "Castle Blackspear",
@@ -589,7 +699,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "blackspear-swamp": {
    "name": "Blackspear-sumpen",
@@ -616,7 +726,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "ranger-hut": {
    "name": "Rangerhytten",
@@ -652,7 +762,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "bedegaarn": {
    "name": "Bedegaarn",
@@ -688,7 +798,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "click-claw": {
    "name": "Click Claw Watch",
@@ -723,10 +833,32 @@
    "sessions": [
     11
    ],
-   "people": [],
-   "factions": [],
+   "people": [
+    [
+     "Bartoz",
+     "bartoz"
+    ],
+    [
+     "Bartoz 1",
+     "bartoz-1"
+    ],
+    [
+     "People",
+     "people"
+    ],
+    [
+     "Wulfram",
+     "wulfram"
+    ]
+   ],
+   "factions": [
+    [
+     "House Arpad",
+     "house-arpad"
+    ]
+   ],
    "visited": true,
-   "noteId": ""
+   "noteId": "click-claw-watch"
   },
   "raven-tomb": {
    "name": "Ravnekongens grav",
@@ -768,7 +900,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "rirroneth-wheel": {
    "name": "Rirroneths hjul",
@@ -794,7 +926,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "fallen-star": {
    "name": "Fallen Star",
@@ -829,10 +961,15 @@
    "sessions": [
     10
    ],
-   "people": [],
+   "people": [
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "fallen-star-inn"
   },
   "mausoleum": {
    "name": "Mausoleet",
@@ -861,7 +998,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "blackbriar": {
    "name": "Blackbriar kloster",
@@ -896,10 +1033,48 @@
    "sessions": [
     8
    ],
-   "people": [],
-   "factions": [],
+   "people": [
+    [
+     "Broder Aldo",
+     "broder-aldo"
+    ],
+    [
+     "Broder Fulton",
+     "broder-fulton"
+    ],
+    [
+     "Broder Thomas spada",
+     "broder-thomas-spada"
+    ],
+    [
+     "Gregor Schatz",
+     "gregor-schatz"
+    ],
+    [
+     "Ivana Schatz",
+     "ivana-schatz"
+    ],
+    [
+     "Lord Vermil",
+     "lord-vermil"
+    ],
+    [
+     "People",
+     "people"
+    ],
+    [
+     "THE necromancer",
+     "the-necromancer"
+    ]
+   ],
+   "factions": [
+    [
+     "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
+     "shadow-company-mcdm-organization-sheet-2025-01-13"
+    ]
+   ],
    "visited": true,
-   "noteId": ""
+   "noteId": "blackbriar-monastery"
   },
   "anadur": {
    "name": "Anadur",
@@ -926,7 +1101,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "kraeltor": {
    "name": "Kraeltor",
@@ -953,7 +1128,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "taernu": {
    "name": "Taernu",
@@ -980,7 +1155,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "gaernur": {
    "name": "Gaernur",
@@ -1007,7 +1182,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "red-hand-warcamp": {
    "name": "Den røde hånds lejr",
@@ -1034,7 +1209,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "cinderhill": {
    "name": "Cinderhill",
@@ -1061,7 +1236,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "dusty-tome": {
    "name": "Dusty Tome – boghandel",
@@ -1088,7 +1263,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "dusty-tome-bookshop"
   },
   "tower-ruins": {
    "name": "Tårnruinen",
@@ -1115,7 +1290,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "old-church": {
    "name": "Den gamle kirkeruin",
@@ -1142,7 +1317,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "ravenscrest": {
    "name": "Ravenscrest Emporium",
@@ -1169,7 +1344,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "egas-mannon": {
    "name": "Professor Egas Mannon",
@@ -1198,7 +1373,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "anden": {
    "name": "Anden tavern",
@@ -1222,10 +1397,23 @@
    "summary": "Nogle af gruppen har været på besøg i kroen.",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "Milton Fischer",
+     "milton-fischer"
+    ],
+    [
+     "Minka Fischer",
+     "minka-fischer"
+    ],
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "anden-tavern"
   },
   "stormpine": {
    "name": "Stormpine Hall – gentlemen club",
@@ -1246,13 +1434,18 @@
    "aliases": [],
    "travel": "",
    "travelLost": false,
-   "summary": "",
+   "summary": "It also has a private library, [The Stormpine halls library inventory](#note/the-stormpine-halls-library-inventory)",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "Roland Hartmoor",
+     "roland-hartmoor"
+    ]
+   ],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": "stormpine-hall-gentlemen-club"
   },
   "osric-stables": {
    "name": "Osric's Gilded Stables",
@@ -1276,10 +1469,15 @@
    "summary": "Gruppen har været i staldene.",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "osric-s-gilded-stables"
   },
   "operation-mongoose": {
    "name": "Operation Mongoose",
@@ -1306,7 +1504,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "black-eagle": {
    "name": "Black Eagle square",
@@ -1333,7 +1531,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "osric-loaf": {
    "name": "Osric's Gold Loaf",
@@ -1360,7 +1558,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "osric-s-gold-loaf"
   },
   "black-portrait": {
    "name": "Black Portrait Inn",
@@ -1384,10 +1582,23 @@
    "summary": "Kroen, hvor gruppen har boet i Delios.",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "Agapito Alamilla",
+     "agapito-alamilla"
+    ],
+    [
+     "Ashely Vieth",
+     "ashely-vieth"
+    ],
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "black-portrait-inn"
   },
   "herbalist": {
    "name": "Herbalist",
@@ -1414,7 +1625,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "oathstone": {
    "name": "Oathstone of the Ancients",
@@ -1441,7 +1652,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "harrt-house": {
    "name": "The Harrt House",
@@ -1468,7 +1679,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "town-square": {
    "name": "Town Square",
@@ -1495,7 +1706,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "milly-bell": {
    "name": "The Milly Bell",
@@ -1519,10 +1730,23 @@
    "summary": "Gruppen har været i The Milly Bell.",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "Bell",
+     "bell"
+    ],
+    [
+     "Millicent",
+     "millicent"
+    ],
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "the-milly-bell"
   },
   "town-hall": {
    "name": "Town Hall",
@@ -1551,7 +1775,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "gaeds-sanctuary": {
    "name": "Gaed's sanctuary",
@@ -1581,7 +1805,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "gaed-s-sanctuary"
   },
   "jagos-jewel": {
    "name": "Jago's Jewel",
@@ -1605,10 +1829,15 @@
    "summary": "Gruppen har været i Jago's Jewel.",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "People",
+     "people"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "jago-s-jewel"
   },
   "caves-of-shadows": {
    "name": "Caves of Shadows",
@@ -1635,7 +1864,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "crocodile-lair": {
    "name": "Crocodile Lair",
@@ -1673,7 +1902,7 @@
    ],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "fort-demass": {
    "name": "Fort De'mass",
@@ -1700,7 +1929,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "gazebo": {
    "name": "Gazebo",
@@ -1727,7 +1956,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "hag-coven": {
    "name": "Hag Coven Lair",
@@ -1754,7 +1983,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "infernal-grotto": {
    "name": "Infernal Grotto",
@@ -1781,7 +2010,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lumber-ranch-1": {
    "name": "Lumber Ranch 1",
@@ -1808,7 +2037,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lumber-ranch-2": {
    "name": "Lumber Ranch 2",
@@ -1835,7 +2064,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lumber-ranch-3": {
    "name": "Lumber Ranch 3",
@@ -1862,7 +2091,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lumber-ranch-4": {
    "name": "Lumber Ranch 4",
@@ -1889,7 +2118,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "lumber-ranch-5": {
    "name": "Lumber Ranch 5",
@@ -1916,7 +2145,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "manticore-lair": {
    "name": "Manticore Lair",
@@ -1943,7 +2172,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "mossy-delve": {
    "name": "Mossy Delve",
@@ -1970,7 +2199,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "solambre": {
    "name": "Solambre",
@@ -1997,7 +2226,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "star-song-hill": {
    "name": "Star Song Hill",
@@ -2027,7 +2256,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "tower-of-lightning": {
    "name": "Tower of Lightning",
@@ -2054,7 +2283,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "ambush-farm": {
    "name": "Ambush farm",
@@ -2081,7 +2310,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "hamlet": {
    "name": "Hamlet ved Click Claw Watch",
@@ -2108,7 +2337,492 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
+  },
+  "misty-falls": {
+   "name": "Misty Falls",
+   "kind": "vildmark",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "east-blackwood",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "The southern part of [Bedegaarn Barony](#note/the-bedegaarn-barony-moc) is known as [Misty Falls](#note/misty-falls). Delios - Teslions - [Taernu](#note/taernu)",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "Family Martelli",
+     "family-martelli"
+    ],
+    [
+     "Jayce Fireheart - ranger hut",
+     "jayce-fireheart-ranger-hut"
+    ],
+    [
+     "Ranger hut - Jayce Fireheart",
+     "ranger-hut-jayce-fireheart"
+    ]
+   ],
+   "factions": [
+    [
+     "Family Eberhardt",
+     "family-eberhardt"
+    ],
+    [
+     "Family Martelli 1",
+     "family-martelli-1"
+    ],
+    [
+     "House Arpad",
+     "house-arpad"
+    ]
+   ],
+   "visited": false,
+   "noteId": "misty-falls"
+  },
+  "click-claw-moors": {
+   "name": "Click Claw Moors",
+   "kind": "vildmark",
+   "map": "misty",
+   "at": [
+    1071,
+    380
+   ],
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "The Moors are rocky, hilly and slightly watery. The road snakes and bends sharply to avoid the difficult terrains. Along the well travelled road lies the [Click Claw Watch](#note/click-claw-watch) fort.",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "Bartolo the guide",
+     "bartolo-the-guide"
+    ],
+    [
+     "Family Paget",
+     "family-paget"
+    ],
+    [
+     "People",
+     "people"
+    ],
+    [
+     "Willard",
+     "willard"
+    ]
+   ],
+   "factions": [
+    [
+     "Family Paget 1",
+     "family-paget-1"
+    ]
+   ],
+   "visited": false,
+   "noteId": "click-claw-moors"
+  },
+  "ashmar-downs": {
+   "name": "Ashmar Downs",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "misty-falls",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "in Bedegaarn Barony, close to Teslions. Ruins of an old keep was swallowed up by a giant sinkhole many years ago, remains of it is scattered in a few caverns underground. One of which holds the teleportation circle of an ancient empire, the floor is tilted due to the collapse.",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "ashmar-downs"
+  },
+  "haudh-ninlaith": {
+   "name": "Haudh Ninlaith",
+   "kind": "helligt",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "misty-falls",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "The alexandrian time travel scenario the black eagle Alternate version from comments \"the claw\"",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "The Inexorable Time",
+     "the-inexorable-time"
+    ],
+    [
+     "the sorrowful lady",
+     "the-sorrowful-lady"
+    ],
+    [
+     "The Star-Violet Lady",
+     "the-star-violet-lady"
+    ]
+   ],
+   "factions": [],
+   "visited": false,
+   "noteId": "haudh-ninlaith"
+  },
+  "azuremarket": {
+   "name": "Azuremarket",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "arendur",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "A market in [Arendur](#note/arendur) The biggest spice market in the city.",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "Faustus Antili",
+     "faustus-antili"
+    ]
+   ],
+   "factions": [
+    [
+     "The Fulcrom",
+     "the-fulcrom"
+    ]
+   ],
+   "visited": false,
+   "noteId": "azuremarket"
+  },
+  "everending-staircase": {
+   "name": "Everending Staircase",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": null,
+   "region": null,
+   "offmap": "other",
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "brainstorm aspects vertigo spiral staircase, avoid looking down paranoia - didnt we already pass this step?brick? trapped - cant escape the staircase torture - neverending size - gargantic or titanic runes - ancient celestial runes marking all over the stair case",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "everending-staircase-monument"
+  },
+  "rustne-baeger": {
+   "name": "Det Rustne Bæger",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "delios",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "The Rusty Goblet: A cozy tavern/inn in the heart of Delios known for its friendly atmosphere, affordable accommodations, and delicious food. The rustic establishment features a bustling tavern area with a well-stocked bar and a spacious dining hall offering hearty meals.",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "det-rustne-baeger"
+  },
+  "black-hammer": {
+   "name": "Black Hammer",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "delios",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "black-hammer"
+  },
+  "beltath": {
+   "name": "Beltath",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "delios",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "beltath"
+  },
+  "osric-gold-button": {
+   "name": "Osric's Gold Button",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "delios",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "osric-s-gold-button"
+  },
+  "lumber-ranches": {
+   "name": "Lumber ranches",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "delios",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "Delios exists to provide lumber for the barony. This has over the ages resulted in 5 prominent family ranches that manages lumbering in the provided lots.",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "lumber-ranches"
+  },
+  "ranch-falca": {
+   "name": "Ranch 1 Falca",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "lumber-ranches",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "Family Martelli",
+     "family-martelli"
+    ],
+    [
+     "mace Martelli",
+     "mace-martelli"
+    ],
+    [
+     "Ramon Chartrand - Alkymist",
+     "ramon-chartrand-alkymist"
+    ],
+    [
+     "The Vampire Spawn",
+     "the-vampire-spawn"
+    ]
+   ],
+   "factions": [
+    [
+     "Family Martelli 1",
+     "family-martelli-1"
+    ]
+   ],
+   "visited": false,
+   "noteId": "ranch-1-falca"
+  },
+  "ranch-rutus": {
+   "name": "Ranch 2 Rutus",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "lumber-ranches",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "ranch-2-rutus"
+  },
+  "ranch-mulcere": {
+   "name": "Ranch 3 Mulcere",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "lumber-ranches",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "ranch-3-mulcere"
+  },
+  "ranch-beltath": {
+   "name": "Ranch 4 Beltath",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "lumber-ranches",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "The Beltath ranch is owned and run by the",
+   "url": "",
+   "sessions": [],
+   "people": [
+    [
+     "Ashely Vieth",
+     "ashely-vieth"
+    ]
+   ],
+   "factions": [],
+   "visited": false,
+   "noteId": "ranch-4-beltath"
+  },
+  "ranch-tenere": {
+   "name": "Ranch 5 Tenere",
+   "kind": "sted",
+   "map": null,
+   "at": null,
+   "approx": false,
+   "also": [],
+   "scroll": false,
+   "gm": "",
+   "parent": "lumber-ranches",
+   "region": null,
+   "offmap": null,
+   "where": "",
+   "aliases": [],
+   "travel": "",
+   "travelLost": false,
+   "summary": "",
+   "url": "",
+   "sessions": [],
+   "people": [],
+   "factions": [],
+   "visited": false,
+   "noteId": "ranch-5-tenere"
   },
   "rirroneth": {
    "name": "Rirroneths domæne",
@@ -2134,7 +2848,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "pearl-fortress": {
    "name": "Perleborgen",
@@ -2162,7 +2876,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "festering-spire": {
    "name": "Labyrinth caves of the festering spire",
@@ -2186,7 +2900,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": null
   },
   "steel-castle": {
    "name": "Stålridderborgen",
@@ -2212,7 +2926,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "akalane": {
    "name": "Akalane",
@@ -2236,7 +2950,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": ""
+   "noteId": null
   },
   "dead-mountain": {
    "name": "Dødebjerget",
@@ -2259,16 +2973,26 @@
    "sessions": [
     16
    ],
-   "people": [],
+   "people": [
+    [
+     "Copper",
+     "copper"
+    ],
+    [
+     "THE necromancer",
+     "the-necromancer"
+    ]
+   ],
    "factions": [],
    "visited": true,
-   "noteId": ""
+   "noteId": "dead-mountain"
   }
  },
  "people": {
   "avarthel": {
    "name": "Avarthel",
-   "place": null,
+   "place": "star-song-hill",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2284,6 +3008,7 @@
   "03-people": {
    "name": "03 People",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2299,6 +3024,7 @@
   "1-npc-database": {
    "name": "1.NPC database",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2313,7 +3039,8 @@
   },
   "agapito-alamilla": {
    "name": "Agapito Alamilla",
-   "place": null,
+   "place": "black-portrait",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2328,7 +3055,8 @@
   },
   "alistair-kingsley": {
    "name": "Alistair Kingsley",
-   "place": null,
+   "place": "ravenscrest",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2345,7 +3073,8 @@
   },
   "angel-the-executioner": {
    "name": "Angel the executioner",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2361,6 +3090,7 @@
   "antero-calaman": {
    "name": "Antero Calaman",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2375,7 +3105,8 @@
   },
   "ashely-vieth": {
    "name": "Ashely Vieth",
-   "place": null,
+   "place": "black-portrait",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2390,7 +3121,8 @@
   },
   "ashley-seidel": {
    "name": "Ashley Seidel",
-   "place": null,
+   "place": "ravenscrest",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2408,6 +3140,7 @@
   "aurilia": {
    "name": "Aurilia",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -2422,7 +3155,8 @@
   },
   "bartolo-the-guide": {
    "name": "Bartolo the guide",
-   "place": null,
+   "place": "click-claw-moors",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2437,7 +3171,8 @@
   },
   "battlehunter-killiar-arrowswift": {
    "name": "Battlehunter Killiar Arrowswift",
-   "place": null,
+   "place": "star-song-hill",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2452,7 +3187,8 @@
   },
   "bayard-spy-of-the-eyes": {
    "name": "Bayard - spy of  'the eyes'",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": false,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2468,6 +3204,7 @@
   "caillach": {
    "name": "Caillach",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2482,7 +3219,8 @@
   },
   "carlotta-baras": {
    "name": "Carlotta Baras",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": false,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2498,6 +3236,7 @@
   "carthach-caskill": {
    "name": "Carthach ó Caskill",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2515,6 +3254,7 @@
   "charnel-house-tomb-robber-team": {
    "name": "Charnel house tomb robber team",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2530,6 +3270,7 @@
   "clan-doomfist": {
    "name": "Clan Doomfist",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2544,7 +3285,8 @@
   },
   "copper": {
    "name": "Copper",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -2559,7 +3301,8 @@
   },
   "duerif-redblade": {
    "name": "Duerif Redblade",
-   "place": null,
+   "place": "skygge-vaulten",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2575,6 +3318,7 @@
   "duke-armatage-volantis": {
    "name": "Duke Armatage Volantis",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": true,
    "status": "dead",
@@ -2592,7 +3336,8 @@
   },
   "emrik-varrow-of-house-varrow": {
    "name": "Emrik Varrow - of house varrow",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2609,7 +3354,8 @@
   },
   "family-martelli": {
    "name": "Family Martelli",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2624,7 +3370,8 @@
   },
   "family-paget": {
    "name": "Family Paget",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2641,7 +3388,8 @@
   },
   "faustus-antili": {
    "name": "Faustus Antili",
-   "place": null,
+   "place": "azuremarket",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": true,
    "status": "dead",
@@ -2656,7 +3404,8 @@
   },
   "fireberry": {
    "name": "Fireberry",
-   "place": null,
+   "place": "star-song-hill",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2672,6 +3421,7 @@
   "fulke-wyrmdancer": {
    "name": "Fulke Wyrmdancer",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2686,7 +3436,8 @@
   },
   "glanzar": {
    "name": "Glanzar",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2702,6 +3453,7 @@
   "gregor-shatz": {
    "name": "Gregor Shatz",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2717,6 +3469,7 @@
   "grozon-hillsmasher": {
    "name": "Grozon “Hillsmasher”",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2731,7 +3484,8 @@
   },
   "harl-lasalle": {
    "name": "Harl Lasalle",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": false,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2746,7 +3500,8 @@
   },
   "irina-delaque": {
    "name": "Irina Delaque",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2762,6 +3517,7 @@
   "ivana-shatz": {
    "name": "Ivana Shatz",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2776,7 +3532,8 @@
   },
   "izzy-the-goblin-bard": {
    "name": "Izzy - the goblin bard",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2792,6 +3549,7 @@
   "jago": {
    "name": "Jago",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2806,7 +3564,8 @@
   },
   "jayce-fireheart-ranger-hut": {
    "name": "Jayce Fireheart - ranger hut",
-   "place": null,
+   "place": "misty-falls",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2821,7 +3580,8 @@
   },
   "josie-harrt": {
    "name": "Josie Harrt",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2836,7 +3596,8 @@
   },
   "judith-m-ller": {
    "name": "Judith Müller",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -2851,7 +3612,8 @@
   },
   "kalarel-the-vile": {
    "name": "Kalarel the vile",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": false,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2869,6 +3631,7 @@
   "kryx-bloodgnash": {
    "name": "Kryx Bloodgnash",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2887,7 +3650,8 @@
   },
   "kurz-beier": {
    "name": "Kurz Beier",
-   "place": null,
+   "place": "fallen-star",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2903,6 +3667,7 @@
   "lady-dazran": {
    "name": "Lady Dazran",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2918,6 +3683,7 @@
   "lady-floret": {
    "name": "Lady Floret",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2933,6 +3699,7 @@
   "lady-isabel-castilla": {
    "name": "Lady Isabel Castilla",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2947,7 +3714,8 @@
   },
   "lady-millicity": {
    "name": "Lady Millicity",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2963,6 +3731,7 @@
   "latona-pippa-the-halfling": {
    "name": "Latona 'Pippa' the halfling",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2977,7 +3746,8 @@
   },
   "lord-chilton-haugwitz": {
    "name": "Lord Chilton haugwitz",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -2993,6 +3763,7 @@
   "lord-davide-castilla-guard-unit": {
    "name": "Lord Davide Castilla guard unit",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3007,7 +3778,8 @@
   },
   "lord-davide-castilla": {
    "name": "Lord Davide Castilla",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3024,7 +3796,8 @@
   },
   "lord-jarret-castilla": {
    "name": "Lord Jarret Castilla",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3039,7 +3812,8 @@
   },
   "lord-vermil": {
    "name": "Lord Vermil",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3054,7 +3828,8 @@
   },
   "lord-wolfgang-landor": {
    "name": "Lord wolfgang landor",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3070,6 +3845,7 @@
   "ludwig": {
    "name": "Ludwig",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3085,6 +3861,7 @@
   "madam-constance": {
    "name": "Madam Constance",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3100,6 +3877,7 @@
   "marta-alamilla": {
    "name": "Marta Alamilla",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3115,6 +3893,7 @@
   "meepo": {
    "name": "Meepo",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -3130,6 +3909,7 @@
   "mellik": {
    "name": "Mellik",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3144,7 +3924,8 @@
   },
   "michell": {
    "name": "Michell",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3159,7 +3940,8 @@
   },
   "miha": {
    "name": "Miha",
-   "place": null,
+   "place": "operation-mongoose",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3174,7 +3956,8 @@
   },
   "milton-fischer": {
    "name": "Milton Fischer",
-   "place": null,
+   "place": "anden",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3189,7 +3972,8 @@
   },
   "minka-fischer": {
    "name": "Minka Fischer",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3205,6 +3989,7 @@
   "morgouse": {
    "name": "Morgouse",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3219,7 +4004,8 @@
   },
   "nails": {
    "name": "Nails",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3234,7 +4020,8 @@
   },
   "osric-schneider": {
    "name": "Osric Schneider",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3251,7 +4038,8 @@
   },
   "ostler-hamm": {
    "name": "Ostler Hamm",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3266,7 +4054,8 @@
   },
   "people-origins": {
    "name": "People Origins",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3281,7 +4070,8 @@
   },
   "pinna": {
    "name": "Pinna",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -3296,7 +4086,8 @@
   },
   "preston": {
    "name": "Preston",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3312,6 +4103,7 @@
   "queen-of-bones-court-of-all-flesh": {
    "name": "Queen of bones, court of all flesh",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3326,7 +4118,8 @@
   },
   "ramon-chartrand-alkymist": {
    "name": "Ramon Chartrand - Alkymist",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3341,7 +4134,8 @@
   },
   "ranger-hut-jayce-fireheart": {
    "name": "Ranger hut - Jayce Fireheart",
-   "place": null,
+   "place": "misty-falls",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3356,7 +4150,8 @@
   },
   "regent-hexton": {
    "name": "Regent Hexton",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3372,6 +4167,7 @@
   "regilarix-lore": {
    "name": "Regilarix - lore",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3386,7 +4182,8 @@
   },
   "robert-gambini": {
    "name": "Robert Gambini",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3402,6 +4199,7 @@
   "rochefort-scheneschal-of-house-zardanti": {
    "name": "Rochefort Scheneschal of House Zardanti",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3416,7 +4214,8 @@
   },
   "roland-hartmoor": {
    "name": "Roland Hartmoor",
-   "place": null,
+   "place": "stormpine",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3432,6 +4231,7 @@
   "saint-elowen-brightsword-of-paladine": {
    "name": "Saint Elowen Brightsword of Paladine",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3446,7 +4246,8 @@
   },
   "selina-rosenknop": {
    "name": "Selina Rosenknop",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3461,7 +4262,8 @@
   },
   "shaw-hammett": {
    "name": "Shaw Hammett",
-   "place": null,
+   "place": "fallen-star",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3477,6 +4279,7 @@
   "siofrah-rod-talende-panda": {
    "name": "Siofrah - Rød Talende Panda",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3491,7 +4294,8 @@
   },
   "sir-claudio-1": {
    "name": "Sir Claudio 1",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3508,7 +4312,8 @@
   },
   "sir-claudio": {
    "name": "Sir Claudio",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3525,7 +4330,8 @@
   },
   "sir-claudio-the-ashtree-knight-complete-profile-2024-06-20": {
    "name": "Sir-Claudio-The-Ashtree-Knight-Complete-Profile-2024-06-20",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3540,7 +4346,8 @@
   },
   "the-necromancer": {
    "name": "THE necromancer",
-   "place": null,
+   "place": "dead-mountain",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "active",
@@ -3557,7 +4364,8 @@
   },
   "the-inexorable-time": {
    "name": "The Inexorable Time",
-   "place": null,
+   "place": "haudh-ninlaith",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3573,6 +4381,7 @@
   "the-raven-king": {
    "name": "The Raven King",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3588,6 +4397,7 @@
   "the-rumour": {
    "name": "The Rumour",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3602,7 +4412,8 @@
   },
   "the-star-violet-lady": {
    "name": "The Star-Violet Lady",
-   "place": null,
+   "place": "haudh-ninlaith",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "inactive",
@@ -3617,7 +4428,8 @@
   },
   "the-vampire-spawn": {
    "name": "The Vampire Spawn",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3633,6 +4445,7 @@
   "thomas-spada": {
    "name": "Thomas spada",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3647,7 +4460,8 @@
   },
   "throg-was": {
    "name": "Throg'was",
-   "place": null,
+   "place": "arendur",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3663,6 +4477,7 @@
   "thurumbaba": {
    "name": "Thurumbaba",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3677,7 +4492,8 @@
   },
   "trellara-nightshadow": {
    "name": "Trellara Nightshadow",
-   "place": null,
+   "place": "star-song-hill",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3692,7 +4508,8 @@
   },
   "willard": {
    "name": "Willard",
-   "place": null,
+   "place": "click-claw-moors",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "retainer",
@@ -3708,6 +4525,7 @@
   "zerok-the-lawgiver": {
    "name": "Zerok the lawgiver",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3723,6 +4541,7 @@
   "jawbreaker": {
    "name": "jawbreaker",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3739,7 +4558,8 @@
   },
   "keyleigh-dufaigh": {
    "name": "keyleigh dufaigh",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3754,7 +4574,8 @@
   },
   "mace-martelli": {
    "name": "mace Martelli",
-   "place": null,
+   "place": "ranch-falca",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3770,6 +4591,7 @@
   "the-sapphiretail-staff": {
    "name": "the sapphiretail staff",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3784,7 +4606,8 @@
   },
   "the-sorrowful-lady": {
    "name": "the sorrowful lady",
-   "place": null,
+   "place": "haudh-ninlaith",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "inactive",
@@ -3800,6 +4623,7 @@
   "ash": {
    "name": "Ash",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3814,7 +4638,8 @@
   },
   "bartoz-1": {
    "name": "Bartoz 1",
-   "place": null,
+   "place": "click-claw",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3829,7 +4654,8 @@
   },
   "bartoz": {
    "name": "Bartoz",
-   "place": null,
+   "place": "click-claw",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3844,7 +4670,8 @@
   },
   "bell": {
    "name": "Bell",
-   "place": null,
+   "place": "milly-bell",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3859,7 +4686,8 @@
   },
   "broder-aldo": {
    "name": "Broder Aldo",
-   "place": null,
+   "place": "blackbriar",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3874,7 +4702,8 @@
   },
   "broder-fulton": {
    "name": "Broder Fulton",
-   "place": null,
+   "place": "blackbriar",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3889,7 +4718,8 @@
   },
   "broder-thomas-spada": {
    "name": "Broder Thomas spada",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3905,6 +4735,7 @@
   "croacker": {
    "name": "Croacker",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3920,6 +4751,7 @@
   "curls": {
    "name": "Curls",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3934,7 +4766,8 @@
   },
   "delora": {
    "name": "Delora",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3950,6 +4783,7 @@
   "dottle": {
    "name": "Dottle",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3965,6 +4799,7 @@
   "fancy": {
    "name": "Fancy",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3979,7 +4814,8 @@
   },
   "father-belderone": {
    "name": "Father Belderone",
-   "place": null,
+   "place": "delios",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -3995,6 +4831,7 @@
   "fimbar": {
    "name": "Fimbar",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4010,6 +4847,7 @@
   "gnavpot": {
    "name": "Gnavpot",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4024,7 +4862,8 @@
   },
   "gregor-schatz": {
    "name": "Gregor Schatz",
-   "place": null,
+   "place": "blackbriar",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4040,6 +4879,7 @@
   "gul-dukat": {
    "name": "Gul dukat",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4054,7 +4894,8 @@
   },
   "henrik-de-vant": {
    "name": "Henrik De'vant",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4069,7 +4910,8 @@
   },
   "iormel": {
    "name": "Iormel",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4084,7 +4926,8 @@
   },
   "ivana-schatz": {
    "name": "Ivana Schatz",
-   "place": null,
+   "place": "blackbriar",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4099,7 +4942,8 @@
   },
   "jarret": {
    "name": "Jarret",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4117,6 +4961,7 @@
   "kazgar": {
    "name": "Kazgar",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4131,7 +4976,8 @@
   },
   "kellin": {
    "name": "Kellin",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4146,7 +4992,8 @@
   },
   "krazkar": {
    "name": "Krazkar",
-   "place": null,
+   "place": "goblin-caves",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4161,7 +5008,8 @@
   },
   "lady-kirkeby": {
    "name": "Lady Kirkeby",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4176,7 +5024,8 @@
   },
   "millicent": {
    "name": "Millicent",
-   "place": null,
+   "place": "milly-bell",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4192,6 +5041,7 @@
   "monarchon": {
    "name": "Monarchon",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4206,7 +5056,8 @@
   },
   "moogzt": {
    "name": "Moogzt",
-   "place": null,
+   "place": "goblin-caves",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4221,7 +5072,8 @@
   },
   "noro": {
    "name": "Noro",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4237,6 +5089,7 @@
   "notes": {
    "name": "Notes",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4252,6 +5105,7 @@
   "oxbar": {
    "name": "Oxbar",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4266,7 +5120,8 @@
   },
   "people": {
    "name": "People",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4282,6 +5137,7 @@
   "rock": {
    "name": "Rock",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4296,7 +5152,8 @@
   },
   "sandra-russo": {
    "name": "Sandra Russo",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4311,7 +5168,8 @@
   },
   "sgt-hersk": {
    "name": "Sgt Hersk",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4327,6 +5185,7 @@
   "sharwyn": {
    "name": "Sharwyn",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4341,7 +5200,8 @@
   },
   "siertianna": {
    "name": "Siertianna",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4356,7 +5216,8 @@
   },
   "soranna-anitha": {
    "name": "Soranna Anitha",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4371,7 +5232,8 @@
   },
   "sunkiller": {
    "name": "Sunkiller",
-   "place": null,
+   "place": "bedegaarn",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4386,7 +5248,8 @@
   },
   "tharma": {
    "name": "Tharma",
-   "place": null,
+   "place": "teslions",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4401,7 +5264,8 @@
   },
   "wulfram": {
    "name": "Wulfram",
-   "place": null,
+   "place": "click-claw",
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4417,6 +5281,7 @@
   "zanmoc": {
    "name": "Zanmoc",
    "place": null,
+   "placeGuess": true,
    "stance": "unknown",
    "dead": false,
    "status": "",
@@ -4503,19 +5368,10 @@
   }
  },
  "factions": {
-  "": {
-   "name": "",
-   "seat": null,
-   "stance": "unknown",
-   "type": "",
-   "status": "",
-   "leader": [],
-   "sessions": [],
-   "members": []
-  },
   "1-faction-database": {
    "name": "1. Faction database",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4525,7 +5381,8 @@
   },
   "abbesses": {
    "name": "Abbesses",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4536,6 +5393,7 @@
   "arendur-cityguard": {
    "name": "Arendur Cityguard",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4545,7 +5403,8 @@
   },
   "assumi-foundation": {
    "name": "Assumi Foundation",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4555,7 +5414,8 @@
   },
   "blue-guardians": {
    "name": "Blue Guardians",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4566,6 +5426,7 @@
   "bones": {
    "name": "Bones",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4576,6 +5437,7 @@
   "charnel-house-tomb-robber-team-1": {
    "name": "Charnel house tomb robber team 1",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4586,6 +5448,7 @@
   "clan-doomfist-1": {
    "name": "Clan Doomfist 1",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4596,6 +5459,7 @@
   "crimson-company": {
    "name": "Crimson Company",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4605,7 +5469,8 @@
   },
   "cult-of-oztt": {
    "name": "Cult of Oztt",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4618,6 +5483,7 @@
   "daughters-of-meg": {
    "name": "Daughters of Meg",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4628,6 +5494,7 @@
   "erythnul-god-of-hate-envy-malice-and-slaughter": {
    "name": "Erythnul God of hate, Envy, Malice and Slaughter",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4637,7 +5504,8 @@
   },
   "eyes-of-the-many-headed-snake": {
    "name": "Eyes of the many headed snake",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4648,6 +5516,7 @@
   "family-aguillar": {
    "name": "Family Aguillar",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4657,7 +5526,8 @@
   },
   "family-eberhardt": {
    "name": "Family Eberhardt",
-   "seat": null,
+   "seat": "delios",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4667,7 +5537,8 @@
   },
   "family-martelli-1": {
    "name": "Family Martelli 1",
-   "seat": null,
+   "seat": "delios",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4677,7 +5548,8 @@
   },
   "family-paget-1": {
    "name": "Family Paget 1",
-   "seat": null,
+   "seat": "delios",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4688,6 +5560,7 @@
   "house-alvares": {
    "name": "House Alvares",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4697,7 +5570,8 @@
   },
   "house-arpad": {
    "name": "House Arpad",
-   "seat": null,
+   "seat": "misty-falls",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4708,6 +5582,7 @@
   "house-avalande": {
    "name": "House Avalande",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4718,6 +5593,7 @@
   "house-castilla": {
    "name": "House Castilla",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4728,6 +5604,7 @@
   "house-duarte": {
    "name": "House Duarte",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4738,6 +5615,7 @@
   "house-navarre": {
    "name": "House Navarre",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4747,7 +5625,8 @@
   },
   "house-omero": {
    "name": "House Omero",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4757,7 +5636,8 @@
   },
   "house-volantis": {
    "name": "House Volantis",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4768,6 +5648,7 @@
   "house-zardanti": {
    "name": "House Zardanti",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4778,6 +5659,7 @@
   "ironbound-academy": {
    "name": "Ironbound Academy",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4787,7 +5669,8 @@
   },
   "knight-order-of-the-black-lilly": {
    "name": "Knight order of the black lilly",
-   "seat": null,
+   "seat": "bedegaarn",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4798,6 +5681,7 @@
   "loz-tdrot": {
    "name": "Loz Tdrot",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4808,6 +5692,7 @@
   "order-of-steel": {
    "name": "Order of steel",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4818,6 +5703,7 @@
   "raven-king-cult": {
    "name": "Raven king cult",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4827,7 +5713,8 @@
   },
   "ravenscrest-emporium": {
    "name": "Ravenscrest Emporium",
-   "seat": null,
+   "seat": "delios",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4841,6 +5728,7 @@
   "red-hand-of-doom-relationship-map": {
    "name": "Red Hand of Doom relationship map",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4850,7 +5738,8 @@
   },
   "shadow-company-mcdm-organization-sheet-2025-01-13": {
    "name": "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
-   "seat": null,
+   "seat": "fallen-star",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4861,6 +5750,7 @@
   "sword-n-shield": {
    "name": "Sword n Shield",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4870,7 +5760,8 @@
   },
   "the-cautier-school": {
    "name": "The Cautier School",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4882,7 +5773,8 @@
   },
   "the-fulcrom": {
    "name": "The Fulcrom",
-   "seat": null,
+   "seat": "azuremarket",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4893,6 +5785,7 @@
   "the-illes": {
    "name": "The Illes",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4903,6 +5796,7 @@
   "the-lodge": {
    "name": "The Lodge",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4912,7 +5806,8 @@
   },
   "the-ruby-throne": {
    "name": "The Ruby Throne",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4922,7 +5817,8 @@
   },
   "the-shadow-company": {
    "name": "The Shadow Company",
-   "seat": null,
+   "seat": "fallen-star",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4932,7 +5828,8 @@
   },
   "the-tower": {
    "name": "The Tower",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4942,7 +5839,8 @@
   },
   "the-white-tusk-tribe": {
    "name": "The white tusk tribe",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "neutral",
@@ -4952,7 +5850,8 @@
   },
   "throg-was-1": {
    "name": "Throg'was 1",
-   "seat": null,
+   "seat": "arendur",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4962,7 +5861,8 @@
   },
   "red-hand-horde": {
    "name": "red hand horde",
-   "seat": null,
+   "seat": "blackspear",
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4973,6 +5873,7 @@
   "the-charnel-house": {
    "name": "the charnel house",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -4983,6 +5884,7 @@
   "ubonhorlige": {
    "name": "ubønhørlige",
    "seat": null,
+   "seatGuess": true,
    "stance": "unknown",
    "type": "",
    "status": "",
@@ -5200,450 +6102,5 @@
    "noteId": "the-shadow-company-book-1-red-hand-of-doom"
   }
  ],
- "unplaced": [
-  {
-   "note": "14 Locations",
-   "id": "14-locations",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Anden tavern",
-   "id": "anden-tavern",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Arendur",
-   "id": "arendur",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Arendur Organisations",
-   "id": "arendur-organisations",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Arendur Rising Fronts",
-   "id": "arendur-rising-fronts",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ashmar Downs",
-   "id": "ashmar-downs",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Azuremarket",
-   "id": "azuremarket",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Bedegaarn Barony Region Sheet",
-   "id": "bedegaarn-barony-region-sheet",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Belle",
-   "id": "belle",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Beltath",
-   "id": "beltath",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Black Hammer",
-   "id": "black-hammer",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Black portrait Inn",
-   "id": "black-portrait-inn",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Click Claw Watch",
-   "id": "click-claw-watch",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Click claw moors",
-   "id": "click-claw-moors",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Dead Mountain",
-   "id": "dead-mountain",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Delios (known)",
-   "id": "delios-known",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Delios known poi",
-   "id": "delios-known-poi",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Delios possible trainers",
-   "id": "delios-possible-trainers",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Despotic realm of Regent Hexton of Bedegaarn",
-   "id": "despotic-realm-of-regent-hexton-of-bedegaarn",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Det Rustne bæger",
-   "id": "det-rustne-baeger",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Domains in the barony",
-   "id": "domains-in-the-barony",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Dragonfly creek - following river by land - encounters",
-   "id": "dragonfly-creek-following-river-by-land-encounters",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Dusty tome - bookshop",
-   "id": "dusty-tome-bookshop",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Everending Staircase - monument",
-   "id": "everending-staircase-monument",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Fallen star inn",
-   "id": "fallen-star-inn",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Fallen star inn - first visit",
-   "id": "fallen-star-inn-first-visit",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Franz Griffins medallion",
-   "id": "franz-griffins-medallion",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Gaed's sanctuary",
-   "id": "gaed-s-sanctuary",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Haudh Ninlaith",
-   "id": "haudh-ninlaith",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Hexton regent of Bedegaarn",
-   "id": "hexton-regent-of-bedegaarn",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Jago's Jewel",
-   "id": "jago-s-jewel",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Map - Misty falls region",
-   "id": "map-misty-falls-region",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Misty Falls",
-   "id": "misty-falls",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Misty falls Nodes",
-   "id": "misty-falls-nodes",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Misty falls region map",
-   "id": "misty-falls-region-map",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Mistyfalls subregion lists",
-   "id": "mistyfalls-subregion-lists",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "NPCs in Delios town",
-   "id": "npcs-in-delios-town",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Osric's Gilded Stables",
-   "id": "osric-s-gilded-stables",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Osric's Gold Loaf",
-   "id": "osric-s-gold-loaf",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Osric's Gold button",
-   "id": "osric-s-gold-button",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ranch 1 Falca",
-   "id": "ranch-1-falca",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ranch 2 Rutus",
-   "id": "ranch-2-rutus",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ranch 3 Mulcere",
-   "id": "ranch-3-mulcere",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ranch 4 Beltath",
-   "id": "ranch-4-beltath",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ranch 5 Tenere",
-   "id": "ranch-5-tenere",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Rinaken Stormbane",
-   "id": "rinaken-stormbane",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Rumours - Delios",
-   "id": "rumours-delios",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Secrets in Delios town",
-   "id": "secrets-in-delios-town",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Selling loot in Delios",
-   "id": "selling-loot-in-delios",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Sir Claudio Patrol",
-   "id": "sir-claudio-patrol",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Standard Spell services costs",
-   "id": "standard-spell-services-costs",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Stormpine Hall - gentlemen club",
-   "id": "stormpine-hall-gentlemen-club",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "THE death knight",
-   "id": "the-death-knight",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Teleportation Circles",
-   "id": "teleportation-circles",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "The Bedegaarn Barony MOC",
-   "id": "the-bedegaarn-barony-moc",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "The Milly Bell",
-   "id": "the-milly-bell",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "The Stormpine halls library inventory",
-   "id": "the-stormpine-halls-library-inventory",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "The southern Baronies",
-   "id": "the-southern-baronies",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Town Delios",
-   "id": "town-delios",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Training possibilities in Delios",
-   "id": "training-possibilities-in-delios",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ursia Region Map",
-   "id": "ursia-region-map",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Ursia hex map",
-   "id": "ursia-hex-map",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "Vault of Shadows",
-   "id": "vault-of-shadows",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "ambush wagon loot",
-   "id": "ambush-wagon-loot",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "blackbriar monastery",
-   "id": "blackbriar-monastery",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "clickclawmoors hazards",
-   "id": "clickclawmoors-hazards",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "council of three",
-   "id": "council-of-three",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "framed black canvas",
-   "id": "framed-black-canvas",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "lumber ranches",
-   "id": "lumber-ranches",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "misty falls region npc domains",
-   "id": "misty-falls-region-npc-domains",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "stone crabs",
-   "id": "stone-crabs",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "tax_enforcement_guide",
-   "id": "tax-enforcement-guide",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "taxation_system_ursia",
-   "id": "taxation-system-ursia",
-   "summary": "",
-   "url": ""
-  },
-  {
-   "note": "worker elixirs",
-   "id": "worker-elixirs",
-   "summary": "",
-   "url": ""
-  }
- ]
+ "unplaced": []
 }

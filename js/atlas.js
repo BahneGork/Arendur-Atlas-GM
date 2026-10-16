@@ -931,7 +931,8 @@
           ? el("p", { class: "person-facts" }, person.dead ? "Rejste med gruppen" : "Rejser med gruppen",
               person.origin ? [" · Fra: ", el("a", { href: `#${placeRoute(person.origin)}` }, placeName(person.origin))] : null)
           : el("p", { class: "person-facts" }, "Opholdssted: ",
-              person.place ? el("a", { href: `#${placeRoute(person.place)}` }, placeName(person.place)) : "ukendt"),
+              person.place ? el("a", { href: `#${placeRoute(person.place)}` }, placeName(person.place)) : "ukendt",
+              person.place && person.placeGuess ? el("small", { class: "guess" }, " (udledt af noten)") : null),
         person.factions.length ? el("p", { class: "person-facts" }, "Factions: ",
           person.factions.flatMap((f, i) => [i ? ", " : null, el("a", { href: `#note/${f}` }, factions[f].name)])) : null,
         person.sessions.length ? sessionChips(person) : null)) : null;
@@ -954,7 +955,8 @@
           el("span", { class: `badge stance-${faction.stance}` }, STANCE[faction.stance]),
           faction.status && faction.status !== "unknown" ? el("span", { class: "badge" }, statusText(faction.status)) : null),
         faction.type ? el("p", { class: "person-facts" }, ftype(faction.type)) : null,
-        faction.seat ? el("p", { class: "person-facts" }, "Sæde: ", el("a", { href: `#${placeRoute(faction.seat)}` }, placeName(faction.seat))) : null,
+        faction.seat ? el("p", { class: "person-facts" }, "Sæde: ", el("a", { href: `#${placeRoute(faction.seat)}` }, placeName(faction.seat)),
+          faction.seatGuess ? el("small", { class: "guess" }, " (udledt af noten)") : null) : null,
         faction.leader.length ? el("p", { class: "person-facts" }, "Leder: ",
           faction.leader.flatMap((k, i) => [i ? ", " : null, el("a", { href: `#note/${k}` }, people[k]?.name || k)])) : null,
         faction.sessions.length ? el("div", { class: "chips" }, faction.sessions.map((num) =>
