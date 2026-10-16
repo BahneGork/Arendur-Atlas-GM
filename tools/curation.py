@@ -365,4 +365,5 @@ PARTY_EXTRA = {
     "Frekka Flammehår": dict(aliases=["Frekka"], players=True, race="", social="", role="", dead=False,
                              statusNote="Sluttede sig til gruppen ved Fallen Star (K58)."),
 }
-NOT_PEOPLE = {"Locations heard of or visited"}  # a copy of the locations list filed under People/
+NOT_PEOPLE = {"Locations heard of or visited",  # a copy of the locations list filed under People/
+              "People Origins"}  # a list note in the GM's people folder

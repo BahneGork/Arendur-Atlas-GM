@@ -50,14 +50,31 @@ def filter_atlas(out, notes_out, player_ids):
     sessions = [{**s, "places": [x for x in s["places"] if x in keep],
                  "noteId": s["noteId"] if s.get("noteId") in player_ids else None}
                 for s in out["sessions"] if s.get("players", True)]
-    factions = {k: {**f, "members": [m for m in f["members"] if m in player_ids],
-                    "leader": [m for m in f["leader"] if m in player_ids]}
+    def own_view(item, field):
+        """The players' placement: the guess from their own notes replaces the GM's (which used GM notes)."""
+        cap = field[0].upper() + field[1:]
+        item = dict(item)
+        for k in (field, field + "Guess", field + "Mentions"):
+            pk = "player" + cap + k[len(field):]
+            if pk in item:
+                item[k] = item[pk]
+        if "playerMentionedWith" in item:
+            item["mentionedWith"] = item["playerMentionedWith"]
+        for k in [k for k in item if k.startswith("player")]:
+            del item[k]
+        ref = item.get(field)
+        if ref and not ref.startswith("region:") and ref not in keep:
+            item[field] = None
+        item["mentionedWith"] = [x for x in item.get("mentionedWith", []) if x in keep]
+        return item
+
+    factions = {k: own_view({**f, "members": [m for m in f["members"] if m in player_ids],
+                             "leader": [m for m in f["leader"] if m in player_ids]}, "seat")
                 for k, f in out["factions"].items() if k in player_ids}
     people = {}
     for k, p in out["people"].items():
         if p.get("noNote") and PARTY_EXTRA.get(p["name"], {}).get("players") or not p.get("noNote") and k in player_ids:
-            people[k] = {**p, "factions": [f for f in p["factions"] if f in factions],
-                         "place": p["place"] if not p["place"] or p["place"].startswith("region:") or p["place"] in keep else None}
+            people[k] = own_view({**p, "factions": [f for f in p["factions"] if f in factions]}, "place")
     tools = {**out["tools"], "forgotten": [f for f in out["tools"]["forgotten"] if f["id"] in player_ids]}
     unplaced = [u for u in out["unplaced"] if u.get("id") in player_ids]
 

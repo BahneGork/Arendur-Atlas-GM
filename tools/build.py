@@ -291,25 +291,92 @@ def build_people(notes, note_id, session_of):
         hits = {where_lc[x.lower()] for x in tags if x.lower() not in campaign_tags and x.lower() in where_lc}
         return max(hits, key=depth) if hits else None
 
-    # Without a location property: the place the note's text points to most, by name. A link counts
-    # double; on a tie the more specific place (deeper inside other places) wins.
+    # Without a location property or place tag, the evidence is where the vault mentions the entity:
+    # places named in its own note, plus places named on the same line as the entity in any other note.
+    # Each mention counts once. A place needs 2+ mentions; on a tie a specific place (a tower) beats a
+    # broad one (a forest, a town). The players' edition gets its own guess from the players' notes only.
     names = {}
     for pid, p in PLACES.items():
         for s in [p.get("name", ""), p["note"]] + p.get("aliases", []):
             if len(s) >= 4:
                 names[s.lower()] = pid
+    for s, pid in LOCATION_ALIASES.items():
+        if len(s) >= 4 and not pid.startswith("region:"):
+            names.setdefault(s.lower(), pid)
     name_re = re.compile(r"(?<![\wæøå])(" + "|".join(re.escape(s) for s in sorted(names, key=len, reverse=True))
-                         + r")(?![\wæøå])")
+                         + r")s?(?![\wæøå])")  # "the blackwoods" is Blackwood
+    broad = {"vildmark": 0, "by": 1}
 
-    def guess_place(body):
+    def text_of(body):
+        """Plain lower-case text for counting mentions. A link counts as its target only when the target is a
+        place ([[Arendur Rising Campaign MOC|Campaign]] is not Arendur); tags (#Arendur), crossed-out text
+        (~~…~~) and navigation lines (Main:, Related:) are dropped."""
+        body = re.sub(r"~~.*?~~", " ", body)
+        body = re.sub(r"(?im)^\s*(?:main|related)\s*:.*$", " ", body)
+        body = WIKILINK.sub(lambda m: m.group(1).strip() if m.group(1).strip().lower() in names else link_label(m), body)
+        return re.sub(r"(?<![\w&])#[\wæøåÆØÅ/-]+", " ", plain(body)).lower()
+
+    def places_in(text):
         counts = defaultdict(int)
-        for m in WIKILINK.finditer(body):
-            if m.group(1).strip().lower() in names:
-                counts[names[m.group(1).strip().lower()]] += 1
-        text = re.sub(r"(?<![\w&])#[\wæøåÆØÅ/-]+", " ", plain(body))  # tags such as #Arendur are not mentions
-        for m in name_re.finditer(text.lower()):
+        for m in name_re.finditer(text):
             counts[names[m.group(1)]] += 1
-        return max(counts, key=lambda k: (counts[k], depth(k))) if counts else None
+        return counts
+
+    # Every line of every note, once; and every name an entity is known by.
+    lines = [(title, text_of(line)) for title, n in notes.items() for line in n["body"].split("\n") if line.strip()]
+    entity_names = defaultdict(set)
+    for title, n in notes.items():
+        if n["folder"] in ("People", "Factions"):
+            for s in [title, title.split(" - ")[0], str(n["props"].get("Name") or "")] + \
+                     [a for a in n["props"].get("aliases") or [] if isinstance(a, str)]:
+                if len(s.strip()) >= 4:
+                    entity_names[s.strip().lower()].add(title)
+    ent_re = re.compile(r"(?<![\wæøå])(" + "|".join(re.escape(s) for s in sorted(entity_names, key=len, reverse=True))
+                        + r")(?![\wæøå])")
+    context = defaultdict(list)  # entity title -> [(note title, place counts on that line)]
+    seen = set()  # the same line copied into several notes (scripts, prep) counts once
+    for note_title, text in lines:
+        hits = {e for m in ent_re.finditer(text) for e in entity_names[m.group(1)]}
+        if hits:
+            found = places_in(text)
+            if found:
+                for e in hits:
+                    if e != note_title and (e, text) not in seen:
+                        seen.add((e, text))
+                        context[e].append((note_title, found))
+
+    def locate(title, players_only=False):
+        """(place id, mentions, [other places mentioned]) from the vault's mentions; place None if too weak."""
+        if players_only and not notes[title]["player"]:
+            return None, 0, []
+        total = places_in(text_of(notes[title]["body"]))
+        for note_title, found in context.get(title, []):
+            if players_only and not notes[note_title]["player"]:
+                continue
+            for k, v in found.items():
+                total[k] += v
+        if not total:
+            return None, 0, []
+        ranked = sorted(total, key=lambda k: (total[k], broad.get(PLACES[k]["kind"], 2), depth(k)), reverse=True)
+        best = ranked[0]
+        if total[best] < 2:
+            return None, total[best], ranked[:3]
+        return best, total[best], ranked[1:4]
+
+    def where_is(title, pr, body, in_party=False):
+        """Place fields for a person or faction: from its properties or tags, else from the vault's mentions."""
+        if in_party:
+            return {"place": place_of(pr), "placeGuess": False}
+        sure = place_of(pr) or tag_place(pr, body)
+        if sure:
+            return {"place": sure, "placeGuess": False, "playerPlace": sure, "playerPlaceGuess": False}
+        out = {}
+        for prefix, only in (("", False), ("player", True)):
+            place, n, near = locate(title, only)
+            key = lambda k: prefix + k[0].upper() + k[1:] if prefix else k
+            out.update({key("place"): place, key("placeGuess"): bool(place), key("placeMentions"): n,
+                        key("mentionedWith"): near})
+        return out
 
     def sessions_of(title, props):
         nums = {session_of[t] for t in prop_targets(props.get("sessions")) if t in session_of}
@@ -322,8 +389,8 @@ def build_people(notes, note_id, session_of):
             continue
         pr = n["props"]
         factions[note_id[title]] = {
-            "name": title, "seat": place_of(pr) or tag_place(pr, n["body"]) or guess_place(n["body"]),
-            "seatGuess": not (place_of(pr) or tag_place(pr, n["body"])),
+            "name": title, **{k.replace("place", "seat").replace("Place", "Seat"): v
+                              for k, v in where_is(title, pr, n["body"]).items()},
             "stance": STANCE.get(str(pr.get("friend-or-foe", "")).lower(), "unknown"),
             "type": text_prop(pr.get("faction_type")), "status": text_prop(pr.get("status")),
             "leader": [note_id[t] for t in prop_targets(pr.get("leader")) if t in note_id],
@@ -347,8 +414,7 @@ def build_people(notes, note_id, session_of):
         pid = note_id[title]
         people[pid] = {
             "name": title,
-            "place": place_of(pr) or (None if in_party else tag_place(pr, n["body"]) or guess_place(n["body"])),
-            "placeGuess": not (place_of(pr) or tag_place(pr, n["body"])),
+            **where_is(title, pr, n["body"], in_party),
             "stance": STANCE.get(disp, "ally" if in_party else "unknown"),  # party members are allies unless noted
             "dead": status == "dead" or disp.startswith("deceased"),
             "status": status if status not in ("", "alive", "unknown") else "",
