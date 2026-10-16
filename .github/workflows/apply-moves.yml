@@ -30,6 +30,8 @@ jobs:
         with:
           python-version: "3.12"
 
+      - run: pip install pyyaml==6.0.2
+
       - name: Apply saved moves
         run: |
           shopt -s nullglob

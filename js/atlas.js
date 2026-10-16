@@ -891,7 +891,9 @@
   // ---------- Note reader (#note/<id>) ----------
   let notes = null;
   const loadNotes = () => (notes ||= fetch(`data/notes.json${V}`).then((r) => r.json()));
-  const GROUP_ORDER = ["Sessioner", "Gruppen", "Steder", "Personer", "Factions", "Karakterer", "Missioner", "Genstande", "Loot", "Journal", "Lore", "Regler", "Andet"];
+  const GROUP_ORDER = ["Sessioner", "Gruppen", "Steder", "Personer", "Factions", "Karakterer", "Missioner", "Krønike",
+    "Hemmeligheder", "Eventyr", "Sessionsnoter", "Handouts", "Genstande", "Loot", "Journal", "Lore", "Bibel",
+    "Skyggekompagniet", "Spillernes vault", "Forberedelse", "Idéer", "Lister", "Regler", "Andet"];
   const sessionOrder = (n) => n.session ?? Infinity;
 
 

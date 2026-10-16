@@ -103,7 +103,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "goblin-caves": {
    "name": "Gutbust-hulerne",
@@ -133,7 +133,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "farmer-john": {
    "name": "Farmer Johns gård",
@@ -157,7 +157,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "kvalec": {
    "name": "Kvalec",
@@ -184,7 +184,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "east-blackwood": {
    "name": "East Blackwood",
@@ -211,7 +211,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "delios": {
    "name": "Delios",
@@ -259,7 +259,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "teslions": {
    "name": "Teslions",
@@ -306,7 +306,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "logen": {
    "name": "Logen i Teslions",
@@ -330,7 +330,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lady-dagger-shop": {
    "name": "Lady Daggers butik",
@@ -354,7 +354,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lady-dagger-caves": {
    "name": "Lady Daggers huler",
@@ -383,7 +383,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "skygge-vaulten": {
    "name": "Skygge-vaulten",
@@ -409,7 +409,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "maakengorge": {
    "name": "Maakengorge",
@@ -445,7 +445,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "sunken-citadel": {
    "name": "Det sunkne citadel",
@@ -483,7 +483,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "camp-oxbar": {
    "name": "Camp Oxbar",
@@ -521,7 +521,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "skullgorge": {
    "name": "Skullgorge-broen",
@@ -553,7 +553,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "blackspear": {
    "name": "Castle Blackspear",
@@ -589,7 +589,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "blackspear-swamp": {
    "name": "Blackspear-sumpen",
@@ -616,7 +616,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "ranger-hut": {
    "name": "Rangerhytten",
@@ -652,7 +652,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "bedegaarn": {
    "name": "Bedegaarn",
@@ -688,7 +688,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "click-claw": {
    "name": "Click Claw Watch",
@@ -726,7 +726,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "raven-tomb": {
    "name": "Ravnekongens grav",
@@ -768,7 +768,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "rirroneth-wheel": {
    "name": "Rirroneths hjul",
@@ -794,7 +794,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "fallen-star": {
    "name": "Fallen Star",
@@ -824,7 +824,7 @@
    "aliases": [],
    "travel": "",
    "travelLost": false,
-   "summary": "Landevejskro, hvor Anton og Frekka sluttede sig til gruppen (K57–K58). Skyggekompagniets hovedkvarter (Summary Session 47).",
+   "summary": "Landevejskro, hvor Anton og Frekka sluttede sig til gruppen (K57–K58). Skyggekompagniets hovedkvarter.",
    "url": "",
    "sessions": [
     10
@@ -832,7 +832,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "mausoleum": {
    "name": "Mausoleet",
@@ -861,7 +861,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "blackbriar": {
    "name": "Blackbriar kloster",
@@ -899,7 +899,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "anadur": {
    "name": "Anadur",
@@ -926,7 +926,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "kraeltor": {
    "name": "Kraeltor",
@@ -953,7 +953,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "taernu": {
    "name": "Taernu",
@@ -980,7 +980,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "gaernur": {
    "name": "Gaernur",
@@ -1007,7 +1007,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "red-hand-warcamp": {
    "name": "Den røde hånds lejr",
@@ -1034,7 +1034,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "cinderhill": {
    "name": "Cinderhill",
@@ -1061,7 +1061,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "dusty-tome": {
    "name": "Dusty Tome – boghandel",
@@ -1088,7 +1088,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "tower-ruins": {
    "name": "Tårnruinen",
@@ -1115,7 +1115,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "old-church": {
    "name": "Den gamle kirkeruin",
@@ -1142,7 +1142,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "ravenscrest": {
    "name": "Ravenscrest Emporium",
@@ -1169,7 +1169,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "egas-mannon": {
    "name": "Professor Egas Mannon",
@@ -1198,7 +1198,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "anden": {
    "name": "Anden tavern",
@@ -1225,7 +1225,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "stormpine": {
    "name": "Stormpine Hall – gentlemen club",
@@ -1252,7 +1252,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "osric-stables": {
    "name": "Osric's Gilded Stables",
@@ -1279,7 +1279,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "operation-mongoose": {
    "name": "Operation Mongoose",
@@ -1306,7 +1306,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "black-eagle": {
    "name": "Black Eagle square",
@@ -1333,7 +1333,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "osric-loaf": {
    "name": "Osric's Gold Loaf",
@@ -1360,7 +1360,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "black-portrait": {
    "name": "Black Portrait Inn",
@@ -1387,7 +1387,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "herbalist": {
    "name": "Herbalist",
@@ -1414,7 +1414,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "oathstone": {
    "name": "Oathstone of the Ancients",
@@ -1441,7 +1441,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "harrt-house": {
    "name": "The Harrt House",
@@ -1468,7 +1468,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "town-square": {
    "name": "Town Square",
@@ -1495,7 +1495,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "milly-bell": {
    "name": "The Milly Bell",
@@ -1522,7 +1522,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "town-hall": {
    "name": "Town Hall",
@@ -1551,7 +1551,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "gaeds-sanctuary": {
    "name": "Gaed's sanctuary",
@@ -1581,7 +1581,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "jagos-jewel": {
    "name": "Jago's Jewel",
@@ -1608,7 +1608,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "caves-of-shadows": {
    "name": "Caves of Shadows",
@@ -1635,7 +1635,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "crocodile-lair": {
    "name": "Crocodile Lair",
@@ -1661,10 +1661,19 @@
    "summary": "",
    "url": "",
    "sessions": [],
-   "people": [],
+   "people": [
+    [
+     "Jayce Fireheart - ranger hut",
+     "jayce-fireheart-ranger-hut"
+    ],
+    [
+     "Ranger hut - Jayce Fireheart",
+     "ranger-hut-jayce-fireheart"
+    ]
+   ],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "fort-demass": {
    "name": "Fort De'mass",
@@ -1691,7 +1700,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "gazebo": {
    "name": "Gazebo",
@@ -1718,7 +1727,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "hag-coven": {
    "name": "Hag Coven Lair",
@@ -1745,7 +1754,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "infernal-grotto": {
    "name": "Infernal Grotto",
@@ -1772,7 +1781,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lumber-ranch-1": {
    "name": "Lumber Ranch 1",
@@ -1799,7 +1808,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lumber-ranch-2": {
    "name": "Lumber Ranch 2",
@@ -1826,7 +1835,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lumber-ranch-3": {
    "name": "Lumber Ranch 3",
@@ -1853,7 +1862,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lumber-ranch-4": {
    "name": "Lumber Ranch 4",
@@ -1880,7 +1889,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "lumber-ranch-5": {
    "name": "Lumber Ranch 5",
@@ -1907,7 +1916,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "manticore-lair": {
    "name": "Manticore Lair",
@@ -1934,7 +1943,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "mossy-delve": {
    "name": "Mossy Delve",
@@ -1961,7 +1970,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "solambre": {
    "name": "Solambre",
@@ -1988,7 +1997,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "star-song-hill": {
    "name": "Star Song Hill",
@@ -2018,7 +2027,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "tower-of-lightning": {
    "name": "Tower of Lightning",
@@ -2045,7 +2054,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "ambush-farm": {
    "name": "Ambush farm",
@@ -2072,7 +2081,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "hamlet": {
    "name": "Hamlet ved Click Claw Watch",
@@ -2099,7 +2108,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "rirroneth": {
    "name": "Rirroneths domæne",
@@ -2125,7 +2134,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "pearl-fortress": {
    "name": "Perleborgen",
@@ -2153,7 +2162,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "festering-spire": {
    "name": "Labyrinth caves of the festering spire",
@@ -2177,7 +2186,7 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   },
   "steel-castle": {
    "name": "Stålridderborgen",
@@ -2203,7 +2212,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "akalane": {
    "name": "Akalane",
@@ -2227,7 +2236,7 @@
    "people": [],
    "factions": [],
    "visited": false,
-   "noteId": null
+   "noteId": ""
   },
   "dead-mountain": {
    "name": "Dødebjerget",
@@ -2253,10 +2262,2173 @@
    "people": [],
    "factions": [],
    "visited": true,
-   "noteId": null
+   "noteId": ""
   }
  },
  "people": {
+  "avarthel": {
+   "name": "Avarthel",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "03-people": {
+   "name": "03 People",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "1-npc-database": {
+   "name": "1.NPC database",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "agapito-alamilla": {
+   "name": "Agapito Alamilla",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "alistair-kingsley": {
+   "name": "Alistair Kingsley",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [
+    "ravenscrest-emporium"
+   ],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "angel-the-executioner": {
+   "name": "Angel the executioner",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "antero-calaman": {
+   "name": "Antero Calaman",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ashely-vieth": {
+   "name": "Ashely Vieth",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ashley-seidel": {
+   "name": "Ashley Seidel",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "broker, Merchant",
+   "aliases": [],
+   "factions": [
+    "ravenscrest-emporium"
+   ],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "aurilia": {
+   "name": "Aurilia",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "bartolo-the-guide": {
+   "name": "Bartolo the guide",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "battlehunter-killiar-arrowswift": {
+   "name": "Battlehunter Killiar Arrowswift",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "bayard-spy-of-the-eyes": {
+   "name": "Bayard - spy of  'the eyes'",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "caillach": {
+   "name": "Caillach",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "carlotta-baras": {
+   "name": "Carlotta Baras",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "carthach-caskill": {
+   "name": "Carthach ó Caskill",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "antons læremester"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "charnel-house-tomb-robber-team": {
+   "name": "Charnel house tomb robber team",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "clan-doomfist": {
+   "name": "Clan Doomfist",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "copper": {
+   "name": "Copper",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "duerif-redblade": {
+   "name": "Duerif Redblade",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "duke-armatage-volantis": {
+   "name": "Duke Armatage Volantis",
+   "place": null,
+   "stance": "unknown",
+   "dead": true,
+   "status": "dead",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "The Black Eagle Knight",
+    "The Black Eagle"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "emrik-varrow-of-house-varrow": {
+   "name": "Emrik Varrow - of house varrow",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "Emrik"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "family-martelli": {
+   "name": "Family Martelli",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "family-paget": {
+   "name": "Family Paget",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "lumber family paget"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "faustus-antili": {
+   "name": "Faustus Antili",
+   "place": null,
+   "stance": "unknown",
+   "dead": true,
+   "status": "dead",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "fireberry": {
+   "name": "Fireberry",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "fulke-wyrmdancer": {
+   "name": "Fulke Wyrmdancer",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "glanzar": {
+   "name": "Glanzar",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "gregor-shatz": {
+   "name": "Gregor Shatz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "grozon-hillsmasher": {
+   "name": "Grozon “Hillsmasher”",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "harl-lasalle": {
+   "name": "Harl Lasalle",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "irina-delaque": {
+   "name": "Irina Delaque",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ivana-shatz": {
+   "name": "Ivana Shatz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "izzy-the-goblin-bard": {
+   "name": "Izzy - the goblin bard",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "jago": {
+   "name": "Jago",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "jayce-fireheart-ranger-hut": {
+   "name": "Jayce Fireheart - ranger hut",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "josie-harrt": {
+   "name": "Josie Harrt",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "judith-m-ller": {
+   "name": "Judith Müller",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "kalarel-the-vile": {
+   "name": "Kalarel the vile",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [
+    "cult-of-oztt"
+   ],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "kryx-bloodgnash": {
+   "name": "Kryx Bloodgnash",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "Beast of the dark wood",
+    "Blood of the underworld",
+    "Old Redfang"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "kurz-beier": {
+   "name": "Kurz Beier",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lady-dazran": {
+   "name": "Lady Dazran",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lady-floret": {
+   "name": "Lady Floret",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lady-isabel-castilla": {
+   "name": "Lady Isabel Castilla",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lady-millicity": {
+   "name": "Lady Millicity",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "latona-pippa-the-halfling": {
+   "name": "Latona 'Pippa' the halfling",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-chilton-haugwitz": {
+   "name": "Lord Chilton haugwitz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-davide-castilla-guard-unit": {
+   "name": "Lord Davide Castilla guard unit",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-davide-castilla": {
+   "name": "Lord Davide Castilla",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [
+    "the-cautier-school"
+   ],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-jarret-castilla": {
+   "name": "Lord Jarret Castilla",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-vermil": {
+   "name": "Lord Vermil",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lord-wolfgang-landor": {
+   "name": "Lord wolfgang landor",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ludwig": {
+   "name": "Ludwig",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "madam-constance": {
+   "name": "Madam Constance",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "marta-alamilla": {
+   "name": "Marta Alamilla",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "meepo": {
+   "name": "Meepo",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "mellik": {
+   "name": "Mellik",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "michell": {
+   "name": "Michell",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "miha": {
+   "name": "Miha",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "milton-fischer": {
+   "name": "Milton Fischer",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "minka-fischer": {
+   "name": "Minka Fischer",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "morgouse": {
+   "name": "Morgouse",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "nails": {
+   "name": "Nails",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "osric-schneider": {
+   "name": "Osric Schneider",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "Osric the townspeaker"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ostler-hamm": {
+   "name": "Ostler Hamm",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "people-origins": {
+   "name": "People Origins",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "pinna": {
+   "name": "Pinna",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "preston": {
+   "name": "Preston",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "queen-of-bones-court-of-all-flesh": {
+   "name": "Queen of bones, court of all flesh",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ramon-chartrand-alkymist": {
+   "name": "Ramon Chartrand - Alkymist",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ranger-hut-jayce-fireheart": {
+   "name": "Ranger hut - Jayce Fireheart",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "regent-hexton": {
+   "name": "Regent Hexton",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "regilarix-lore": {
+   "name": "Regilarix - lore",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "robert-gambini": {
+   "name": "Robert Gambini",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "rochefort-scheneschal-of-house-zardanti": {
+   "name": "Rochefort Scheneschal of House Zardanti",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "roland-hartmoor": {
+   "name": "Roland Hartmoor",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "saint-elowen-brightsword-of-paladine": {
+   "name": "Saint Elowen Brightsword of Paladine",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "selina-rosenknop": {
+   "name": "Selina Rosenknop",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "shaw-hammett": {
+   "name": "Shaw Hammett",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "siofrah-rod-talende-panda": {
+   "name": "Siofrah - Rød Talende Panda",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sir-claudio-1": {
+   "name": "Sir Claudio 1",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "ashtree knight"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sir-claudio": {
+   "name": "Sir Claudio",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "ashtree knight"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sir-claudio-the-ashtree-knight-complete-profile-2024-06-20": {
+   "name": "Sir-Claudio-The-Ashtree-Knight-Complete-Profile-2024-06-20",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-necromancer": {
+   "name": "THE necromancer",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "active",
+   "race": "",
+   "social": "",
+   "role": "villain",
+   "aliases": [
+    "hayden bisset"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-inexorable-time": {
+   "name": "The Inexorable Time",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-raven-king": {
+   "name": "The Raven King",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-rumour": {
+   "name": "The Rumour",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-star-violet-lady": {
+   "name": "The Star-Violet Lady",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "inactive",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-vampire-spawn": {
+   "name": "The Vampire Spawn",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "thomas-spada": {
+   "name": "Thomas spada",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "throg-was": {
+   "name": "Throg'was",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "thurumbaba": {
+   "name": "Thurumbaba",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "trellara-nightshadow": {
+   "name": "Trellara Nightshadow",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "willard": {
+   "name": "Willard",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "retainer",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "zerok-the-lawgiver": {
+   "name": "Zerok the lawgiver",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "jawbreaker": {
+   "name": "jawbreaker",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "warmaster"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "keyleigh-dufaigh": {
+   "name": "keyleigh dufaigh",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "mace-martelli": {
+   "name": "mace Martelli",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-sapphiretail-staff": {
+   "name": "the sapphiretail staff",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "the-sorrowful-lady": {
+   "name": "the sorrowful lady",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "inactive",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ash": {
+   "name": "Ash",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "bartoz-1": {
+   "name": "Bartoz 1",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "bartoz": {
+   "name": "Bartoz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "bell": {
+   "name": "Bell",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "broder-aldo": {
+   "name": "Broder Aldo",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "broder-fulton": {
+   "name": "Broder Fulton",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "broder-thomas-spada": {
+   "name": "Broder Thomas spada",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "croacker": {
+   "name": "Croacker",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "curls": {
+   "name": "Curls",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "delora": {
+   "name": "Delora",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "dottle": {
+   "name": "Dottle",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "fancy": {
+   "name": "Fancy",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "father-belderone": {
+   "name": "Father Belderone",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "fimbar": {
+   "name": "Fimbar",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "gnavpot": {
+   "name": "Gnavpot",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "gregor-schatz": {
+   "name": "Gregor Schatz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "gul-dukat": {
+   "name": "Gul dukat",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "henrik-de-vant": {
+   "name": "Henrik De'vant",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "iormel": {
+   "name": "Iormel",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "ivana-schatz": {
+   "name": "Ivana Schatz",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "jarret": {
+   "name": "Jarret",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [
+    "lady dagger"
+   ],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "kazgar": {
+   "name": "Kazgar",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "kellin": {
+   "name": "Kellin",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "krazkar": {
+   "name": "Krazkar",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "lady-kirkeby": {
+   "name": "Lady Kirkeby",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "millicent": {
+   "name": "Millicent",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "monarchon": {
+   "name": "Monarchon",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "moogzt": {
+   "name": "Moogzt",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "noro": {
+   "name": "Noro",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "notes": {
+   "name": "Notes",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "oxbar": {
+   "name": "Oxbar",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "people": {
+   "name": "People",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "rock": {
+   "name": "Rock",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sandra-russo": {
+   "name": "Sandra Russo",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sgt-hersk": {
+   "name": "Sgt Hersk",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sharwyn": {
+   "name": "Sharwyn",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "siertianna": {
+   "name": "Siertianna",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "soranna-anitha": {
+   "name": "Soranna Anitha",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "sunkiller": {
+   "name": "Sunkiller",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "tharma": {
+   "name": "Tharma",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "wulfram": {
+   "name": "Wulfram",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
+  "zanmoc": {
+   "name": "Zanmoc",
+   "place": null,
+   "stance": "unknown",
+   "dead": false,
+   "status": "",
+   "race": "",
+   "social": "",
+   "role": "",
+   "aliases": [],
+   "factions": [],
+   "sessions": [],
+   "pc": false,
+   "statusNote": ""
+  },
   "cedric-belmote": {
    "name": "Cedric Belmote",
    "place": null,
@@ -2330,7 +4502,495 @@
    "noNote": true
   }
  },
- "factions": {},
+ "factions": {
+  "": {
+   "name": "",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "1-faction-database": {
+   "name": "1. Faction database",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "abbesses": {
+   "name": "Abbesses",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "arendur-cityguard": {
+   "name": "Arendur Cityguard",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "assumi-foundation": {
+   "name": "Assumi Foundation",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "blue-guardians": {
+   "name": "Blue Guardians",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "bones": {
+   "name": "Bones",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "charnel-house-tomb-robber-team-1": {
+   "name": "Charnel house tomb robber team 1",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "clan-doomfist-1": {
+   "name": "Clan Doomfist 1",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "crimson-company": {
+   "name": "Crimson Company",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "cult-of-oztt": {
+   "name": "Cult of Oztt",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": [
+    "kalarel-the-vile"
+   ]
+  },
+  "daughters-of-meg": {
+   "name": "Daughters of Meg",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "erythnul-god-of-hate-envy-malice-and-slaughter": {
+   "name": "Erythnul God of hate, Envy, Malice and Slaughter",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "eyes-of-the-many-headed-snake": {
+   "name": "Eyes of the many headed snake",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "family-aguillar": {
+   "name": "Family Aguillar",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "family-eberhardt": {
+   "name": "Family Eberhardt",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "family-martelli-1": {
+   "name": "Family Martelli 1",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "family-paget-1": {
+   "name": "Family Paget 1",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-alvares": {
+   "name": "House Alvares",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-arpad": {
+   "name": "House Arpad",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-avalande": {
+   "name": "House Avalande",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-castilla": {
+   "name": "House Castilla",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-duarte": {
+   "name": "House Duarte",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-navarre": {
+   "name": "House Navarre",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-omero": {
+   "name": "House Omero",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-volantis": {
+   "name": "House Volantis",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "house-zardanti": {
+   "name": "House Zardanti",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "ironbound-academy": {
+   "name": "Ironbound Academy",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "knight-order-of-the-black-lilly": {
+   "name": "Knight order of the black lilly",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "loz-tdrot": {
+   "name": "Loz Tdrot",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "order-of-steel": {
+   "name": "Order of steel",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "raven-king-cult": {
+   "name": "Raven king cult",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "ravenscrest-emporium": {
+   "name": "Ravenscrest Emporium",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": [
+    "alistair-kingsley",
+    "ashley-seidel"
+   ]
+  },
+  "red-hand-of-doom-relationship-map": {
+   "name": "Red Hand of Doom relationship map",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "shadow-company-mcdm-organization-sheet-2025-01-13": {
+   "name": "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "sword-n-shield": {
+   "name": "Sword n Shield",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-cautier-school": {
+   "name": "The Cautier School",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": [
+    "lord-davide-castilla"
+   ]
+  },
+  "the-fulcrom": {
+   "name": "The Fulcrom",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-illes": {
+   "name": "The Illes",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-lodge": {
+   "name": "The Lodge",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-ruby-throne": {
+   "name": "The Ruby Throne",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-shadow-company": {
+   "name": "The Shadow Company",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-tower": {
+   "name": "The Tower",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-white-tusk-tribe": {
+   "name": "The white tusk tribe",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "neutral",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "throg-was-1": {
+   "name": "Throg'was 1",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "red-hand-horde": {
+   "name": "red hand horde",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "the-charnel-house": {
+   "name": "the charnel house",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  },
+  "ubonhorlige": {
+   "name": "ubønhørlige",
+   "seat": null,
+   "stance": "unknown",
+   "type": "",
+   "status": "",
+   "leader": [],
+   "sessions": [],
+   "members": []
+  }
+ },
  "threads": [],
  "tools": {
   "forgotten": [],
@@ -2540,5 +5200,450 @@
    "noteId": "the-shadow-company-book-1-red-hand-of-doom"
   }
  ],
- "unplaced": []
+ "unplaced": [
+  {
+   "note": "14 Locations",
+   "id": "14-locations",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Anden tavern",
+   "id": "anden-tavern",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Arendur",
+   "id": "arendur",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Arendur Organisations",
+   "id": "arendur-organisations",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Arendur Rising Fronts",
+   "id": "arendur-rising-fronts",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ashmar Downs",
+   "id": "ashmar-downs",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Azuremarket",
+   "id": "azuremarket",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Bedegaarn Barony Region Sheet",
+   "id": "bedegaarn-barony-region-sheet",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Belle",
+   "id": "belle",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Beltath",
+   "id": "beltath",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Black Hammer",
+   "id": "black-hammer",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Black portrait Inn",
+   "id": "black-portrait-inn",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Click Claw Watch",
+   "id": "click-claw-watch",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Click claw moors",
+   "id": "click-claw-moors",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Dead Mountain",
+   "id": "dead-mountain",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Delios (known)",
+   "id": "delios-known",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Delios known poi",
+   "id": "delios-known-poi",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Delios possible trainers",
+   "id": "delios-possible-trainers",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Despotic realm of Regent Hexton of Bedegaarn",
+   "id": "despotic-realm-of-regent-hexton-of-bedegaarn",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Det Rustne bæger",
+   "id": "det-rustne-baeger",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Domains in the barony",
+   "id": "domains-in-the-barony",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Dragonfly creek - following river by land - encounters",
+   "id": "dragonfly-creek-following-river-by-land-encounters",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Dusty tome - bookshop",
+   "id": "dusty-tome-bookshop",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Everending Staircase - monument",
+   "id": "everending-staircase-monument",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Fallen star inn",
+   "id": "fallen-star-inn",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Fallen star inn - first visit",
+   "id": "fallen-star-inn-first-visit",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Franz Griffins medallion",
+   "id": "franz-griffins-medallion",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Gaed's sanctuary",
+   "id": "gaed-s-sanctuary",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Haudh Ninlaith",
+   "id": "haudh-ninlaith",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Hexton regent of Bedegaarn",
+   "id": "hexton-regent-of-bedegaarn",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Jago's Jewel",
+   "id": "jago-s-jewel",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Map - Misty falls region",
+   "id": "map-misty-falls-region",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Misty Falls",
+   "id": "misty-falls",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Misty falls Nodes",
+   "id": "misty-falls-nodes",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Misty falls region map",
+   "id": "misty-falls-region-map",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Mistyfalls subregion lists",
+   "id": "mistyfalls-subregion-lists",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "NPCs in Delios town",
+   "id": "npcs-in-delios-town",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Osric's Gilded Stables",
+   "id": "osric-s-gilded-stables",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Osric's Gold Loaf",
+   "id": "osric-s-gold-loaf",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Osric's Gold button",
+   "id": "osric-s-gold-button",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ranch 1 Falca",
+   "id": "ranch-1-falca",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ranch 2 Rutus",
+   "id": "ranch-2-rutus",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ranch 3 Mulcere",
+   "id": "ranch-3-mulcere",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ranch 4 Beltath",
+   "id": "ranch-4-beltath",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ranch 5 Tenere",
+   "id": "ranch-5-tenere",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Rinaken Stormbane",
+   "id": "rinaken-stormbane",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Rumours - Delios",
+   "id": "rumours-delios",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Secrets in Delios town",
+   "id": "secrets-in-delios-town",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Selling loot in Delios",
+   "id": "selling-loot-in-delios",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Sir Claudio Patrol",
+   "id": "sir-claudio-patrol",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Standard Spell services costs",
+   "id": "standard-spell-services-costs",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Stormpine Hall - gentlemen club",
+   "id": "stormpine-hall-gentlemen-club",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "THE death knight",
+   "id": "the-death-knight",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Teleportation Circles",
+   "id": "teleportation-circles",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "The Bedegaarn Barony MOC",
+   "id": "the-bedegaarn-barony-moc",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "The Milly Bell",
+   "id": "the-milly-bell",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "The Stormpine halls library inventory",
+   "id": "the-stormpine-halls-library-inventory",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "The southern Baronies",
+   "id": "the-southern-baronies",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Town Delios",
+   "id": "town-delios",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Training possibilities in Delios",
+   "id": "training-possibilities-in-delios",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ursia Region Map",
+   "id": "ursia-region-map",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Ursia hex map",
+   "id": "ursia-hex-map",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "Vault of Shadows",
+   "id": "vault-of-shadows",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "ambush wagon loot",
+   "id": "ambush-wagon-loot",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "blackbriar monastery",
+   "id": "blackbriar-monastery",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "clickclawmoors hazards",
+   "id": "clickclawmoors-hazards",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "council of three",
+   "id": "council-of-three",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "framed black canvas",
+   "id": "framed-black-canvas",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "lumber ranches",
+   "id": "lumber-ranches",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "misty falls region npc domains",
+   "id": "misty-falls-region-npc-domains",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "stone crabs",
+   "id": "stone-crabs",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "tax_enforcement_guide",
+   "id": "tax-enforcement-guide",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "taxation_system_ursia",
+   "id": "taxation-system-ursia",
+   "summary": "",
+   "url": ""
+  },
+  {
+   "note": "worker elixirs",
+   "id": "worker-elixirs",
+   "summary": "",
+   "url": ""
+  }
+ ]
 }

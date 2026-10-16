@@ -23,11 +23,23 @@ CAMPAIGN = {
     "title": "Arendur",
     "start": "ursia",                    # map shown first
     "repo": "BahneGork/Arendur-Atlas-GM",   # where "Gem for alle" commits moved pins (the private repo)
-    "notes_repo": "https://github.com/BahneGork/GMnostes.git",
-    # Player-safe folders only: anything under them is shown in the public atlas.
-    "notes_dirs": [
-        "src/site/notes/01 GM/Campaigns/The Arendur Rising Campaign/The Shadow Company/Bible/Player Vault",
-        "src/site/notes/01 GM/Campaigns/The Arendur Rising Campaign/Handouts/Cutscenes",
+    # The owner's vault (read by tools/sync_vault.py, which copies these folders into vault/).
+    "vault_source": "/mnt/e/Dropbox (Personlig)/Obsidian notes/Diamor/01 GM/Campaigns/The Arendur Rising Campaign",
+    "vault_folders": ["00 Arendur Seedbox", "01 Running the game", "12 Adventures & Events", "15 lists", "Handouts",
+                      "The Bible", "The Shadow Company"],
+    # Notes the players have (their vault, the cutscenes). Every other note is GM-only.
+    "player_dirs": ["The Shadow Company/Bible/Player Vault", "Handouts/Cutscenes"],
+    # Note type by folder: the first rule whose text is in the note's path wins.
+    "note_kinds": [
+        ("Player Vault/People", "People"), ("Player Vault/Missions", "Missions"),
+        ("Player Vault/Handouts", "Handouts"), ("Player Vault/The Company Chronicle", "Journal"),
+        ("Player Vault/", "PlayerVault"),
+        ("04 Fact sheets/03 People", "People"), ("04 Fact sheets/04 Factions", "Factions"),
+        ("04 Fact sheets/14 Locations", "Locations"), ("04 Fact sheets/16 Setting", "Lore"),
+        ("Secrets n clues", "Secrets"), ("03 Old sessions notes", "Sessions"), ("Playercharacters", "Characters"),
+        ("The Bible/", "Bible"), ("12 Adventures & Events", "Adventures"), ("Handouts/", "Handouts"),
+        ("/Loot/", "Loot"), ("The Shadow Company/", "Company"), ("01 Running the game", "Prep"),
+        ("00 Arendur Seedbox", "Seeds"), ("15 lists", "Lists"),
     ],
     "home_note": "1.This is the player vault for the Arendur Rising campaign",
     "hubs": ["1.This is the player vault for the Arendur Rising campaign", "2.Campaign Journal",
@@ -137,7 +149,7 @@ PLACES = {
     "fallen-star": dict(note="", players=True, also=[("misty", [1119, 392], False)], map="blackwood", at=[770, 575], approx=True, kind="sted", name="Fallen Star",
                         visited=True, where="En landevejskro på vejen mod Delios (K57).",
                         summary="Landevejskro, hvor Anton og Frekka sluttede sig til gruppen (K57–K58). "
-                                "Skyggekompagniets hovedkvarter (Summary Session 47)."),
+                                "Skyggekompagniets hovedkvarter."),  # HQ: the owner's Summary Session 47
     "mausoleum": dict(note="", players=True, map="blackwood", at=[785, 610], approx=True, kind="hule", name="Mausoleet",
                       visited=True, where="Ikke langt fra Fallen Star (K54–K57).",
                       summary="Gammelt gravsted med et elverbroderet vægtæppe. Tidsmagi sendte gruppen tilbage "

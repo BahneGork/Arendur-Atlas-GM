@@ -9,6 +9,7 @@ The GM edition of the Arendur Rising atlas, and the source of the players' editi
 
 ## Build
 ```bash
+python3 tools/sync_vault.py                          # copy the notes from the vault into vault/
 python3 tools/build.py                              # GM atlas into data/
 python3 tools/build.py --players ../Arendur-Atlas   # + the players' edition into the public repo
 ```

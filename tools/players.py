@@ -11,15 +11,17 @@ import os
 import re
 import shutil
 
-from curation import MAPS, PARTY_EXTRA, PLACES, PORTALS
+from curation import CAMPAIGN, MAPS, PARTY_EXTRA, PLACES, PORTALS
 
 # Files of the site itself, copied as they are.
 SITE = ["index.html", "css", "js", "vendor"]
 
 
-def filter_atlas(out):
-    """The GM atlas data -> the players' atlas data, plus problems that must stop the build."""
+def filter_atlas(out, notes_out, player_ids):
+    """The GM atlas data and notes -> the players' data and notes (JSON text), plus problems that must stop
+    the build. player_ids: the notes the players have (their vault, the cutscenes)."""
     problems = []
+    ok = lambda ref: ref and ref[1] in player_ids  # [title, note id] pairs
     gm_maps = {k for k, m in MAPS.items() if not m.get("players")}
     keep = {pid for pid, p in PLACES.items() if p.get("players")}
 
@@ -33,22 +35,52 @@ def filter_atlas(out):
             # Known to the players, but not where it is (or only on a GM map).
             p.update(map=None, at=None, approx=False, offmap=p["offmap"] or (None if p["parent"] else "other"))
         p["also"] = [x for x in p["also"] if x["map"] not in gm_maps]
+        p["people"] = [r for r in p["people"] if ok(r)]
+        p["factions"] = [r for r in p["factions"] if ok(r)]
+        if p.get("noteId") not in player_ids:
+            # A GM note: no link, and its text never becomes the players' summary.
+            p.update(noteId=None, url="")
+            if not PLACES[pid].get("summary"):
+                p["summary"] = ""
         places[pid] = p
 
     maps = {k: {kk: vv for kk, vv in m.items() if kk != "players" and not (kk == "place" and vv not in keep)}
             for k, m in MAPS.items() if k not in gm_maps}
     portals = [p for p in PORTALS if p["map"] not in gm_maps and p["to"] not in gm_maps]
-    sessions = [{**s, "places": [x for x in s["places"] if x in keep]} for s in out["sessions"] if s.get("players", True)]
-    people = {k: p for k, p in out["people"].items()
-              if not (p.get("noNote") and not PARTY_EXTRA.get(p["name"], {}).get("players"))}
+    sessions = [{**s, "places": [x for x in s["places"] if x in keep],
+                 "noteId": s["noteId"] if s.get("noteId") in player_ids else None}
+                for s in out["sessions"] if s.get("players", True)]
+    factions = {k: {**f, "members": [m for m in f["members"] if m in player_ids],
+                    "leader": [m for m in f["leader"] if m in player_ids]}
+                for k, f in out["factions"].items() if k in player_ids}
+    people = {}
+    for k, p in out["people"].items():
+        if p.get("noNote") and PARTY_EXTRA.get(p["name"], {}).get("players") or not p.get("noNote") and k in player_ids:
+            people[k] = {**p, "factions": [f for f in p["factions"] if f in factions],
+                         "place": p["place"] if not p["place"] or p["place"].startswith("region:") or p["place"] in keep else None}
+    tools = {**out["tools"], "forgotten": [f for f in out["tools"]["forgotten"] if f["id"] in player_ids]}
+    unplaced = [u for u in out["unplaced"] if u.get("id") in player_ids]
+
+    notes = {}
+    for nid, n in notes_out.items():
+        if nid not in player_ids:
+            continue
+        n = {**n, "links": [x for x in n["links"] if x in player_ids],
+             "backlinks": [x for x in n["backlinks"] if x in player_ids]}
+        if "together" in n:
+            n["together"] = [x for x in n["together"] if x[0] in player_ids]
+        if n.get("place") and n["place"][0] == "sted" and n["place"][1] not in keep:
+            del n["place"]
+        notes[nid] = n
 
     res = {**out, "campaign": {**out["campaign"], "audience": "players"}, "maps": maps, "portals": portals,
-           "places": places, "sessions": sessions, "people": people}
-    return res, problems
+           "places": places, "sessions": sessions, "people": people, "factions": factions, "tools": tools,
+           "unplaced": unplaced}
+    return res, json.dumps(notes, ensure_ascii=False, separators=(",", ":")), problems
 
 
 def gm_only_strings():
-    """Names and texts that only the GM may see, for the leak check."""
+    """Curated names and texts that only the GM may see, for the leak check."""
     shown = {s.lower() for pid, p in PLACES.items() if p.get("players")
              for s in [p.get("name", ""), p.get("note", "")] + p.get("aliases", []) if s}
     shown |= {m["name"].lower() for m in MAPS.values() if m.get("players")}
@@ -66,11 +98,28 @@ def gm_only_strings():
     return found
 
 
-def leak_check(texts):
-    """Every GM-only string must be absent from the players' files."""
-    blob = "\n".join(texts).lower()
-    return [f"LEAK: '{s}' ({where}) is in the players' edition" for where, s in gm_only_strings()
-            if len(s) >= 4 and re.search(r"(?<![\wæøå])" + re.escape(s.lower()) + r"(?![\wæøå])", blob)]
+def gm_note_titles(gm_titles):
+    """Titles of GM-only notes that aren't also the name of something the players see."""
+    shown = {s.lower() for p in PLACES.values() if p.get("players")
+             for s in [p.get("name", ""), p.get("note", "")] + p.get("aliases", []) if s}
+    return [t for t in gm_titles if t.lower() not in shown and t not in CAMPAIGN.get("leak_ok", [])]
+
+
+def leak_check(atlas_json, notes_json, gm_titles=(), player_titles=()):
+    """GM-only names and texts must be absent from the players' files.
+
+    Curated GM-only places, maps and gm= texts may appear nowhere. A GM note's title is a leak only in
+    the generated atlas data, and only when the players' own notes don't contain it: a name the players
+    have written down themselves is known to them (the note's content never reaches them)."""
+    atlas, own = atlas_json.lower(), notes_json.lower()
+    known = {t.lower() for t in player_titles}
+    has = lambda blob, s: re.search(r"(?<![\wæøå])" + re.escape(s.lower()) + r"(?![\wæøå])", blob)
+    leaks = [f"LEAK: '{s}' ({where}) is in the players' edition" for where, s in gm_only_strings()
+             if len(s) >= 4 and (has(atlas, s) or has(own, s))]
+    leaks += [f"LEAK: GM note '{s}' is named in the players' atlas data"
+              for s in gm_note_titles([t for t in gm_titles if t.lower() not in known])
+              if len(s) >= 4 and has(atlas, s) and not has(own, s)]
+    return leaks
 
 
 def write(out_dir, root, data, notes_json, version):

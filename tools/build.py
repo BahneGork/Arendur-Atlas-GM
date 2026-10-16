@@ -11,7 +11,6 @@ import argparse
 import json
 import os
 import re
-import subprocess
 import sys
 from collections import defaultdict
 from datetime import datetime
@@ -26,64 +25,63 @@ import players as pl  # noqa: E402
 import threads as thr  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REPO = CAMPAIGN["notes_repo"]
-CACHE = os.path.join(ROOT, ".cache", "notes")
-NOTES_DIRS = CAMPAIGN["notes_dirs"]
-
-
-def fetch_notes():
-    """Sparse, shallow copy of the published notes; refreshed on every build."""
-    git = ["git", "-C", CACHE]
-    try:
-        if not os.path.isdir(CACHE):
-            subprocess.run(["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse", REPO, CACHE],
-                           check=True)
-            subprocess.run(git + ["sparse-checkout", "set", "--no-cone"] + [f"/{d}/" for d in NOTES_DIRS], check=True)
-        else:
-            subprocess.run(git + ["fetch", "-q", "--depth", "1", "origin", "main"], check=True)
-            subprocess.run(git + ["reset", "-q", "--hard", "origin/main"], check=True)
-    except (subprocess.CalledProcessError, OSError) as e:
-        print(f"warning: could not update notes from GitHub ({e}); using the cached copy")
-    rev = subprocess.run(git + ["log", "-1", "--format=%h %ci"], capture_output=True, text=True).stdout.strip()
-    print(f"notes: GitHub {rev}")
-    return CACHE
-
+VAULT = os.path.join(ROOT, "vault")  # filled from the owner's vault by tools/sync_vault.py
 
 ARGS = argparse.ArgumentParser()
-ARGS.add_argument("--notes", help="notes root instead of fetching them from GitHub")
+ARGS.add_argument("--notes", help="notes root instead of vault/")
 ARGS.add_argument("--players", metavar="DIR", help="also write the players' edition into DIR (the public repo)")
 ARGS = ARGS.parse_args()
-ROOT_DIR = ARGS.notes or fetch_notes()
-NOTE_DIRS = [os.path.join(ROOT_DIR, d) for d in NOTES_DIRS]
+NOTES_ROOT = ARGS.notes or VAULT
+
+
+def note_kind(rel):
+    """The note's type ("People", "Locations", ...) from its folder, by the first rule in CAMPAIGN["note_kinds"]."""
+    path = rel.replace(os.sep, "/")
+    return next((kind for part, kind in CAMPAIGN["note_kinds"] if part in path), "")
+
+
+def is_player_note(rel):
+    path = rel.replace(os.sep, "/")
+    return any(path.startswith(d + "/") for d in CAMPAIGN["player_dirs"])
+
 
 WIKILINK = re.compile(r"\[\[(?:[^\]|]*/)?([^\]|/#]+?)(?:#[^\]|]*)?(?:\\?\|([^\]]+))?\]\]")
 
 
 def load_notes():
-    notes = {}
-    for base in NOTE_DIRS:
-        for dirpath, _, files in os.walk(base):
-            for f in files:
-                if not f.endswith(".md"):
-                    continue
-                path = os.path.join(dirpath, f)
-                text = open(path, encoding="utf-8").read()
-                meta, body = {}, text
-                m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
-                if m:
-                    try:
-                        meta = json.loads(m.group(1))
-                    except ValueError:
-                        pass
-                    body = text[m.end():]
-                rel = os.path.relpath(path, base)
-                # Some titles exist in several folders; the Locations note wins.
-                if notes.get(f[:-3], {}).get("folder") == "Locations":
-                    continue
-                notes[f[:-3]] = {"folder": rel.split(os.sep)[0] if os.sep in rel else "",
-                                 "marked_visited": "Locationsvisited" in rel.split(os.sep)[:-1],
-                                 "permalink": meta.get("permalink"), "body": body,
-                                 "props": meta.get("dg-note-properties") or {}}
+    """All notes under NOTES_ROOT, keyed by title. A title that exists twice keeps the players' copy
+    (else the longer one), so both editions show the same text."""
+    import yaml
+    notes, dropped = {}, []
+    for dirpath, dirs, files in os.walk(NOTES_ROOT):
+        dirs[:] = sorted(d for d in dirs if not d.startswith("."))
+        for f in sorted(files):
+            if not f.endswith(".md"):
+                continue
+            path = os.path.join(dirpath, f)
+            text = open(path, encoding="utf-8").read()
+            meta, body = {}, text
+            m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+            if m:
+                try:
+                    meta = yaml.safe_load(m.group(1)) or {}
+                except yaml.YAMLError:
+                    meta = {}
+                if not isinstance(meta, dict):
+                    meta = {}
+                body = text[m.end():]
+            rel = os.path.relpath(path, NOTES_ROOT)
+            note = {"folder": note_kind(rel), "path": rel, "player": is_player_note(rel),
+                    "marked_visited": False, "permalink": None, "body": body, "props": meta}
+            old = notes.get(f[:-3])
+            if old and (old["player"], len(old["body"])) >= (note["player"], len(note["body"])):
+                dropped.append(rel)
+                continue
+            if old:
+                dropped.append(old["path"])
+            notes[f[:-3]] = note
+    if dropped:
+        print(f"{len(dropped)} notes skipped: same title as another note (the players' copy is kept)")
     return notes
 
 
@@ -144,8 +142,10 @@ def inside(pt, poly):
 
 # Note groups shown in the reader, by top-level folder.
 GROUPS = {"Locations": "Steder", "People": "Personer", "Factions": "Factions", "Items": "Genstande",
-          "Loot": "Loot", "Missions": "Missioner", "Journal": "Journal", "Setting lore": "Lore", "Lore": "Lore",
-          "Characters": "Karakterer", "Rules": "Regler", "": "Andet"}
+          "Loot": "Loot", "Missions": "Missioner", "Journal": "Krønike", "Lore": "Lore", "Characters": "Karakterer",
+          "Secrets": "Hemmeligheder", "Sessions": "Sessionsnoter", "Adventures": "Eventyr", "Handouts": "Handouts",
+          "Company": "Skyggekompagniet", "Bible": "Bibel", "Prep": "Forberedelse", "Seeds": "Idéer",
+          "Lists": "Lister", "PlayerVault": "Spillernes vault", "": "Andet"}
 SKIP_NOTES = set(CAMPAIGN.get("skip_notes", []))  # e.g. generated Dataview output
 # Overview notes that link to everything; readable, but not shown as "related".
 HUBS = set(CAMPAIGN.get("hubs", []))
@@ -231,28 +231,23 @@ def text_prop(value):
     return ", ".join(WIKILINK.sub(link_label, v) for v in vals)
 
 
-def character_sheets():
-    """Race and class from the player character notes in Characters/, keyed by lower-case name and alias."""
+def character_sheets(notes):
+    """Race and class from the player character notes (type: pc), keyed by lower-case name and alias."""
     sheets = {}
-    for dirpath, _, files in (w for base in NOTE_DIRS for w in os.walk(os.path.join(base, "Characters"))):
-        for f in files:
-            m = re.match(r"^---\n(.*?)\n---\n", open(os.path.join(dirpath, f), encoding="utf-8").read(), re.S)
-            try:
-                pr = json.loads(m.group(1)).get("dg-note-properties", {}) if m else {}
-            except ValueError:
-                continue
-            if pr.get("type") != "pc" or not pr.get("class"):
-                continue
-            cls = pr["class"] + (f" ({pr['subclass']})" if pr.get("subclass") and pr["subclass"] != "uknown" else "")
-            sheet = {"race": pr.get("race", ""), "class": cls}
-            for name in [f[:-3]] + [a for a in pr.get("aliases") or [] if isinstance(a, str)]:
-                sheets[name.lower()] = sheet
+    for title, n in notes.items():
+        pr = n["props"]
+        if n["folder"] != "Characters" or pr.get("type") != "pc" or not pr.get("class"):
+            continue
+        cls = pr["class"] + (f" ({pr['subclass']})" if pr.get("subclass") and pr["subclass"] != "uknown" else "")
+        sheet = {"race": pr.get("race", ""), "class": cls}
+        for name in [title] + [a for a in pr.get("aliases") or [] if isinstance(a, str)]:
+            sheets[name.lower()] = sheet
     return sheets
 
 
 def build_people(notes, note_id, session_of):
     """People and factions from their notes' properties, placed on atlas places where possible."""
-    sheets = character_sheets()
+    sheets = character_sheets(notes)
     where = {p["note"]: pid for pid, p in PLACES.items()}
     where.update({a: pid for pid, p in PLACES.items() for a in p.get("aliases", [])})
     where.update({r["note"]: f"region:{rid}" for rid, r in REGIONS.items()})
@@ -358,6 +353,8 @@ def follow_renames(notes):
     PARTY[:] = [res(x) for x in PARTY]
     for d in (PARTY_NAMES, PARTY_STATUS, PARTY_PERIODS, PARTY_CLASS, PARTY_RACE, PARTY_ORIGIN):
         for k in list(d):
+            if k in PARTY_EXTRA:  # party members shown without a note keep their own name
+                continue
             if res(k) != k:
                 d[res(k)] = d.pop(k)
     for names in SOLO_SESSIONS.values():
@@ -468,7 +465,8 @@ def main():
     curated |= {r["note"] for r in REGIONS.values()} | {a for r in REGIONS.values() for a in r.get("aliases", [])}
     uncurated = sorted(t for t, n in notes.items()
                        if n["folder"] == "Locations" and t not in curated and t not in NOT_PLACES)
-    unplaced = [{"note": t, "summary": summarize(notes[t]["body"]), "url": note_url(notes[t])} for t in uncurated]
+    unplaced = [{"note": t, "id": note_id.get(t), "summary": summarize(notes[t]["body"]), "url": note_url(notes[t])}
+                for t in uncurated]
 
     place_of = {p["note"]: ("sted", pid) for pid, p in PLACES.items()}
     place_of.update({r["note"]: ("region", rid) for rid, r in REGIONS.items()})
@@ -565,9 +563,11 @@ def main():
         if problems:
             print("players' edition NOT written: fix the problems first")
         else:
-            data, leaks = pl.filter_atlas(out)
-            notes_json = open(notes_path, encoding="utf-8").read()
-            leaks += pl.leak_check([json.dumps(data, ensure_ascii=False), notes_json])
+            player_ids = {note_id[t] for t, n in notes.items() if n["player"] and t in note_id}
+            data, notes_json, leaks = pl.filter_atlas(out, json.load(open(notes_path, encoding="utf-8")), player_ids)
+            leaks += pl.leak_check(json.dumps(data, ensure_ascii=False), notes_json,
+                                   gm_titles=[t for t, n in notes.items() if not n["player"]],
+                                   player_titles=[t for t, n in notes.items() if n["player"]])
             if leaks:
                 problems += leaks
                 print("players' edition NOT written")
