@@ -5724,23 +5724,6 @@
    "sessions": [],
    "members": []
   },
-  "assumi-foundation": {
-   "name": "Assumi Foundation",
-   "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [],
-   "playerSeat": null,
-   "playerSeatGuess": false,
-   "playerSeatMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "type": "player organization",
-   "status": "",
-   "leader": [],
-   "sessions": [],
-   "members": []
-  },
   "blue-guardians": {
    "name": "Blue Guardians",
    "seat": "arendur",

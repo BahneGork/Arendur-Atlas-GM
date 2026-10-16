@@ -59,6 +59,7 @@ CAMPAIGN = {
         "INDEX-Starsong-Hill-Package", "+Develop list", "Tjek list", "Party Planning List of contents",
         "Misty falls Nodes", "Mistyfalls subregion lists", "Rirroneth Hazards", "Rirroneth POIs - Landmarks",
         "+Party DO list", "+Everyone else DO list", "Red Hand of Doom relationship map",
+        "Assumi Foundation",  # a test example for the Faction Dashboard (owner, 2026-10-16)
     ],
     "gm": "",
     # Rejsen follows the chronicle in stages, because which session did what isn't recorded (owner).
