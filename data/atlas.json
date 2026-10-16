@@ -139,10 +139,6 @@
      "nails"
     ],
     [
-     "People",
-     "people"
-    ],
-    [
      "Regent Hexton",
      "regent-hexton"
     ],
@@ -353,12 +349,7 @@
      "the-vampire-spawn"
     ]
    ],
-   "factions": [
-    [
-     "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
-     "shadow-company-mcdm-organization-sheet-2025-01-13"
-    ]
-   ],
+   "factions": [],
    "visited": true,
    "noteId": "town-delios"
   },
@@ -839,10 +830,6 @@
      "bartoz-1"
     ],
     [
-     "People",
-     "people"
-    ],
-    [
      "Wulfram",
      "wulfram"
     ]
@@ -957,12 +944,7 @@
    "sessions": [
     10
    ],
-   "people": [
-    [
-     "People",
-     "people"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "fallen-star-inn"
@@ -1055,20 +1037,11 @@
      "lord-vermil"
     ],
     [
-     "People",
-     "people"
-    ],
-    [
      "THE necromancer",
      "the-necromancer"
     ]
    ],
-   "factions": [
-    [
-     "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
-     "shadow-company-mcdm-organization-sheet-2025-01-13"
-    ]
-   ],
+   "factions": [],
    "visited": true,
    "noteId": "blackbriar-monastery"
   },
@@ -1401,10 +1374,6 @@
     [
      "Minka Fischer",
      "minka-fischer"
-    ],
-    [
-     "People",
-     "people"
     ]
    ],
    "factions": [],
@@ -1465,12 +1434,7 @@
    "summary": "Gruppen har været i staldene.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "People",
-     "people"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "osric-s-gilded-stables"
@@ -1586,10 +1550,6 @@
     [
      "Ashely Vieth",
      "ashely-vieth"
-    ],
-    [
-     "People",
-     "people"
     ]
    ],
    "factions": [],
@@ -1734,10 +1694,6 @@
     [
      "Millicent",
      "millicent"
-    ],
-    [
-     "People",
-     "people"
     ]
    ],
    "factions": [],
@@ -1825,12 +1781,7 @@
    "summary": "Gruppen har været i Jago's Jewel.",
    "url": "",
    "sessions": [],
-   "people": [
-    [
-     "People",
-     "people"
-    ]
-   ],
+   "people": [],
    "factions": [],
    "visited": true,
    "noteId": "jago-s-jewel"
@@ -2417,10 +2368,6 @@
      "family-paget"
     ],
     [
-     "People",
-     "people"
-    ],
-    [
      "Willard",
      "willard"
     ]
@@ -2988,53 +2935,6 @@
   "avarthel": {
    "name": "Avarthel",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 6,
-   "mentionedWith": [
-    "star-song-hill",
-    "east-blackwood"
-   ],
-   "playerPlace": null,
-   "playerPlaceGuess": false,
-   "playerPlaceMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
-  "03-people": {
-   "name": "03 People",
-   "place": "arendur",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [],
-   "playerPlace": null,
-   "playerPlaceGuess": false,
-   "playerPlaceMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
-  "1-npc-database": {
-   "name": "1.NPC database",
-   "place": null,
    "placeGuess": false,
    "placeMentions": 0,
    "mentionedWith": [],
@@ -3169,11 +3069,9 @@
   "aurilia": {
    "name": "Aurilia",
    "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3247,11 +3145,9 @@
   "caillach": {
    "name": "Caillach",
    "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "east-blackwood"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3376,14 +3272,10 @@
   },
   "duerif-redblade": {
    "name": "Duerif Redblade",
-   "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "east-blackwood",
-    "skygge-vaulten",
-    "black-portrait"
-   ],
+   "place": "delios",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3402,14 +3294,10 @@
   },
   "duke-armatage-volantis": {
    "name": "Duke Armatage Volantis",
-   "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "delios",
-    "haudh-ninlaith",
-    "arendur"
-   ],
+   "place": null,
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3489,13 +3377,10 @@
   },
   "faustus-antili": {
    "name": "Faustus Antili",
-   "place": null,
+   "place": "azuremarket",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "azuremarket",
-    "arendur"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3514,12 +3399,10 @@
   },
   "fireberry": {
    "name": "Fireberry",
-   "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "star-song-hill"
-   ],
+   "place": "star-song-hill",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3700,14 +3583,10 @@
   },
   "jayce-fireheart-ranger-hut": {
    "name": "Jayce Fireheart - ranger hut",
-   "place": "east-blackwood",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "crocodile-lair",
-    "misty-falls",
-    "blackspear-swamp"
-   ],
+   "place": "ranger-hut",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3745,8 +3624,8 @@
   "judith-m-ller": {
    "name": "Judith Müller",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 4,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -3788,10 +3667,8 @@
    "name": "Kryx Bloodgnash",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "raven-tomb"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3814,12 +3691,10 @@
   },
   "kurz-beier": {
    "name": "Kurz Beier",
-   "place": null,
+   "place": "hamlet",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "fallen-star"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3839,8 +3714,8 @@
   "lady-dazran": {
    "name": "Lady Dazran",
    "place": "rirroneth",
-   "placeGuess": true,
-   "placeMentions": 8,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -3860,14 +3735,10 @@
   },
   "lady-floret": {
    "name": "Lady Floret",
-   "place": null,
+   "place": "bedegaarn",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "bedegaarn",
-    "delios",
-    "teslions"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3904,12 +3775,10 @@
   },
   "lady-millicity": {
    "name": "Lady Millicity",
-   "place": null,
+   "place": "delios",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -3930,12 +3799,8 @@
    "name": "Latona 'Pippa' the halfling",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "delios",
-    "arendur",
-    "rirroneth"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4014,12 +3879,10 @@
   },
   "lord-jarret-castilla": {
    "name": "Lord Jarret Castilla",
-   "place": null,
+   "place": "arendur",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4156,10 +4019,8 @@
    "name": "Mellik",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4197,11 +4058,9 @@
   "miha": {
    "name": "Miha",
    "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "operation-mongoose"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4274,20 +4133,16 @@
   },
   "nails": {
    "name": "Nails",
-   "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "east-blackwood",
-    "arendur",
-    "herbalist"
-   ],
+   "place": "tower-of-lightning",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
    "playerMentionedWith": [],
    "stance": "unknown",
-   "dead": false,
+   "dead": true,
    "status": "",
    "race": "",
    "social": "",
@@ -4296,7 +4151,7 @@
    "factions": [],
    "sessions": [],
    "pc": false,
-   "statusNote": ""
+   "statusNote": "Karou's Bakke: \"Nails er død, dræbt af den sorte drage fra castle blackspear.\""
   },
   "osric-schneider": {
    "name": "Osric Schneider",
@@ -4338,13 +4193,10 @@
   },
   "pinna": {
    "name": "Pinna",
-   "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 6,
-   "mentionedWith": [
-    "arendur",
-    "lady-dagger-caves"
-   ],
+   "place": "arendur",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4381,7 +4233,7 @@
   },
   "queen-of-bones-court-of-all-flesh": {
    "name": "Queen of bones, court of all flesh",
-   "place": null,
+   "place": "raven-tomb",
    "placeGuess": false,
    "placeMentions": 0,
    "mentionedWith": [],
@@ -4421,14 +4273,10 @@
   },
   "ranger-hut-jayce-fireheart": {
    "name": "Ranger hut - Jayce Fireheart",
-   "place": "east-blackwood",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "crocodile-lair",
-    "delios",
-    "misty-falls"
-   ],
+   "place": "ranger-hut",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4448,13 +4296,9 @@
   "regent-hexton": {
    "name": "Regent Hexton",
    "place": "bedegaarn",
-   "placeGuess": true,
-   "placeMentions": 24,
-   "mentionedWith": [
-    "arendur",
-    "delios",
-    "east-blackwood"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4474,12 +4318,9 @@
   "regilarix-lore": {
    "name": "Regilarix - lore",
    "place": "blackspear",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "arendur",
-    "east-blackwood"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4499,8 +4340,8 @@
   "robert-gambini": {
    "name": "Robert Gambini",
    "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -4543,8 +4384,8 @@
   "roland-hartmoor": {
    "name": "Roland Hartmoor",
    "place": "stormpine",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -4587,8 +4428,8 @@
   "selina-rosenknop": {
    "name": "Selina Rosenknop",
    "place": "arendur",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -4608,13 +4449,10 @@
   },
   "shaw-hammett": {
    "name": "Shaw Hammett",
-   "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 5,
-   "mentionedWith": [
-    "teslions",
-    "delios"
-   ],
+   "place": "delios",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4658,13 +4496,9 @@
   "sir-claudio-1": {
    "name": "Sir Claudio 1",
    "place": "bedegaarn",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "fallen-star",
-    "delios",
-    "rirroneth"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4685,14 +4519,10 @@
   },
   "sir-claudio": {
    "name": "Sir Claudio",
-   "place": "rirroneth",
-   "placeGuess": true,
-   "placeMentions": 16,
-   "mentionedWith": [
-    "bedegaarn",
-    "arendur",
-    "fallen-star"
-   ],
+   "place": "bedegaarn",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4711,42 +4541,12 @@
    "pc": false,
    "statusNote": ""
   },
-  "sir-claudio-the-ashtree-knight-complete-profile-2024-06-20": {
-   "name": "Sir-Claudio-The-Ashtree-Knight-Complete-Profile-2024-06-20",
-   "place": "rirroneth",
-   "placeGuess": true,
-   "placeMentions": 15,
-   "mentionedWith": [
-    "bedegaarn",
-    "arendur",
-    "delios"
-   ],
-   "playerPlace": null,
-   "playerPlaceGuess": false,
-   "playerPlaceMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
   "the-necromancer": {
    "name": "THE necromancer",
-   "place": "dead-mountain",
-   "placeGuess": true,
-   "placeMentions": 5,
-   "mentionedWith": [
-    "blackbriar",
-    "kvalec",
-    "click-claw-moors"
-   ],
+   "place": null,
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4790,12 +4590,9 @@
   "the-raven-king": {
    "name": "The Raven King",
    "place": "raven-tomb",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "rirroneth",
-    "click-claw-moors"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4838,11 +4635,8 @@
    "name": "The Star-Violet Lady",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "bedegaarn",
-    "fallen-star"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4880,11 +4674,9 @@
   "thomas-spada": {
    "name": "Thomas spada",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4905,11 +4697,8 @@
    "name": "Throg'was",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "arendur",
-    "delios"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4929,11 +4718,9 @@
   "thurumbaba": {
    "name": "Thurumbaba",
    "place": "dead-mountain",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -4971,12 +4758,9 @@
   "willard": {
    "name": "Willard",
    "place": "fallen-star",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "star-song-hill",
-    "click-claw-moors"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -5017,13 +4801,10 @@
   },
   "jawbreaker": {
    "name": "jawbreaker",
-   "place": "arendur",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "blackspear",
-    "teslions"
-   ],
+   "place": null,
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 0,
@@ -5078,35 +4859,11 @@
    "pc": false,
    "statusNote": ""
   },
-  "the-sapphiretail-staff": {
-   "name": "the sapphiretail staff",
-   "place": "kvalec",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "dead-mountain"
-   ],
-   "playerPlace": null,
-   "playerPlaceGuess": false,
-   "playerPlaceMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
   "the-sorrowful-lady": {
    "name": "the sorrowful lady",
    "place": "haudh-ninlaith",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
@@ -5149,8 +4906,8 @@
   "bartoz-1": {
    "name": "Bartoz 1",
    "place": "click-claw",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "click-claw",
    "playerPlaceGuess": true,
@@ -5170,12 +4927,10 @@
   },
   "bartoz": {
    "name": "Bartoz",
-   "place": null,
+   "place": "click-claw",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "click-claw"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5197,12 +4952,9 @@
   "bell": {
    "name": "Bell",
    "place": "milly-bell",
-   "placeGuess": true,
-   "placeMentions": 12,
-   "mentionedWith": [
-    "gaeds-sanctuary",
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "milly-bell",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 4,
@@ -5224,11 +4976,9 @@
   "broder-aldo": {
    "name": "Broder Aldo",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "blackbriar",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 2,
@@ -5250,8 +5000,8 @@
   "broder-fulton": {
    "name": "Broder Fulton",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "blackbriar",
    "playerPlaceGuess": true,
@@ -5272,11 +5022,9 @@
   "broder-thomas-spada": {
    "name": "Broder Thomas spada",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "teslions"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "blackbriar",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 2,
@@ -5342,8 +5090,8 @@
   "delora": {
    "name": "Delora",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5408,12 +5156,9 @@
   "father-belderone": {
    "name": "Father Belderone",
    "place": "gaeds-sanctuary",
-   "placeGuess": true,
-   "placeMentions": 4,
-   "mentionedWith": [
-    "milly-bell",
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "delios",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 2,
@@ -5432,12 +5177,10 @@
   },
   "fimbar": {
    "name": "Fimbar",
-   "place": null,
+   "place": "teslions",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "teslions"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5481,8 +5224,8 @@
   "gregor-schatz": {
    "name": "Gregor Schatz",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "blackbriar",
    "playerPlaceGuess": true,
@@ -5525,8 +5268,8 @@
   "henrik-de-vant": {
    "name": "Henrik De'vant",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5547,8 +5290,8 @@
   "iormel": {
    "name": "Iormel",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5569,8 +5312,8 @@
   "ivana-schatz": {
    "name": "Ivana Schatz",
    "place": "blackbriar",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "blackbriar",
    "playerPlaceGuess": true,
@@ -5591,12 +5334,9 @@
   "jarret": {
    "name": "Jarret",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 5,
-   "mentionedWith": [
-    "arendur",
-    "skullgorge"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 5,
@@ -5642,8 +5382,8 @@
   "kellin": {
    "name": "Kellin",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5663,13 +5403,10 @@
   },
   "krazkar": {
    "name": "Krazkar",
-   "place": null,
+   "place": "teslions",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "goblin-caves",
-    "teslions"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5691,13 +5428,10 @@
   },
   "lady-kirkeby": {
    "name": "Lady Kirkeby",
-   "place": "taernu",
-   "placeGuess": true,
-   "placeMentions": 5,
-   "mentionedWith": [
-    "teslions",
-    "delios"
-   ],
+   "place": "delios",
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 3,
@@ -5720,11 +5454,9 @@
   "millicent": {
    "name": "Millicent",
    "place": "milly-bell",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5768,14 +5500,10 @@
   },
   "moogzt": {
    "name": "Moogzt",
-   "place": null,
+   "place": "teslions",
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "goblin-caves",
-    "teslions",
-    "east-blackwood"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5799,8 +5527,8 @@
   "noro": {
    "name": "Noro",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5818,71 +5546,17 @@
    "pc": false,
    "statusNote": ""
   },
-  "notes": {
-   "name": "Notes",
-   "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [],
-   "playerPlace": null,
-   "playerPlaceGuess": false,
-   "playerPlaceMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
   "oxbar": {
    "name": "Oxbar",
    "place": "camp-oxbar",
-   "placeGuess": true,
-   "placeMentions": 2,
-   "mentionedWith": [
-    "delios"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
    "playerMentionedWith": [
     "camp-oxbar"
-   ],
-   "stance": "unknown",
-   "dead": false,
-   "status": "",
-   "race": "",
-   "social": "",
-   "role": "",
-   "aliases": [],
-   "factions": [],
-   "sessions": [],
-   "pc": false,
-   "statusNote": ""
-  },
-  "people": {
-   "name": "People",
-   "place": "delios",
-   "placeGuess": true,
-   "placeMentions": 29,
-   "mentionedWith": [
-    "teslions",
-    "black-portrait",
-    "fallen-star"
-   ],
-   "playerPlace": "delios",
-   "playerPlaceGuess": true,
-   "playerPlaceMentions": 24,
-   "playerMentionedWith": [
-    "teslions",
-    "fallen-star",
-    "black-portrait"
    ],
    "stance": "unknown",
    "dead": false,
@@ -5921,8 +5595,8 @@
   "sandra-russo": {
    "name": "Sandra Russo",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5943,8 +5617,8 @@
   "sgt-hersk": {
    "name": "Sgt Hersk",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -5966,10 +5640,8 @@
    "name": "Sharwyn",
    "place": null,
    "placeGuess": false,
-   "placeMentions": 1,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": null,
    "playerPlaceGuess": false,
    "playerPlaceMentions": 1,
@@ -5991,8 +5663,8 @@
   "siertianna": {
    "name": "Siertianna",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 4,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -6013,8 +5685,8 @@
   "soranna-anitha": {
    "name": "Soranna Anitha",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -6035,13 +5707,9 @@
   "sunkiller": {
    "name": "Sunkiller",
    "place": "bedegaarn",
-   "placeGuess": true,
-   "placeMentions": 3,
-   "mentionedWith": [
-    "blackspear",
-    "arendur",
-    "blackspear-swamp"
-   ],
+   "placeGuess": false,
+   "placeMentions": 0,
+   "mentionedWith": [],
    "playerPlace": "bedegaarn",
    "playerPlaceGuess": true,
    "playerPlaceMentions": 2,
@@ -6064,8 +5732,8 @@
   "tharma": {
    "name": "Tharma",
    "place": "teslions",
-   "placeGuess": true,
-   "placeMentions": 2,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "teslions",
    "playerPlaceGuess": true,
@@ -6086,8 +5754,8 @@
   "wulfram": {
    "name": "Wulfram",
    "place": "click-claw",
-   "placeGuess": true,
-   "placeMentions": 3,
+   "placeGuess": false,
+   "placeMentions": 0,
    "mentionedWith": [],
    "playerPlace": "click-claw",
    "playerPlaceGuess": true,
@@ -6201,23 +5869,6 @@
   }
  },
  "factions": {
-  "1-faction-database": {
-   "name": "1. Faction database",
-   "seat": null,
-   "seatGuess": false,
-   "seatMentions": 0,
-   "mentionedWith": [],
-   "playerSeat": null,
-   "playerSeatGuess": false,
-   "playerSeatMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "type": "",
-   "status": "",
-   "leader": [],
-   "sessions": [],
-   "members": []
-  },
   "abbesses": {
    "name": "Abbesses",
    "seat": "delios",
@@ -6270,11 +5921,9 @@
   "blue-guardians": {
    "name": "Blue Guardians",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 7,
-   "mentionedWith": [
-    "teslions"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6288,13 +5937,10 @@
   },
   "bones": {
    "name": "Bones",
-   "seat": null,
+   "seat": "raven-tomb",
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "raven-tomb",
-    "arendur"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6344,9 +5990,9 @@
   },
   "crimson-company": {
    "name": "Crimson Company",
-   "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 3,
+   "seat": null,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6362,8 +6008,8 @@
   "cult-of-oztt": {
    "name": "Cult of Oztt",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6380,13 +6026,10 @@
   },
   "daughters-of-meg": {
    "name": "Daughters of Meg",
-   "seat": "blackspear",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "bedegaarn",
-    "delios"
-   ],
+   "seat": "hag-coven",
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6418,8 +6061,8 @@
   "eyes-of-the-many-headed-snake": {
    "name": "Eyes of the many headed snake",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 3,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6486,12 +6129,10 @@
   },
   "house-alvares": {
    "name": "House Alvares",
-   "seat": null,
+   "seat": "arendur",
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6505,12 +6146,10 @@
   },
   "house-arpad": {
    "name": "House Arpad",
-   "seat": null,
+   "seat": "click-claw",
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "click-claw-moors"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6544,11 +6183,9 @@
   "house-castilla": {
    "name": "House Castilla",
    "seat": "bedegaarn",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6580,8 +6217,8 @@
   "house-navarre": {
    "name": "House Navarre",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6597,11 +6234,9 @@
   "house-omero": {
    "name": "House Omero",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "bedegaarn"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6616,8 +6251,8 @@
   "house-volantis": {
    "name": "House Volantis",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 3,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6667,12 +6302,9 @@
   "knight-order-of-the-black-lilly": {
    "name": "Knight order of the black lilly",
    "seat": "bedegaarn",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "fallen-star",
-    "delios"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6686,14 +6318,10 @@
   },
   "loz-tdrot": {
    "name": "Loz Tdrot",
-   "seat": "bedegaarn",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "arendur",
-    "east-blackwood",
-    "dead-mountain"
-   ],
+   "seat": "arendur",
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6755,49 +6383,11 @@
     "ashley-seidel"
    ]
   },
-  "red-hand-of-doom-relationship-map": {
-   "name": "Red Hand of Doom relationship map",
-   "seat": null,
-   "seatGuess": false,
-   "seatMentions": 0,
-   "mentionedWith": [],
-   "playerSeat": null,
-   "playerSeatGuess": false,
-   "playerSeatMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "type": "",
-   "status": "",
-   "leader": [],
-   "sessions": [],
-   "members": []
-  },
-  "shadow-company-mcdm-organization-sheet-2025-01-13": {
-   "name": "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
-   "seat": "fallen-star",
-   "seatGuess": true,
-   "seatMentions": 3,
-   "mentionedWith": [
-    "delios",
-    "bedegaarn",
-    "teslions"
-   ],
-   "playerSeat": null,
-   "playerSeatGuess": false,
-   "playerSeatMentions": 0,
-   "playerMentionedWith": [],
-   "stance": "unknown",
-   "type": "",
-   "status": "",
-   "leader": [],
-   "sessions": [],
-   "members": []
-  },
   "sword-n-shield": {
    "name": "Sword n Shield",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 4,
+   "seatGuess": false,
+   "seatMentions": 0,
    "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
@@ -6813,12 +6403,9 @@
   "the-cautier-school": {
    "name": "The Cautier School",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 7,
-   "mentionedWith": [
-    "bedegaarn",
-    "east-blackwood"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6834,13 +6421,10 @@
   },
   "the-fulcrom": {
    "name": "The Fulcrom",
-   "seat": "east-blackwood",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "azuremarket",
-    "arendur"
-   ],
+   "seat": "azuremarket",
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6868,11 +6452,9 @@
   "the-lodge": {
    "name": "The Lodge",
    "seat": "teslions",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "arendur"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6887,11 +6469,9 @@
   "the-ruby-throne": {
    "name": "The Ruby Throne",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 3,
-   "mentionedWith": [
-    "ravenscrest"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6906,13 +6486,9 @@
   "the-shadow-company": {
    "name": "The Shadow Company",
    "seat": "fallen-star",
-   "seatGuess": true,
-   "seatMentions": 5,
-   "mentionedWith": [
-    "arendur",
-    "delios",
-    "blackspear"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6927,12 +6503,9 @@
   "the-tower": {
    "name": "The Tower",
    "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 5,
-   "mentionedWith": [
-    "tower-of-lightning",
-    "bedegaarn"
-   ],
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6948,10 +6521,8 @@
    "name": "The white tusk tribe",
    "seat": null,
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "bedegaarn"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6965,13 +6536,10 @@
   },
   "throg-was-1": {
    "name": "Throg'was 1",
-   "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "bedegaarn",
-    "blackspear"
-   ],
+   "seat": null,
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -6985,14 +6553,10 @@
   },
   "red-hand-horde": {
    "name": "red hand horde",
-   "seat": "arendur",
-   "seatGuess": true,
-   "seatMentions": 2,
-   "mentionedWith": [
-    "blackspear",
-    "teslions",
-    "east-blackwood"
-   ],
+   "seat": "red-hand-warcamp",
+   "seatGuess": false,
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,
@@ -7008,11 +6572,8 @@
    "name": "the charnel house",
    "seat": null,
    "seatGuess": false,
-   "seatMentions": 1,
-   "mentionedWith": [
-    "fallen-star",
-    "raven-tomb"
-   ],
+   "seatMentions": 0,
+   "mentionedWith": [],
    "playerSeat": null,
    "playerSeatGuess": false,
    "playerSeatMentions": 0,

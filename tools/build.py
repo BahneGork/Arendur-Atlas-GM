@@ -17,7 +17,7 @@ from datetime import datetime
 from urllib.parse import quote, unquote
 
 sys.path.insert(0, os.path.dirname(__file__))
-from curation import (CAMPAIGN, GARDEN_URL, LOCATION_ALIASES, MAPS, NOT_PEOPLE, NOT_PLACES,  # noqa: E402
+from curation import (CAMPAIGN, DEAD, GARDEN_URL, PLACED, LOCATION_ALIASES, MAPS, NOT_PEOPLE, NOT_PLACES,  # noqa: E402
                       OFFMAP, PARTY, PARTY_CLASS, PARTY_EXTRA, PARTY_NAMES, PARTY_ORIGIN, PARTY_PERIODS, PARTY_RACE,
                       PARTY_STATUS, PLACES, PORTALS, SOLO_SESSIONS,
                       REGIONS, SESSIONS)
@@ -371,7 +371,9 @@ def build_people(notes, note_id, session_of):
         if sure:
             return {"place": sure, "placeGuess": False, "playerPlace": sure, "playerPlaceGuess": False}
         out = {}
-        for prefix, only in (("", False), ("player", True)):
+        if title in PLACED:  # decided by reading the vault (GM edition only)
+            out.update(place=PLACED[title], placeGuess=False, placeMentions=0, mentionedWith=[])
+        for prefix, only in (("player", True),) if title in PLACED else (("", False), ("player", True)):
             place, n, near = locate(title, only)
             key = lambda k: prefix + k[0].upper() + k[1:] if prefix else k
             out.update({key("place"): place, key("placeGuess"): bool(place), key("placeMentions"): n,
@@ -385,7 +387,7 @@ def build_people(notes, note_id, session_of):
 
     factions = {}
     for title, n in notes.items():
-        if n["folder"] != "Factions" or title not in note_id:
+        if n["folder"] != "Factions" or title not in note_id or title in NOT_PEOPLE:
             continue
         pr = n["props"]
         factions[note_id[title]] = {
@@ -416,7 +418,8 @@ def build_people(notes, note_id, session_of):
             "name": title,
             **where_is(title, pr, n["body"], in_party),
             "stance": STANCE.get(disp, "ally" if in_party else "unknown"),  # party members are allies unless noted
-            "dead": status == "dead" or disp.startswith("deceased"),
+            # DEAD is GM knowledge: it never marks a person from the players' notes.
+            "dead": status == "dead" or disp.startswith("deceased") or (title in DEAD and not n["player"]),
             "status": status if status not in ("", "alive", "unknown") else "",
             "race": "" if pr.get("race") in (None, "unspecified") else text_prop(pr.get("race")),
             # social_status is generic filler on the party's notes ("commoner"), so it is left out for them
@@ -424,7 +427,7 @@ def build_people(notes, note_id, session_of):
             "role": text_prop(pr.get("role")) or text_prop(pr.get("Profession")),
             "aliases": [a for a in pr.get("aliases") or [] if isinstance(a, str)],
             "factions": fids, "sessions": sessions_of(title, pr),
-            "pc": in_party, "statusNote": status_note,
+            "pc": in_party, "statusNote": status_note or ("" if n["player"] else DEAD.get(title, "")),
         }
         if in_party:
             # A party member's location in their note is where they come from; they travel with the group.

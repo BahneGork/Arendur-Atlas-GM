@@ -365,5 +365,64 @@ PARTY_EXTRA = {
     "Frekka Flammehår": dict(aliases=["Frekka"], players=True, race="", social="", role="", dead=False,
                              statusNote="Sluttede sig til gruppen ved Fallen Star (K58)."),
 }
+# Notes in the people/faction folders that are lists, duplicates or items, not people or factions.
 NOT_PEOPLE = {"Locations heard of or visited",  # a copy of the locations list filed under People/
-              "People Origins"}  # a list note in the GM's people folder
+              "People Origins", "People", "Notes", "03 People", "1.NPC database", "1. Faction database",
+              "Red Hand of Doom relationship map", "Shadow-Company-MCDM-Organization-Sheet-2025-01-13",
+              "Sir-Claudio-The-Ashtree-Knight-Complete-Profile-2024-06-20", "the sapphiretail staff"}
+
+# Where people and factions are, decided by Claude from every line in the vault that mentions them
+# (2026-10-16), for notes without a usable location property. GM edition only: the players' edition
+# places its people from the players' own notes. None = the vault doesn't say.
+PLACED = {
+    # Teslions: "Teslions council", guard, the Lodge, innkeeper (the GM's People list and their notes)
+    "Delora": "teslions", "Iormel": "teslions", "Kellin": "teslions", "Noro": "teslions",
+    "Soranna Anitha": "teslions", "Sgt Hersk": "teslions", "Sandra Russo": "teslions", "Tharma": "teslions",
+    "Henrik De'vant": "teslions", "Siertianna": "teslions", "Jarret": "teslions", "Judith Müller": "teslions",
+    "Fimbar": "teslions",  # "later Teslions smith"
+    "Krazkar": "teslions", "Moogzt": "teslions",  # "Raized Teslions" (K39)
+    "Avarthel": "teslions",  # "the druid from Teslions"
+    # Blackbriar monastery
+    "Broder Aldo": "blackbriar", "Broder Fulton": "blackbriar", "Broder Thomas spada": "blackbriar",
+    "Thomas spada": "blackbriar", "Gregor Schatz": "blackbriar", "Ivana Schatz": "blackbriar",
+    # Delios
+    "Duerif Redblade": "delios", "Shaw Hammett": "delios",  # back in Delios (Logged script 43/44)
+    "Lady Kirkeby": "delios",  # guest at the Delios townspeaker manor (Logged - Session 30)
+    "Caillach": "delios", "Miha": "delios", "Robert Gambini": "delios", "Lady Millicity": "delios",
+    "Bell": "milly-bell", "Millicent": "milly-bell", "Father Belderone": "gaeds-sanctuary",
+    "Roland Hartmoor": "stormpine",  # caretaker of Stormpine Hall
+    # Around Delios
+    "Aurilia": "fallen-star", "Willard": "fallen-star",  # HQ castellan; caretaker of the inn
+    "Kurz Beier": "hamlet",  # "lives in a small hamlet close to Fallen star inn ... tends to the mausoleum"
+    "Bartoz": "click-claw", "Bartoz 1": "click-claw", "Wulfram": "click-claw",
+    "Jayce Fireheart - ranger hut": "ranger-hut", "Ranger hut - Jayce Fireheart": "ranger-hut",
+    "Nails": "tower-of-lightning",  # "Nails i tower of lightning" (Summary Session 45); "Nail's tower"
+    "Thurumbaba": "dead-mountain",  # the cyclops' lair
+    "Regilarix - lore": "blackspear", "The Raven King": "raven-tomb",
+    "Queen of bones, court of all flesh": "raven-tomb", "the sorrowful lady": "haudh-ninlaith",
+    "Fireberry": "star-song-hill",  # mount of Trellara Nightshadow from Starsong hill
+    "Oxbar": "camp-oxbar", "Lady Dazran": "rirroneth",
+    # Further away
+    "Pinna": "arendur",  # now Assumi's retainer; went home to Arendur with her (K35)
+    "Selina Rosenknop": "arendur", "Lord Jarret Castilla": "arendur", "Faustus Antili": "azuremarket",
+    "Regent Hexton": "bedegaarn", "Sir Claudio": "bedegaarn", "Sir Claudio 1": "bedegaarn",
+    "Lady Floret": "bedegaarn",  # "remaining in Bedegaarn"
+    "Sunkiller": "bedegaarn",  # sent to Bedegaarn Keep (Secret transport report)
+    # Unknown: the vault mentions no place they are at
+    "THE necromancer": None, "Throg'was": None, "Sharwyn": None, "Mellik": None,
+    "Latona 'Pippa' the halfling": None, "Duke Armatage Volantis": None, "The Star-Violet Lady": None,
+    "jawbreaker": None, "Kryx Bloodgnash": None,
+    # Factions
+    "Blue Guardians": "arendur", "The Tower": "arendur", "Cult of Oztt": "arendur",
+    "Eyes of the many headed snake": "arendur", "House Navarre": "arendur", "House Omero": "arendur",
+    "House Volantis": "arendur", "House Alvares": "arendur", "Sword n Shield": "arendur",  # Arendur Organisations
+    "The Cautier School": "arendur", "The Ruby Throne": "arendur", "Loz Tdrot": "arendur",
+    "House Castilla": "bedegaarn", "Knight order of the black lilly": "bedegaarn",  # HQ in Bedegaarn
+    "House Arpad": "click-claw",  # "a station at the newly erected Watch"
+    "Daughters of Meg": "hag-coven",  # the owner's Leaflet pin "Daughters of Meg" is the hag coven lair
+    "The Fulcrom": "azuremarket", "The Lodge": "teslions", "The Shadow Company": "fallen-star",
+    "red hand horde": "red-hand-warcamp", "Bones": "raven-tomb",
+    "Throg'was 1": None, "the charnel house": None, "Crimson Company": None, "The white tusk tribe": None,
+}
+# Dead, though their note doesn't say so (GM edition only).
+DEAD = {"Nails": "Karou's Bakke: \"Nails er død, dræbt af den sorte drage fra castle blackspear.\""}
