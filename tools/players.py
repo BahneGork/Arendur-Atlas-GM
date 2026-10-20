@@ -11,10 +11,61 @@ import os
 import re
 import shutil
 
-from curation import CAMPAIGN, MAPS, PARTY_EXTRA, PLACES, PORTALS
+from curation import CAMPAIGN, CITIES, MAPS, PARTY_EXTRA, PLACES, PORTALS
 
 # Files of the site itself, copied as they are.
 SITE = ["index.html", "css", "js", "vendor"]
+
+
+def city_released(cid):
+    """What the players may see of a city: its "players" rules, or nothing while its map is GM-only.
+    A rule is a list of names or "*" for all (a lone name or "*" may also be written without the list)."""
+    if not any(m.get("city") == cid and m.get("players") for m in MAPS.values()):
+        return {}
+    return {k: [v] if isinstance(v, str) else list(v) for k, v in CITIES[cid].get("players", {}).items()}
+
+
+def filter_city(city, rules, faction_names):
+    """A Ward Builder city as the players see it: only the views, districts, factions, wards and power
+    centres the GM released (rules); every other name is blank and every other ward neutral."""
+    views = [v for v in rules.get("views", []) if v in city["views"]]
+    known = lambda kind, name: bool(name) and ("*" in rules.get(kind, []) or name in rules.get(kind, []))
+    districts = [{k: d[k] for k in ("id", "name", "color")} for d in city["districts"] or []
+                 if "districts" in views and known("districts", d["name"])]
+    # a faction links to its note only when the players have that note
+    factions = [{"id": f["id"], "name": f["name"], "color": f["color"],
+                 "note": f.get("note") if f.get("note") in faction_names else ""}
+                for f in city["factions"] or [] if "factions" in views and known("factions", f["name"])]
+    dids, fids = {d["id"] for d in districts}, {f["id"] for f in factions}
+    shape = ("id", "x", "y", "isWater", "rInner", "rOuter", "aStart", "aEnd", "hubX", "hubY")
+    wards = [{**{k: w[k] for k in shape if k in w},
+              "name": w["name"] if "names" in views and known("wards", w["name"]) else "",
+              "district": w["district"] if w.get("district") in dids else "",
+              "faction": w["faction"] if w.get("faction") in fids else ""} for w in city["wards"]]
+    centers = [{**{k: p[k] for k in ("id", "name", "category", "x", "y")},
+                "faction": p["faction"] if p.get("faction") in fids else ""}
+               for p in city["powerCenters"] or [] if known("powerCenters", p["name"])]
+    return {"layoutStyle": city["layoutStyle"], "customEnclosure": city["customEnclosure"], "wards": wards,
+            "districts": districts, "factions": factions, "powerCenters": centers, "pois": [], "views": views}
+
+
+def city_names(cities):
+    """(released, unreleased): the names in the cities the GM has and has not released to the players. Both
+    are for the leak check: a released name is known to the players, even when it is a GM note's title."""
+    shown, found = [], []
+    for cid, c in cities.items():
+        rules = city_released(cid)
+        views = rules.get("views", [])
+        for kind, view in (("districts", "districts"), ("factions", "factions"), ("wards", "names"),
+                           ("powerCenters", None), ("pois", "")):
+            for x in c.get(kind) or []:
+                name = x.get("name", "")
+                released = (view is None or view in views) and ("*" in rules.get(kind, []) or name in rules.get(kind, []))
+                if name and released:
+                    shown.append(name)
+                elif name:
+                    found.append((f"city {cid}, {kind}", name))
+    return shown, found
 
 
 def filter_atlas(out, notes_out, player_ids):
@@ -90,9 +141,13 @@ def filter_atlas(out, notes_out, player_ids):
             del n["place"]
         notes[nid] = n
 
+    faction_names = {f["name"] for f in factions.values()}
+    cities = {m["city"]: filter_city(out["cities"][m["city"]], city_released(m["city"]), faction_names)
+              for m in maps.values() if m.get("city") in out["cities"]}
+
     res = {**out, "campaign": {**out["campaign"], "audience": "players"}, "maps": maps, "portals": portals,
            "places": places, "sessions": sessions, "people": people, "factions": factions, "tools": tools,
-           "unplaced": unplaced}
+           "unplaced": unplaced, "cities": cities}
     return res, json.dumps(notes, ensure_ascii=False, separators=(",", ":")), problems
 
 
@@ -122,17 +177,18 @@ def gm_note_titles(gm_titles):
     return [t for t in gm_titles if t.lower() not in shown and t not in CAMPAIGN.get("leak_ok", [])]
 
 
-def leak_check(atlas_json, notes_json, gm_titles=(), player_titles=()):
+def leak_check(atlas_json, notes_json, gm_titles=(), player_titles=(), cities=None):
     """GM-only names and texts must be absent from the players' files.
 
     gm= texts may appear nowhere. Names of GM-only places, maps and notes are leaks in the generated atlas
     data, unless the players' own notes contain them: a name the players have written down themselves is
     known to them (what the GM knows about it never reaches them)."""
     atlas, own = atlas_json.lower(), notes_json.lower()
-    known = {t.lower() for t in player_titles}
+    city_shown, city_hidden = city_names(cities or {})
+    known = {t.lower() for t in list(player_titles) + city_shown}
     has = lambda blob, s: re.search(r"(?<![\wæøå])" + re.escape(s.lower()) + r"(?![\wæøå])", blob)
     gm_text = {p["gm"] for p in PLACES.values() if p.get("gm")}
-    leaks = [f"LEAK: '{s}' ({where}) is in the players' edition" for where, s in gm_only_strings()
+    leaks = [f"LEAK: '{s}' ({where}) is in the players' edition" for where, s in gm_only_strings() + city_hidden
              if len(s) >= 4 and (has(atlas, s) or has(own, s)) and (s in gm_text or not has(own, s))]
     leaks += [f"LEAK: GM note '{s}' is named in the players' atlas data"
               for s in gm_note_titles([t for t in gm_titles if t.lower() not in known])
@@ -162,7 +218,7 @@ def write(out_dir, root, data, notes_json, version):
     # Only the players' maps; any other image is removed.
     maps_dir = os.path.join(out_dir, "maps")
     os.makedirs(maps_dir, exist_ok=True)
-    wanted = {os.path.basename(m["image"]) for m in data["maps"].values()}
+    wanted = {os.path.basename(m["image"]) for m in data["maps"].values() if m.get("image")}  # cities have none
     for f in os.listdir(maps_dir):
         if f not in wanted:
             os.remove(os.path.join(maps_dir, f))

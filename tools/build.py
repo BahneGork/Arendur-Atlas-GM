@@ -15,9 +15,10 @@ import sys
 from collections import defaultdict
 from datetime import datetime
 from urllib.parse import quote, unquote
+from urllib.request import urlopen
 
 sys.path.insert(0, os.path.dirname(__file__))
-from curation import (CAMPAIGN, DEAD, GARDEN_URL, PLACED, LOCATION_ALIASES, MAPS, NOT_PEOPLE, NOT_PLACES,  # noqa: E402
+from curation import (CAMPAIGN, CITIES, DEAD, GARDEN_URL, PLACED, LOCATION_ALIASES, MAPS, NOT_PEOPLE, NOT_PLACES,  # noqa: E402
                       OFFMAP, PARTY, PARTY_CLASS, PARTY_EXTRA, PARTY_NAMES, PARTY_ORIGIN, PARTY_PERIODS, PARTY_RACE,
                       PARTY_STATUS, PLACES, PORTALS, SOLO_SESSIONS,
                       REGIONS, SESSIONS)
@@ -495,6 +496,38 @@ def follow_renames(notes):
     return renamed
 
 
+# The parts of a Ward Builder city file the atlas draws (the rest is the builder's own bookkeeping).
+CITY_FIELDS = ["layoutStyle", "customEnclosure", "wards", "districts", "factions", "powerCenters", "pois"]
+CITY_VIEWS = ["districts", "factions", "block", "names"]
+
+
+def load_cities(problems):
+    """Each city's file from its Ward Builder repository. A copy is kept in cities/, so a build without the
+    network still works (and the last fetched state is in git)."""
+    cities = {}
+    for cid, c in CITIES.items():
+        url = f"https://raw.githubusercontent.com/{c['repo']}/main/cities/{c['city']}/{c['version']}.json"
+        cache = os.path.join(ROOT, "cities", f"{c['city']}-{c['version']}.json")
+        try:
+            with urlopen(url, timeout=20) as r:
+                text = r.read().decode("utf-8")
+            json.loads(text)
+            os.makedirs(os.path.dirname(cache), exist_ok=True)
+            with open(cache, "w", encoding="utf-8") as f:
+                f.write(text)
+        except (OSError, ValueError) as e:
+            if not os.path.exists(cache):
+                problems.append(f"city {cid}: can't fetch {url} ({e}) and there is no copy in cities/")
+                continue
+            print(f"city {cid}: using the copy in cities/ ({e})")
+        city = json.load(open(cache, encoding="utf-8"))
+        owner, name = c["repo"].split("/")
+        cities[cid] = {**{k: city.get(k) for k in CITY_FIELDS}, "views": CITY_VIEWS,
+                       # the GM atlas reads the newest save from the Ward Builder's site when it can
+                       "live": f"https://{owner.lower()}.github.io/{name}/cities/{c['city']}/{c['version']}.json"}
+    return cities
+
+
 def main():
     notes = load_notes()
     renamed = follow_renames(notes)
@@ -682,10 +715,11 @@ def main():
     for s in sessions:
         s["noteId"] = note_id.get(entry_note_of.get(s["num"]) or session_notes.get(s["num"]))
 
+    cities = load_cities(problems)
     out = {"campaign": {**{k: CAMPAIGN[k] for k in ("title", "start", "repo", "unit", "readLabel") if k in CAMPAIGN},
                         "audience": "gm"}, "maps": MAPS, "portals": PORTALS, "offmap": OFFMAP, "places": places,
            "people": people, "factions": factions, "threads": threads, "tools": tools,
-           "regions": regions, "sessions": sessions, "unplaced": unplaced}
+           "regions": regions, "sessions": sessions, "unplaced": unplaced, "cities": cities}
     with open(os.path.join(ROOT, "data", "atlas.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
 
@@ -714,7 +748,8 @@ def main():
             data, notes_json, leaks = pl.filter_atlas(out, json.load(open(notes_path, encoding="utf-8")), player_ids)
             leaks += pl.leak_check(json.dumps(data, ensure_ascii=False), notes_json,
                                    gm_titles=[t for t, n in notes.items() if not n["player"]],
-                                   player_titles=[t for t, n in notes.items() if n["player"]])
+                                   player_titles=[t for t, n in notes.items() if n["player"]],
+                                   cities=cities)
             if leaks:
                 problems += leaks
                 print("players' edition NOT written")

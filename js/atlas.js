@@ -58,6 +58,255 @@
     return null;
   }
 
+  // ---------- Cities drawn from the Ward Builder ----------
+  // A city map has no image: its wards are drawn as SVG from the owner's Ward Builder city file, by the
+  // Ward Builder's own rules (ring wedges, Voronoi cells or circles, inside the city wall). Positions are
+  // the Ward Builder's coordinates. The players' edition gets the city already reduced to what they know.
+  const cities = data.cities || {};
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const svg = (tag, attrs = {}, ...kids) => {
+    const n = document.createElementNS(SVGNS, tag);
+    for (const [k, v] of Object.entries(attrs)) if (v != null) n.setAttribute(k, v);
+    n.append(...kids);
+    return n;
+  };
+  // The Ward Builder's colours, so the city looks the same in both.
+  const CITY = { neutral: "#a89a80", water: "rgb(90,128,168)", ink: "#2c2620", inkSoft: "#6c5f48", margin: 130 };
+  const CENTER_COLOR = { "Factory/Manufacturing": "#8a6d5c", "Military/City Guard": "#8c3c34", Law: "#4a5b7a",
+    Cultural: "#7a5ba8", "Knowledge/Information": "#3f7a75", Religion: "#c9a24a", Civic: "#a3792f", Transport: "#c07a3f",
+    Financial: "#5a8c5e", Trade: "#b04e72", "Criminal/Underworld": "#4a3b52" };
+  const cityView = {}; // per city map: { color: "districts" | "factions" | null, block, names }
+  const factionByNote = Object.fromEntries(Object.entries(factions).map(([fid, f]) => [f.name, fid]));
+
+  function convexHull(points) {
+    const pts = [...points].sort((a, b) => a.x - b.x || a.y - b.y);
+    const cross = (o, a, b) => (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);
+    const half = (list) => {
+      const h = [];
+      for (const p of list) {
+        while (h.length >= 2 && cross(h[h.length - 2], h[h.length - 1], p) <= 0) h.pop();
+        h.push(p);
+      }
+      return h.slice(0, -1);
+    };
+    return [...half(pts), ...half([...pts].reverse())];
+  }
+  // The city wall: the owner's own outline, else the wards' hull pushed out by the Ward Builder's margin.
+  function cityWall(c) {
+    if (c.customEnclosure?.length > 2) return c.customEnclosure;
+    const ws = c.wards;
+    if (!ws.length) return null;
+    const cx = ws.reduce((s, w) => s + w.x, 0) / ws.length, cy = ws.reduce((s, w) => s + w.y, 0) / ws.length;
+    if (ws.length < 3) {
+      return Array.from({ length: 16 }, (_, i) => ({ x: cx + Math.cos(i * Math.PI / 8) * CITY.margin, y: cy + Math.sin(i * Math.PI / 8) * CITY.margin }));
+    }
+    const hull = convexHull(ws.map((w) => ({ x: w.x, y: w.y })));
+    const hx = hull.reduce((s, p) => s + p.x, 0) / hull.length, hy = hull.reduce((s, p) => s + p.y, 0) / hull.length;
+    return hull.map((p) => {
+      const d = Math.hypot(p.x - hx, p.y - hy) || 1;
+      return { x: p.x + (p.x - hx) / d * CITY.margin, y: p.y + (p.y - hy) / d * CITY.margin };
+    });
+  }
+  function cityBounds(c) {
+    const pts = cityWall(c) || [{ x: 0, y: 0 }, { x: 1000, y: 1000 }];
+    const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y), pad = 60;
+    return L.latLngBounds([[-(Math.max(...ys) + pad), Math.min(...xs) - pad], [-(Math.min(...ys) - pad), Math.max(...xs) + pad]]);
+  }
+  // Voronoi: the part of the wall's area closer to this ward than to any other.
+  function voronoiCell(w, wards, wall) {
+    let poly = wall.map((p) => [p.x, p.y]);
+    for (const o of wards) {
+      if (o === w || !poly.length) continue;
+      const nx = o.x - w.x, ny = o.y - w.y, lim = (o.x * o.x + o.y * o.y - w.x * w.x - w.y * w.y) / 2;
+      const inside = (p) => nx * p[0] + ny * p[1] <= lim;
+      const out = [];
+      poly.forEach((a, i) => {
+        const b = poly[(i + 1) % poly.length];
+        if (inside(a)) out.push(a);
+        if (inside(a) !== inside(b)) {
+          const t = (lim - nx * a[0] - ny * a[1]) / (nx * (b[0] - a[0]) + ny * (b[1] - a[1]));
+          out.push([a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])]);
+        }
+      });
+      poly = out;
+    }
+    return poly;
+  }
+  const f2 = (n) => Math.round(n * 100) / 100;
+  const circlePath = (x, y, r) => `M${f2(x - r)} ${f2(y)}a${f2(r)} ${f2(r)} 0 1 0 ${f2(2 * r)} 0a${f2(r)} ${f2(r)} 0 1 0 ${f2(-2 * r)} 0Z`;
+  const wedgeSpan = (w) => { const s = w.aEnd - w.aStart; return s <= 0 ? s + Math.PI * 2 : s; };
+  function wardPath(w, c, wall) {
+    if (c.layoutStyle === "voronoi") {
+      const cell = voronoiCell(w, c.wards, wall);
+      return cell.length ? `M${cell.map(([x, y]) => `${f2(x)} ${f2(y)}`).join("L")}Z` : "";
+    }
+    if (w.rOuter == null) return circlePath(w.x, w.y, 45);
+    if (w.rInner <= 0.01) return circlePath(w.hubX, w.hubY, w.rOuter);
+    const span = wedgeSpan(w);
+    if (span > Math.PI * 2 - 1e-6) return circlePath(w.hubX, w.hubY, w.rOuter) + circlePath(w.hubX, w.hubY, w.rInner);
+    const pt = (r, a) => `${f2(w.hubX + r * Math.cos(a))} ${f2(w.hubY + r * Math.sin(a))}`;
+    const large = span > Math.PI ? 1 : 0, a1 = w.aStart + span;
+    return `M${pt(w.rOuter, w.aStart)}A${f2(w.rOuter)} ${f2(w.rOuter)} 0 ${large} 1 ${pt(w.rOuter, a1)}`
+      + `L${pt(w.rInner, a1)}A${f2(w.rInner)} ${f2(w.rInner)} 0 ${large} 0 ${pt(w.rInner, w.aStart)}Z`;
+  }
+  const measure = (() => {
+    const ctx = document.createElement("canvas").getContext("2d");
+    return (text, size, bold = false) => { ctx.font = `${bold ? "bold " : ""}${size}px Georgia, serif`; return ctx.measureText(text).width; };
+  })();
+  // A ward name along the middle of its ring wedge, sized to fit it; flipped on the lower half so it reads
+  // left to right. Too long a name is left out, as in the Ward Builder.
+  function curvedLabel(w, pathId, defs) {
+    const span = wedgeSpan(w), aMid = w.aStart + span / 2, rMid = (w.rInner + w.rOuter) / 2;
+    const maxWidth = span * rMid * 0.82;
+    let size = Math.min(12, Math.max(5, (w.rOuter - w.rInner) * 0.55));
+    let width = measure(w.name, size);
+    while (width > maxWidth && size > 4) { size -= 0.5; width = measure(w.name, size); }
+    if (width > maxWidth * 1.5) return null;
+    const half = Math.min(Math.PI * 0.999, Math.max(span / 2, width / rMid / 2 + 0.05));
+    const pt = (a) => `${f2(w.hubX + rMid * Math.cos(a))} ${f2(w.hubY + rMid * Math.sin(a))}`;
+    const large = half > Math.PI / 2 ? 1 : 0;
+    const flip = Math.sin(aMid) > 0;
+    defs.append(svg("path", { id: pathId, d: flip
+      ? `M${pt(aMid + half)}A${f2(rMid)} ${f2(rMid)} 0 ${large} 0 ${pt(aMid - half)}`
+      : `M${pt(aMid - half)}A${f2(rMid)} ${f2(rMid)} 0 ${large} 1 ${pt(aMid + half)}` }));
+    return svg("text", { class: "city-label", "font-size": size, "dominant-baseline": "central" },
+      svg("textPath", { href: `#${pathId}`, startOffset: "50%", "text-anchor": "middle" }, w.name));
+  }
+  const cityOf = (mapId) => cities[maps[mapId]?.city];
+  const cityGroup = (w, mode) => (mode === "factions" ? w.faction : mode === "districts" ? w.district : "");
+  const cityGroups = (c, mode) => (mode === "factions" ? c.factions : mode === "districts" ? c.districts : []) || [];
+  const nearestWard = (c, x, y) => c.wards.reduce((best, w) => (!best || Math.hypot(w.x - x, w.y - y) < Math.hypot(best.x - x, best.y - y) ? w : best), null);
+  const cityFactionId = (f) => (f?.note ? factionByNote[f.note] : null);
+
+  function drawCity(mapId) {
+    const c = cityOf(mapId), v = cityView[mapId], lyr = layers[mapId], root = lyr.svg;
+    const b = lyr.bounds;
+    root.setAttribute("viewBox", `${b.getWest()} ${-b.getNorth()} ${b.getEast() - b.getWest()} ${b.getNorth() - b.getSouth()}`);
+    const wall = cityWall(c);
+    const defs = svg("defs");
+    const wards = svg("g");
+    if (wall && c.layoutStyle !== "voronoi") {
+      defs.append(svg("clipPath", { id: `city-clip-${mapId}` }, svg("polygon", { points: wall.map((p) => `${f2(p.x)},${f2(p.y)}`).join(" ") })));
+      wards.setAttribute("clip-path", `url(#city-clip-${mapId})`);
+    }
+    for (const w of c.wards) {
+      const group = cityGroup(w, v.color);
+      const color = group ? cityGroups(c, v.color).find((g) => g.id === group)?.color : null;
+      const path = svg("path", {
+        d: wardPath(w, c, wall), class: `city-ward${w.id === lyr.selectedWard ? " selected" : ""}`, "data-ward": w.id,
+        fill: w.isWater ? CITY.water : color || CITY.neutral, "fill-opacity": w.isWater ? 0.75 : color ? 0.68 : 0.24,
+        stroke: v.block && group ? "none" : CITY.inkSoft, "stroke-opacity": 0.5, "vector-effect": "non-scaling-stroke",
+      }, svg("title", {}, w.name || "Bydel"));
+      path.addEventListener("click", (e) => { L.DomEvent.stop(e); go(`bydel/${mapId}/${w.id}`); });
+      wards.append(path);
+    }
+    const labels = svg("g", { class: "city-labels" });
+    if (v.names) {
+      for (const w of c.wards) {
+        if (!w.name || (v.block && cityGroup(w, v.color))) continue;
+        labels.append(w.rOuter != null && w.rInner > 0.01 && c.layoutStyle !== "voronoi"
+          ? curvedLabel(w, `city-arc-${mapId}-${w.id}`, defs) || ""
+          : svg("text", { class: "city-label", x: f2(w.x), y: f2(w.y - 14), "font-size": 12, "text-anchor": "middle" }, w.name));
+      }
+    }
+    if (v.block) {
+      // each district's (or faction's) name on the ward nearest its middle, so it sits on its own ground
+      for (const g of cityGroups(c, v.color)) {
+        const own = c.wards.filter((w) => cityGroup(w, v.color) === g.id);
+        if (!own.length) continue;
+        const ax = own.reduce((s, w) => s + w.x, 0) / own.length, ay = own.reduce((s, w) => s + w.y, 0) / own.length;
+        const at = own.reduce((best, w) => (Math.hypot(w.x - ax, w.y - ay) < Math.hypot(best.x - ax, best.y - ay) ? w : best));
+        labels.append(svg("text", { class: "city-label city-block-label", x: f2(at.x), y: f2(at.y), "font-size": 17, "text-anchor": "middle" }, g.name));
+      }
+    }
+    root.replaceChildren(defs, wards,
+      wall ? svg("polygon", { class: "city-wall", points: wall.map((p) => `${f2(p.x)},${f2(p.y)}`).join(" "), "vector-effect": "non-scaling-stroke" }) : "",
+      labels);
+
+    // Power centres: markers that open their own panel.
+    lyr.centers.clearLayers();
+    for (const pc of c.powerCenters || []) {
+      const f = (c.factions || []).find((x) => x.id === pc.faction);
+      L.marker(ll([pc.x, pc.y]), {
+        keyboard: true, title: "",
+        icon: L.divIcon({ className: "city-center", iconSize: [16, 16],
+          html: `<span style="background:${CENTER_COLOR[pc.category] || "#c9a24a"};border-color:${f?.color || CITY.ink}"></span>` }),
+      }).bindTooltip(f ? `${pc.name} · ${f.name}` : pc.name, { className: "pin-label", direction: "top", offset: [0, -10] })
+        .on("click", () => go(`magt/${mapId}/${pc.id}`))
+        .addTo(lyr.centers);
+    }
+  }
+
+  // The view switches for a city map, in the legend box.
+  const cityViews = $(".city-views");
+  function showCityViews(mapId) {
+    const c = cityOf(mapId);
+    cityViews.hidden = !c;
+    if (!c) return;
+    const v = cityView[mapId], has = (k) => c.views.includes(k);
+    const colors = ["districts", "factions"].filter(has);
+    const redraw = () => { drawCity(mapId); showCityViews(mapId); };
+    const check = (key, label) => el("label", {}, el("input", { type: "checkbox", checked: v[key],
+      onchange: (e) => { v[key] = e.target.checked; redraw(); } }), label);
+    cityViews.replaceChildren(
+      el("p", { class: "city-views-title" }, "Byen"),
+      colors.length ? el("div", { class: "seg", role: "group", "aria-label": "Farver" },
+        [...colors, null].map((k) => el("button", { type: "button", "aria-pressed": String(v.color === k),
+          onclick: () => { v.color = k; redraw(); } }, { districts: "Kvarterer", factions: "Factions", null: "Ingen farver" }[k]))) : null,
+      has("block") && v.color ? check("block", "Blokvisning") : null,
+      has("names") ? check("names", "Bydelsnavne") : null,
+    );
+  }
+
+  // Panels for a ward (#bydel/<map>/<ward>) and a power centre (#magt/<map>/<id>).
+  const factionChip = (f) => {
+    const fid = cityFactionId(f);
+    return fid ? el("a", { href: `#note/${fid}` }, f.name) : f.name;
+  };
+  function cityCrumbs(mapId) {
+    return el("p", { class: "crumbs" }, el("button", { type: "button", onclick: () => go(`kort/${mapId}`) }, maps[mapId].name));
+  }
+  function selectWard(mapId, wid) {
+    layers[mapId].selectedWard = wid;
+    for (const p of layers[mapId].svg.querySelectorAll(".city-ward")) p.classList.toggle("selected", p.dataset.ward === wid);
+  }
+  function showWard(mapId, wid) {
+    const c = cityOf(mapId), w = c.wards.find((x) => x.id === wid);
+    const d = (c.districts || []).find((x) => x.id === w.district), f = (c.factions || []).find((x) => x.id === w.faction);
+    const centers = (c.powerCenters || []).filter((pc) => nearestWard(c, pc.x, pc.y) === w);
+    const pois = (c.pois || []).filter((p) => p.ward === wid);
+    showMap(mapId, false);
+    openPanel(
+      cityCrumbs(mapId),
+      el("p", { class: "kicker" }, w.isWater ? "Vand" : "Bydel"),
+      el("h2", {}, w.name || "Ukendt bydel"),
+      d ? el("p", { class: "person-facts" }, "Kvarter: ", d.name) : null,
+      f ? el("p", { class: "person-facts" }, "Holdes af: ", factionChip(f)) : null,
+      centers.length ? [el("h3", {}, "Magtcentre"), el("ul", { class: "places-list" }, centers.map((pc) =>
+        el("li", {}, el("button", { type: "button", onclick: () => go(`magt/${mapId}/${pc.id}`) }, pc.name))))] : null,
+      pois.length ? [el("h3", {}, "Steder"), el("ul", { class: "places-list" }, pois.map((p) =>
+        el("li", {}, p.name, p.kind ? el("small", {}, ` ${p.kind}`) : null)))] : null,
+    );
+    select(null);
+    selectWard(mapId, wid);
+  }
+  function showCenter(mapId, id) {
+    const c = cityOf(mapId), pc = c.powerCenters.find((x) => x.id === id);
+    const f = (c.factions || []).find((x) => x.id === pc.faction), w = nearestWard(c, pc.x, pc.y);
+    showMap(mapId, false);
+    openPanel(
+      cityCrumbs(mapId),
+      el("p", { class: "kicker" }, "Magtcentrum"),
+      el("h2", {}, pc.name),
+      el("p", { class: "person-facts" }, [pc.category, pc.subcategory].filter(Boolean).join(" · ") || null),
+      f ? el("p", { class: "person-facts" }, "Holdes af: ", factionChip(f)) : null,
+      w ? el("p", { class: "person-facts" }, "Bydel: ", el("a", { href: `#bydel/${mapId}/${w.id}` }, w.name || "ukendt bydel")) : null,
+    );
+    select(null);
+    selectWard(mapId, null);
+    flyWithin(L.latLngBounds(ll([pc.x, pc.y]), ll([pc.x, pc.y])), { maxZoom: Math.max(map.getZoom(), 0), duration: 0.6, paddingBottomRight: panelPadding() });
+  }
+
   // ---------- Map ----------
   const map = L.map("map", {
     crs: L.CRS.Simple, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: -4, maxZoom: 1.5,
@@ -67,16 +316,40 @@
 
   const layers = {};
   for (const [id, m] of Object.entries(maps)) {
-    const [w, h] = m.size;
-    const bounds = L.latLngBounds([[-h, 0], [0, w]]);
+    const city = cityOf(id);
+    const bounds = city ? cityBounds(city) : L.latLngBounds([[-m.size[1], 0], [0, m.size[0]]]);
+    const root = city ? svg("svg", { xmlns: SVGNS }) : null;
     layers[id] = {
       bounds,
-      image: L.imageOverlay(m.image, bounds),
+      image: city ? L.svgOverlay(root, bounds, { interactive: true }) : L.imageOverlay(m.image, bounds),
       regions: L.layerGroup(),
       pins: L.layerGroup(),
       trail: L.layerGroup(),
       influence: L.layerGroup(),
     };
+    if (city) {
+      Object.assign(layers[id], { svg: root, centers: L.layerGroup(), selectedWard: null });
+      layers[id].centers.addTo(layers[id].pins);
+      const has = (k) => city.views.includes(k);
+      cityView[id] = { color: has("districts") ? "districts" : has("factions") ? "factions" : null, block: false, names: has("names") };
+      drawCity(id);
+    }
+  }
+  // The GM atlas reads the newest save from the Ward Builder's site, so a city saved there shows here within
+  // minutes, without a rebuild; the copy in the atlas data stays as the fallback.
+  if (campaign.audience === "gm") {
+    for (const [id, m] of Object.entries(maps)) {
+      const c = cityOf(id);
+      if (!c?.live) continue;
+      fetch(c.live, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).then((fresh) => {
+        if (!fresh?.wards) return;
+        cities[m.city] = { ...c, ...Object.fromEntries(Object.keys(c).filter((k) => k in fresh).map((k) => [k, fresh[k]])) };
+        layers[id].bounds = cityBounds(cities[m.city]);
+        layers[id].image.setBounds(layers[id].bounds);
+        drawCity(id);
+        if (current === id) showCityViews(id);
+      }).catch(() => { /* offline: keep the built copy */ });
+    }
   }
 
   const markers = {};
@@ -196,6 +469,7 @@
     }
     for (const b of tabs.children) b.setAttribute("aria-pressed", String(b.dataset.map === id));
     if (fit) map.fitBounds(layers[id].bounds, { animate: false });
+    showCityViews(id);
     applyPinState();
   }
 
@@ -255,6 +529,7 @@
     clearInfluence();
     markSessions([]);
     for (const r of Object.values(regionLayers)) r.getElement()?.classList.remove("selected");
+    for (const [k, l] of Object.entries(layers)) if (l.svg) selectWard(k, null);
   }
 
   const placeButton = (id) => {
@@ -1128,6 +1403,8 @@
     else if (kind === "traad") showThread(id);
     else if (kind === "udenfor" && offmap[id]) showOffmap(id);
     else if (kind === "kort" && maps[id]) showMapPanel(id);
+    else if (kind === "bydel" && cityOf(id)?.wards.some((w) => w.id === sub)) showWard(id, sub);
+    else if (kind === "magt" && cityOf(id)?.powerCenters?.some((pc) => pc.id === sub)) showCenter(id, sub);
     else { closePanel(); showMap(current || campaign.start, !current); }
   }
   window.addEventListener("hashchange", () => route_(location.hash.slice(1)));

@@ -463,3 +463,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .journey { bottom: 12px; }
   .panel:not([hidden]) ~ .journey { display: none; }
 }
+
+/* ---------- City maps, drawn from the Ward Builder ---------- */
+.city-ward { cursor: pointer; transition: fill-opacity 0.15s; }
+.city-ward:hover { fill-opacity: 0.9; }
+.city-ward.selected { stroke: var(--wax); stroke-width: 3px; stroke-opacity: 1; }
+.city-wall { fill: none; stroke: #2c2620; stroke-opacity: 0.55; stroke-width: 2px; stroke-dasharray: 10 6; pointer-events: none; }
+.city-label { font-family: Georgia, "Times New Roman", serif; fill: #2c2620; pointer-events: none; }
+.city-block-label { font-weight: bold; paint-order: stroke; stroke: var(--parchment); stroke-width: 4px; stroke-linejoin: round; }
+.city-center span {
+  display: block; width: 14px; height: 14px; margin: 1px; transform: rotate(45deg);
+  border: 2.5px solid; box-shadow: 0 1px 3px rgba(30, 18, 8, 0.45);
+}
+.city-views { padding: 10px 14px 6px; border-bottom: 1px solid var(--parchment-edge); }
+.city-views-title { margin: 0 0 4px; font-family: var(--font-title); font-size: 16px; }
+.city-views .seg { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0 6px; }
+.city-views .seg button { border: 1px solid var(--ink-faint); background: transparent; border-radius: 3px; padding: 2px 8px; font-size: 14px; }
+.city-views .seg button[aria-pressed="true"] { background: var(--ink); color: var(--parchment); border-color: var(--ink); }

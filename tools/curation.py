@@ -78,6 +78,9 @@ MAPS = {
     # the wxx Kingdom coordinates (fit to the owner's Leaflet pins, max error 19 px).
     "misty": {"name": "Misty Falls (GM)", "image": "maps/misty.webp", "size": [1822, 1121], "place": "misty-falls"},
     "delios": {"players": True, "name": "Delios", "image": "maps/delios.webp", "size": [7680, 4320], "place": "delios"},
+    # The city of Arendur, drawn from the owner's Ward Builder city (CITIES below) instead of an image; its
+    # positions are the Ward Builder's own coordinates. GM only until the owner releases it.
+    "arendur-city": {"name": "Arendur", "city": "arendur", "place": "arendur"},
 }
 
 # Links between maps, drawn as signposts at the map edge (never next to pins).
@@ -85,7 +88,25 @@ PORTALS = [
     {"map": "blackwood", "to": "ursia", "label": "Ursia", "hint": "hele landet", "at": [80, 1040], "arrow": "↑"},
     {"map": "delios", "to": "blackwood", "label": "East Blackwood", "hint": "egnen omkring", "at": [7300, 200],
      "arrow": "↑"},
+    {"map": "arendur-city", "to": "ursia", "label": "Ursia", "hint": "hele landet", "at": [1500, -200], "arrow": "↑"},
 ]
+
+# Cities drawn from the owner's Ward Builder (github.com/BahneGork/Ward-Builder), where each is the file
+# cities/<city>/<version>.json. Its factions link to atlas factions through their notes (the Ward Builder's
+# faction "note" field). "players" is what the players' edition shows of the city; the rest of it (ward,
+# district, faction and power centre names, who holds which ward) is GM-only and covered by the leak check.
+CITIES = {
+    "arendur": {
+        "repo": "BahneGork/Ward-Builder", "city": "arendur", "version": "arendur-rising",
+        "players": {
+            "views": [],         # which of "districts", "factions", "block", "names" the players may switch on
+            "districts": [],     # district names they know, or ["*"] for all
+            "factions": [],      # faction names as in the Ward Builder, or ["*"]
+            "wards": [],         # ward names, or ["*"]
+            "powerCenters": [],  # power centre names, or ["*"]
+        },
+    },
+}
 
 # kind: by | borg | taarn | hule | helligt | havn | vildmark | sted
 PLACES = {
