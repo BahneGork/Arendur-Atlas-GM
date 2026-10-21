@@ -225,9 +225,10 @@
 
     // Power centres: markers that open their own panel.
     lyr.centers.clearLayers();
+    lyr.centerMarkers = {};
     for (const pc of c.powerCenters || []) {
       const f = (c.factions || []).find((x) => x.id === pc.faction);
-      L.marker(ll([pc.x, pc.y]), {
+      lyr.centerMarkers[pc.id] = L.marker(ll([pc.x, pc.y]), {
         keyboard: true, title: "",
         icon: L.divIcon({ className: "city-center", iconSize: [16, 16],
           html: `<span style="background:${CENTER_COLOR[pc.category] || "#c9a24a"};border-color:${f?.color || CITY.ink}"></span>` }),
@@ -241,6 +242,7 @@
   const cityViews = $(".city-views");
   function showCityViews(mapId) {
     const c = cityOf(mapId);
+    showCityIndex(mapId);
     cityViews.hidden = !c;
     if (!c) return;
     const v = cityView[mapId], has = (k) => c.views.includes(k);
@@ -257,6 +259,55 @@
       has("names") ? check("names", "Bydelsnavne") : null,
     );
   }
+
+  // The power centres listed by district down the left side, so one can be found by name.
+  const cityIndex = $(".city-index"), cityIndexBody = $(".city-index-body"), cityIndexToggle = $(".city-index-toggle");
+  const centerDiamond = (c, pc) => {
+    const f = (c.factions || []).find((x) => x.id === pc.faction);
+    return el("span", { class: "center-diamond", style: `background:${CENTER_COLOR[pc.category] || "#c9a24a"};border-color:${f?.color || CITY.ink}` });
+  };
+  function showCityIndex(mapId) {
+    const c = cityOf(mapId), pcs = c?.powerCenters || [];
+    cityIndex.hidden = !pcs.length;
+    if (!pcs.length) return;
+    const lyr = layers[mapId];
+    const byDistrict = new Map((c.districts || []).map((d) => [d.id, []]));
+    const outside = [];
+    for (const pc of pcs) {
+      const w = nearestWard(c, pc.x, pc.y);
+      (byDistrict.get(w?.district) || outside).push({ pc, w });
+    }
+    const groups = [...(c.districts || []).map((d) => [d.name, d.color, byDistrict.get(d.id)]), ["Uden for kvartererne", null, outside]];
+    cityIndexToggle.textContent = `Magtcentre (${pcs.length})`;
+    cityIndexBody.replaceChildren(...groups.filter(([, , list]) => list.length).map(([name, color, list]) => [
+      el("h4", {}, el("span", { class: "district-swatch", style: color ? `background:${color}` : null }), name),
+      el("ul", {}, list.sort((a, b) => a.pc.name.localeCompare(b.pc.name, "da")).map(({ pc, w }) => el("li", {},
+        el("button", { type: "button", "data-center": pc.id, "aria-current": String(lyr.selectedCenter === pc.id),
+          onclick: () => go(`magt/${mapId}/${pc.id}`),
+          onmouseenter: () => lyr.centerMarkers[pc.id]?.openTooltip(),
+          onmouseleave: () => lyr.centerMarkers[pc.id]?.closeTooltip() },
+          centerDiamond(c, pc), pc.name, w?.name ? el("small", {}, w.name) : null)))),
+    ]).flat());
+    placeCityIndex();
+  }
+  function markCenter(mapId, id) {
+    layers[mapId].selectedCenter = id;
+    for (const b of cityIndexBody.querySelectorAll("button")) b.setAttribute("aria-current", String(b.dataset.center === id));
+  }
+  // Between the title and the legend, whatever their heights.
+  function placeCityIndex() {
+    if (cityIndex.hidden) return;
+    cityIndex.style.top = `${$(".cartouche").getBoundingClientRect().bottom + 10}px`;
+    cityIndex.style.bottom = `${window.innerHeight - $(".legend").getBoundingClientRect().top + 10}px`;
+  }
+  new ResizeObserver(placeCityIndex).observe($(".cartouche"));
+  new ResizeObserver(placeCityIndex).observe($(".legend"));
+  window.addEventListener("resize", placeCityIndex);
+  cityIndexToggle.addEventListener("click", () => {
+    const open = cityIndexBody.hidden;
+    cityIndexBody.hidden = !open;
+    cityIndexToggle.setAttribute("aria-expanded", String(open));
+  });
 
   // Panels for a ward (#bydel/<map>/<ward>) and a power centre (#magt/<map>/<id>).
   const factionChip = (f) => {
@@ -289,6 +340,7 @@
     );
     select(null);
     selectWard(mapId, wid);
+    markCenter(mapId, null);
   }
   function showCenter(mapId, id) {
     const c = cityOf(mapId), pc = c.powerCenters.find((x) => x.id === id);
@@ -304,6 +356,7 @@
     );
     select(null);
     selectWard(mapId, null);
+    markCenter(mapId, id);
     flyWithin(L.latLngBounds(ll([pc.x, pc.y]), ll([pc.x, pc.y])), { maxZoom: Math.max(map.getZoom(), 0), duration: 0.6, paddingBottomRight: panelPadding() });
   }
 
@@ -529,7 +582,7 @@
     clearInfluence();
     markSessions([]);
     for (const r of Object.values(regionLayers)) r.getElement()?.classList.remove("selected");
-    for (const [k, l] of Object.entries(layers)) if (l.svg) selectWard(k, null);
+    for (const [k, l] of Object.entries(layers)) if (l.svg) { selectWard(k, null); markCenter(k, null); }
   }
 
   const placeButton = (id) => {
