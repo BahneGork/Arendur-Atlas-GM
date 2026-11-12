@@ -6660,6 +6660,10 @@
      "y": 309.5546229122969
     },
     {
+     "x": 1675.8314341011726,
+     "y": 547.0797168641043
+    },
+    {
      "x": 1619.5729725834196,
      "y": 815.995121260553
     },
@@ -8197,9 +8201,9 @@
      "nameDa": "",
      "category": "Transport",
      "subcategory": "Stables",
-     "faction": "f8",
-     "x": 498.0788823091683,
-     "y": 687.5501745753802
+     "faction": "f4",
+     "x": 783.5782349875683,
+     "y": 357.99227981698016
     },
     {
      "id": "pc3",
@@ -8218,8 +8222,8 @@
      "category": "Civic",
      "subcategory": "Palace",
      "faction": "f1",
-     "x": 574.2763359165187,
-     "y": 178.84274845895837
+     "x": 909.1212557245187,
+     "y": 668.7737363885584
     },
     {
      "id": "pc5",
@@ -8329,17 +8333,17 @@
      "subcategory": "Black Market",
      "faction": "f11",
      "x": 844.1753350014058,
-     "y": 604.5912733124071
+     "y": 590.4925398468072
     },
     {
      "id": "pc17",
-     "name": "Court of Shadows",
+     "name": "Warden's Monastery",
      "nameDa": "",
-     "category": "Criminal/Underworld",
-     "subcategory": "Safehouse",
+     "category": "Religion",
+     "subcategory": "Monastery",
      "faction": "f13",
-     "x": 655.2595186748753,
-     "y": 702.2456493613485
+     "x": 274.5937151036753,
+     "y": 1067.0503777837484
     },
     {
      "id": "pc19",
@@ -8348,8 +8352,268 @@
      "category": "Law",
      "subcategory": "Courthouse",
      "faction": "f15",
-     "x": 703.0911513279365,
-     "y": 523.6779686920373
+     "x": 856.4148777663365,
+     "y": 763.3564376072374
+    },
+    {
+     "id": "pc21",
+     "name": "Widow's Market",
+     "nameDa": "",
+     "category": "Trade",
+     "subcategory": "Market",
+     "faction": "f2",
+     "x": 824.5857104970631,
+     "y": 265.50641066796993
+    },
+    {
+     "id": "pc22",
+     "name": "Hollowmark Trading Post",
+     "nameDa": "",
+     "category": "Trade",
+     "subcategory": "Trading Post",
+     "faction": "f2",
+     "x": 799.138480829258,
+     "y": 168.9066976162202
+    },
+    {
+     "id": "pc23",
+     "name": "Merchant's Exchange",
+     "nameDa": "",
+     "category": "Financial",
+     "subcategory": "Exchange",
+     "faction": "f2",
+     "x": 1371.290944993075,
+     "y": 508.1464997011167
+    },
+    {
+     "id": "pc24",
+     "name": "Ashgate Bank",
+     "nameDa": "",
+     "category": "Financial",
+     "subcategory": "Bank",
+     "faction": "f2",
+     "x": 976.3281671216461,
+     "y": 123.04579537425599
+    },
+    {
+     "id": "pc25",
+     "name": "Stonewell Cathedral",
+     "nameDa": "",
+     "category": "Religion",
+     "subcategory": "Cathedral",
+     "faction": "f3",
+     "x": 1075.9448333072937,
+     "y": 1067.4234672425212
+    },
+    {
+     "id": "pc26",
+     "name": "Blackthorn Mausoleum",
+     "nameDa": "",
+     "category": "Cultural",
+     "subcategory": "Mausoleum",
+     "faction": "f3",
+     "x": 757.1136722771807,
+     "y": 1082.720118456216
+    },
+    {
+     "id": "pc27",
+     "name": "Blackthorn Hospital",
+     "nameDa": "",
+     "category": "Religion",
+     "subcategory": "Hospital",
+     "faction": "f3",
+     "x": 775.9405688091829,
+     "y": 894.9448658873273
+    },
+    {
+     "id": "pc28",
+     "name": "Wolfmark Magic Portal",
+     "nameDa": "",
+     "category": "Transport",
+     "subcategory": "Magic Portal",
+     "faction": "f4",
+     "x": 753.4561353559045,
+     "y": 439.46994895966964
+    },
+    {
+     "id": "pc29",
+     "name": "Ghost's The Tower",
+     "nameDa": "",
+     "category": "Knowledge/Information",
+     "subcategory": "The Tower",
+     "faction": "f4",
+     "x": 904.8617467381156,
+     "y": 415.34193585736523
+    },
+    {
+     "id": "pc30",
+     "name": "Ashfall Watch House",
+     "nameDa": "",
+     "category": "Military/City Guard",
+     "subcategory": "Watch House",
+     "faction": "f5",
+     "x": 386.09802692803095,
+     "y": 752.0501670831837
+    },
+    {
+     "id": "pc31",
+     "name": "Wanderer's Textile Mill",
+     "nameDa": "",
+     "category": "Factory/Manufacturing",
+     "subcategory": "Textile Mill",
+     "faction": "f5",
+     "x": 586.198277669742,
+     "y": 746.6465380342336
+    },
+    {
+     "id": "pc32",
+     "name": "Longshadow Academy",
+     "nameDa": "",
+     "category": "Military/City Guard",
+     "subcategory": "Academy",
+     "faction": "f5",
+     "x": 216.38518070863546,
+     "y": 428.2453097817395
+    },
+    {
+     "id": "pc33",
+     "name": "Serpent's Treasury",
+     "nameDa": "",
+     "category": "Financial",
+     "subcategory": "Treasury",
+     "faction": "f6",
+     "x": 1060.0572784323058,
+     "y": 482.99380486903533
+    },
+    {
+     "id": "pc34",
+     "name": "Grimhold Great Manor House",
+     "nameDa": "",
+     "category": "Civic",
+     "subcategory": "Great Manor House",
+     "faction": "f6",
+     "x": 1187.9654683989515,
+     "y": 576.9255996064837
+    },
+    {
+     "id": "pc35",
+     "name": "Scholar's Aqueduct",
+     "nameDa": "",
+     "category": "Civic",
+     "subcategory": "Aqueduct",
+     "faction": "f6",
+     "x": 1200.508842588353,
+     "y": 696.8421689761294
+    },
+    {
+     "id": "pc36",
+     "name": "Serpent's Colosseum",
+     "nameDa": "",
+     "category": "Cultural",
+     "subcategory": "Colosseum",
+     "faction": "f7",
+     "x": 309.998883133264,
+     "y": 787.350465463114
+    },
+    {
+     "id": "pc37",
+     "name": "Stonewell Slaughterhouse",
+     "nameDa": "",
+     "category": "Factory/Manufacturing",
+     "subcategory": "Slaughterhouse",
+     "faction": "f7",
+     "x": 457.3332325586668,
+     "y": 876.9926379800646
+    },
+    {
+     "id": "pc38",
+     "name": "Ghostlight Carpet Transport Hub",
+     "nameDa": "",
+     "category": "Transport",
+     "subcategory": "Carpet Transport Hub",
+     "faction": "f8",
+     "x": 608.3070769402776,
+     "y": 286.23988631197943
+    },
+    {
+     "id": "pc39",
+     "name": "Stormwatch Theater",
+     "nameDa": "",
+     "category": "Cultural",
+     "subcategory": "Theater",
+     "faction": "f8",
+     "x": 464.78995346894504,
+     "y": 388.1894741547513
+    },
+    {
+     "id": "pc40",
+     "name": "Emberfall Paper Mill",
+     "nameDa": "",
+     "category": "Factory/Manufacturing",
+     "subcategory": "Paper Mill",
+     "faction": "f9",
+     "x": 568.0860671521601,
+     "y": 1149.096951895043
+    },
+    {
+     "id": "pc41",
+     "name": "Longshadow Rendering Farm",
+     "nameDa": "",
+     "category": "Factory/Manufacturing",
+     "subcategory": "Rendering Farm",
+     "faction": "f9",
+     "x": 384.7782189812998,
+     "y": 915.3284642266474
+    },
+    {
+     "id": "pc42",
+     "name": "Wanderer's Printing Press",
+     "nameDa": "",
+     "category": "Factory/Manufacturing",
+     "subcategory": "Printing Press",
+     "faction": "f9",
+     "x": 370.0451527160103,
+     "y": 1044.2289304558217
+    },
+    {
+     "id": "pc43",
+     "name": "Smith's The Tower",
+     "nameDa": "",
+     "category": "Knowledge/Information",
+     "subcategory": "The Tower",
+     "faction": "f10",
+     "x": 734.1469034801416,
+     "y": 638.6123955459217
+    },
+    {
+     "id": "pc44",
+     "name": "Ashfall Black Market",
+     "nameDa": "",
+     "category": "Criminal/Underworld",
+     "subcategory": "Black Market",
+     "faction": "f11",
+     "x": 654.6269163140755,
+     "y": 558.6473613874125
+    },
+    {
+     "id": "pc45",
+     "name": "Stormwatch Monastery",
+     "nameDa": "",
+     "category": "Religion",
+     "subcategory": "Monastery",
+     "faction": "f13",
+     "x": 1235.0836735002374,
+     "y": 1030.580705701618
+    },
+    {
+     "id": "pc46",
+     "name": "Scholar's Armory",
+     "nameDa": "",
+     "category": "Military/City Guard",
+     "subcategory": "Armory",
+     "faction": "f15",
+     "x": 824.056144807121,
+     "y": 658.9101530083414
     }
    ],
    "pois": [],
